@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Sex;
 use App\Product;
+use App\Category;
+use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
 
-    public function products(){
-        $products = Product::all();
+    public function index(){
+        $products = Category::find(3)->products;
+
+        //dd($products);
 
         return view('pages.products')->with(compact('products'));
     }

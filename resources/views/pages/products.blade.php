@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             @foreach ($products as $product)
-                <div class=" col col-3">
-                    <h1>{{$product->name}}</h1>
+                <div class="col">
+                    <h3>{{$product->name}}</h3>
                 </div>
             @endforeach
             

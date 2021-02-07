@@ -20,31 +20,26 @@ class CategoriesTableSeeder extends Seeder
         Category::create([
             'name' => 'female',
             'slug' => Str::slug('female'),
-            
         ]);
 
         Category::create([
             'name' => 'clothes',
-            'parent_id' => 1,
-            'slug' => Str::slug('male clothes', '-'),
-        ]);
-
-        Category::create([
-            'name' => 'clothes',
-            'parent_id' => 2,
-            'slug' => Str::slug('female clothes', '-'),
+            'slug' => Str::slug('clothes'),
+            'sex' => 'u',
         ]);
 
         Category::create([
             'name' => 'shoes',
-            'parent_id' => 1,
-            'slug' => Str::slug('male shoes', '-'),
+            'slug' => Str::slug('shoes'),
+            'sex' => 'u',
         ]);
 
         Category::create([
-            'name' => 'shoes',
-            'parent_id' => 2,
-            'slug' => Str::slug('female shoes', '-'),
+            'name' => 'accessories',
+            'slug' => Str::slug('accessories'),
+            'sex' => 'u',
         ]);
+
+        
     }
 }
