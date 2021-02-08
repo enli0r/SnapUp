@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         //Kada se seeduje onda se izvrsava ovaj kod
         $this->call('CategoriesTableSeeder'); 
         $this->call('ProductsTableSeeder');
-        // $this->call('AttributesTableSeeder');
-        // $this->call('AdminTableSeeder');
+        $this->call('ProductImagesTableSeeder');
+        
     }
 }

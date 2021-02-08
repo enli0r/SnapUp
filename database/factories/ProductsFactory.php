@@ -12,9 +12,9 @@ $factory->define(Product::class, function (Faker $faker) {
         'name' => Str::random(10),
         'slug' => Str::slug(Str::random(10)),
         'sex' => $faker->randomElement(['m', 'f']),
+        'thumbnail' => 'slika1.jpg',
         'description' => $faker->realText(30),
         'featured' => rand(1,2),
-        'image' => 'slika1.jpg',
         'menu' => 1
     ];
 });
