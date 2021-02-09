@@ -14,6 +14,7 @@ $factory->define(Product::class, function (Faker $faker) {
         'sex' => $faker->randomElement(['m', 'f']),
         'thumbnail' => 'slika1.jpg',
         'description' => $faker->realText(30),
+        'price' => rand(10,30),
         'featured' => rand(1,2),
         'menu' => 1
     ];
