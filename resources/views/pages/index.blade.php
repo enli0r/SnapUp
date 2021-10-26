@@ -1,9 +1,7 @@
-@extends('layouts.app')
+<x-layout>
+    <x-navbar />
+    <x-cat_navbar />
 
-@section('content')
-    @include('inc.navbar')
-    @include('inc.cat_navbar')
-    
     <div class="header container-parent">
         <div class="container">
                 <div class="col">
@@ -206,5 +204,5 @@
             </div>
         </div>
     </div>
-    @include('inc.footer')
-@endsection
+    <x-footer />
+</x-layout>

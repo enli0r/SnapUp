@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-    @include('inc.navbar')
-    @include('inc.footer')
-@endsection
+<x-layout>
+    <x-navbar />
+    <x-footer />
+</x-layout>
