@@ -10916,33 +10916,9 @@ body {
   background: white;
 }
 
-.dropdown .dropdown-menu {
-  transition: all 0.5s;
-  overflow: hidden;
-  transform-origin: top center;
-  transform: scale(1, 0);
-  display: block;
-}
-
-.dropdown:hover .dropdown-menu {
-  transform: scale(1);
-}
-
 .container-parent {
   display: flex;
   justify-content: center;
-}
-
-.navbar .container .navbar-brand {
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-.navbar .container .navbar-brand span {
-  color: #a51129;
 }
 
 .header {
@@ -11197,6 +11173,59 @@ body {
   filter: grayscale(0);
 }
 
+@media (max-width: 800px) {
+  .header .container {
+    justify-content: center;
+  }
+
+  .header .container .col {
+    text-align: center;
+  }
+}
+
+.dropdown .dropdown-menu {
+  transition: all 0.5s;
+  overflow: hidden;
+  transform-origin: top center;
+  transform: scale(1, 0);
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+}
+
+.navbar .container .navbar-brand {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.navbar .container .navbar-brand span {
+  color: #a51129;
+}
+
+@media (max-width: 800px) {
+  .navbar #container-mobile {
+    padding: 5px 0 10px !important;
+  }
+
+  .navbar #container-mobile nav ul li {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .navbar .container #nav-pc {
+    display: none;
+  }
+
+  .navbar .container .menu-and-cart #menu-icon {
+    display: inline-block;
+  }
+}
+
 .footer {
   background: #000;
   color: #8a8a8a;
@@ -11279,32 +11308,5 @@ body {
   background-color: white;
   margin: 10px 0;
   width: 100%;
-}
-
-@media (max-width: 800px) {
-  .navbar #container-mobile {
-    padding: 5px 0 10px !important;
-  }
-
-  .navbar #container-mobile nav ul li {
-    margin-bottom: 10px;
-    display: block;
-  }
-
-  .navbar .container #nav-pc {
-    display: none;
-  }
-
-  .navbar .container .menu-and-cart #menu-icon {
-    display: inline-block;
-  }
-
-  .header .container {
-    justify-content: center;
-  }
-
-  .header .container .col {
-    text-align: center;
-  }
 }
 

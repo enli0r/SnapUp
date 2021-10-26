@@ -14,40 +14,9 @@ body{
     background: white;
 }
 
-.dropdown {
-    .dropdown-menu {
-        transition: all 0.5s;
-        overflow: hidden;
-        transform-origin: top center;
-        transform: scale(1,0);
-        display: block;
-    }
-    &:hover {
-        .dropdown-menu {
-            transform: scale(1);
-        }
-    }
-}
-
 .container-parent{
     display: flex;
     justify-content: center;
-}
-
-
-.navbar{
-    .container{
-        .navbar-brand{
-            text-transform: uppercase;
-            font-size: 32px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-family: 'Nunito Sans', sans-serif;
-            span{
-                color: $crvena;
-            }
-        }
-    }
 }
 
 //Header
@@ -324,121 +293,8 @@ body{
     }
 }
 
-
-//Footer
-.footer{
-    background: #000;
-    color: #8a8a8a;
-    padding: 60px 0 20px;
-    border: none;
-
-    .col-3{
-        min-width: 270px;
-        margin: 15px auto;
-        text-align: center;
-    }
-
-    #fcol-1{
-        h5{
-            color: white;
-            font-size: 20px;
-            font-family: 'Nunito Sans', sans-serif;
-            margin: 0 0 10px;
-        }
-        p{
-            font-size: 14px;
-        }
-
-        img{
-            width: 45%;
-            height: 40px;
-        }
-    }
-
-    #fcol-2{
-        h1{
-            font-size: 34px;
-            text-transform: uppercase;
-            color: white;
-            margin: 0 0 10px;
-            font-family: 'Nunito Sans', sans-serif;
-            border: 1px solid white;
-            padding: 10px;
-            span{
-                color: $crvena;
-            }
-        }
-
-        p{
-            font-size: 14px;
-            text-transform: capitalize;
-        }
-    }
-
-    #fcol-3, #fcol-4{
-        h5{
-            font-size: 20px;
-            color: white;
-            font-family: 'Nunito Sans', sans-serif;
-            margin: 0 0 10px;
-        }
-        
-        li{
-            list-style-type: none;
-            
-            a{
-                font-size: 16px;
-                color: #8a8a8a;
-                &:hover{
-                    color: $crvena;
-                    text-decoration: none;
-                    transition: all 0.2s ease-in-out;
-                }
-            }
-        }
-    }
-
-    .copyright{
-        text-align: center;
-        hr{
-            background-color: white;
-            margin: 10px 0;
-            width: 100%;
-        }
-    }
-
-
-}
-
 //Media Query for navbar
 @media (max-width: 800px){
-
-
-    //Collapse-box
-    .navbar{
-        #container-mobile{
-            padding: 5px 0 10px !important;
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 10px;
-                        display: block;
-                    }
-                }
-            }
-        }
-        .container{
-            #nav-pc{
-                display: none;
-            }
-            .menu-and-cart{
-                #menu-icon{
-                    display: inline-block;
-                }
-            }
-        }
-    }
-
     //Header-text-centering
     .header{
         .container{
