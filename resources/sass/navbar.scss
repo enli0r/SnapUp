@@ -14,6 +14,8 @@
 }
 
 .navbar{
+    background-color: white;
+    position: relative;
     .container{
         .navbar-brand{
             text-transform: uppercase;
@@ -24,6 +26,10 @@
             span{
                 color: $crvena;
             }
+        }
+
+        .navbar-toggler{
+            display: none;
         }
     }
 }
@@ -51,6 +57,40 @@
                 #menu-icon{
                     display: inline-block;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .navbar{
+        .container{
+            .navbar-toggler{
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 101;
+            }
+
+            .sidebar{
+                background-color: lightgray;
+                position: fixed;
+                right: 0px;
+                top: 0px;
+                width: 0px;
+                height: 100%;
+                z-index: 100;
+                text-align: center;
+                overflow-x: hidden; //disable horiznotal scroll
+                transition: 0.3s;
+                ul{
+                    margin-top: 100px;
+                }
+            }
+
+            .clicked{
+                width: 300px;
             }
         }
     }

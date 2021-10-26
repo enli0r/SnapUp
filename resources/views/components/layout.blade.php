@@ -14,7 +14,9 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
+
         {{$slot}}
+        
         <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>

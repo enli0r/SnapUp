@@ -11195,6 +11195,11 @@ body {
   transform: scale(1);
 }
 
+.navbar {
+  background-color: white;
+  position: relative;
+}
+
 .navbar .container .navbar-brand {
   text-transform: uppercase;
   font-size: 32px;
@@ -11205,6 +11210,10 @@ body {
 
 .navbar .container .navbar-brand span {
   color: #a51129;
+}
+
+.navbar .container .navbar-toggler {
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -11223,6 +11232,37 @@ body {
 
   .navbar .container .menu-and-cart #menu-icon {
     display: inline-block;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar .container .navbar-toggler {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+  }
+
+  .navbar .container .sidebar {
+    background-color: lightgray;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+
+  .navbar .container .sidebar ul {
+    margin-top: 100px;
+  }
+
+  .navbar .container .clicked {
+    width: 300px;
   }
 }
 

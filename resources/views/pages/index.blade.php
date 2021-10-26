@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar />
-    <x-cat_navbar />
+    <x-category-navbar />
 
     <div class="header container-parent">
         <div class="container">

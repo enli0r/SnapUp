@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-require 'admin.php';
-
 //Pages
 Route::get('/', 'PagesController@index')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
@@ -25,15 +23,12 @@ Route::post('/register', 'RegisterController@store'); //Inheriting the name regi
 
 //Login
 Route::get('/login', 'LoginController@index')->name('login');
-Route::post('/login', 'LoginController@store'); //Inheriting the name register
+Route::post('/login', 'LoginController@store'); //Inheriting the name login
 
 //Logout
 Route::post('/logout', 'LogoutController@store')->name('logout'); //Has to be post request
 
 //Products
-
-
-
 Route::group(['prefix' => 'products'], function(){
     Route::get('/', 'ProductsController@index')->name('products'); 
 });
