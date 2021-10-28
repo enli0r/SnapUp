@@ -23,42 +23,44 @@
             font-weight: 600;
             letter-spacing: 1px;
             font-family: 'Nunito Sans', sans-serif;
+            color: rgb(30,30,30);
             span{
                 color: $crvena;
             }
         }
 
-        .navbar-toggler{
+        .navbar-toggler, .close-toggler{
             display: none;
-        }
-    }
-}
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 101;
 
-@media (max-width: 800px){
+            &:focus{
+                outline: none;
+            }
+        }
 
-    //Collapse-box
-    .navbar{
-        #container-mobile{
-            padding: 5px 0 10px !important;
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 10px;
-                        display: block;
-                    }
-                }
+        .close-toggler{
+            width: 53px;
+            height: 38px;
+            text-align: center;
+            border-radius: 0.25rem;
+            color: white;
+            border: 1px solid gray;
+            vertical-align: middle;
+            padding: 0;
+            
+
+            .close-icon{
+                width: 40%;
+                height: 50%;
+
+
             }
+            
         }
-        .container{
-            #nav-pc{
-                display: none;
-            }
-            .menu-and-cart{
-                #menu-icon{
-                    display: inline-block;
-                }
-            }
-        }
+
     }
 }
 
@@ -67,14 +69,10 @@
         .container{
             .navbar-toggler{
                 display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                z-index: 101;
             }
 
             .sidebar{
-                background-color: lightgray;
+                background-color: rgb(30,30,30);
                 position: fixed;
                 right: 0px;
                 top: 0px;
@@ -84,8 +82,22 @@
                 text-align: center;
                 overflow-x: hidden; //disable horiznotal scroll
                 transition: 0.3s;
-                ul{
+
+                .navbar-nav{
                     margin-top: 100px;
+
+                    .nav-item{
+                        .nav-link{
+                            color: white;
+                            width: 100%;
+                            font-weight: 500;
+                            
+                            &:hover{
+                                background: rgba(200,200,200, 0.5);
+                            }
+                            
+                        }
+                    }
                 }
             }
 

@@ -37331,8 +37331,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (function(module, exports) {
 
 $(function () {
-  $('.navbar-toggler').on('click', function () {
+  $('.navbar-toggler-icon').on('click', function (event) {
     $('#sidebar').toggleClass('clicked');
+    $('.navbar').toggleClass('navbar-dark');
+  });
+});
+$(function () {
+  $(document).on('click', function (event) {
+    var opened = $('#sidebar').hasClass('clicked');
+    var clickaway = $(event.target);
+
+    if (opened) {
+      $('.navbar-toggler').css('display', 'none');
+      $('.close-toggler').css('display', 'block');
+
+      if (!clickaway.hasClass('navbar-toggler-icon') && !clickaway.hasClass('sidebar') && !clickaway.hasClass('nav-link')) {
+        $('.navbar-toggler-icon').trigger('click');
+      }
+    } else {
+      $('.navbar-toggler').css('display', 'block');
+      $('.close-toggler').css('display', 'none');
+    }
   });
 });
 
@@ -37356,8 +37375,8 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/MAMP/htdocs/snapup/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/snapup/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\snapup\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\snapup\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

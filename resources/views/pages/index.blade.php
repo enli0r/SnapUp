@@ -4,7 +4,7 @@
 
     <div class="header">
         <div class="container">
-                <div class="col">
+                <div class="header-wrapper">
                     <h1>give your<br>workout<br>a new style!</h1>
                     <p>Success isn't always about greatness. It's about consistency. Consistent hard work gains success. Greatness will come.</p>
                     <a href="" class="btn btn-primary">Explore Now</a>
@@ -137,16 +137,16 @@
     </section>
 
     <!--Exclusive offer-->
-    <section class="exclusive-offer container-parent">
+    <section class="exclusive-offer">
         <div class="container">
-            <div class="row">
-                <div class="col col-6">
+            <div class="exclusive-offer-wrapper">
+                <div class="exclusive-offer-product">
                     <img src="images/exclusive5.png" alt="">
                 </div>
             
-                <div class="col col-5 offer-desc">
-                    <p class = "exclusive-text">Exclusively Avaliable on SnapUp</p>
-                    <h2 class = "exclusive-text">addidas vendor</h2>
+                <div class="offer-description">
+                    <p>Exclusively Avaliable on SnapUp</p>
+                    <h2>addidas vendor</h2>
                     <small>The Addidas Vendor are designed to protect your feet when running, provide traction on different surfaces, cushion landing shock and support your feet.</small>
                     <a href="" class="btn btn-primary">buy now!</a>
                 </div>
@@ -196,7 +196,7 @@
     <!--Brands-->
     <section class="brands">
         <div class="container">
-            <div class="brands-wrapper grid-container">
+            <div class="brands-wrapper">
                 <div class="grid-item">
                     <img src="images/logo-godrej.png" alt="">
                 </div>

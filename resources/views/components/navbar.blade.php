@@ -1,10 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="{{route('home')}}"><span>s</span>nap <span>u</span>p</a>
-    
-      <button class="navbar-toggler" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <button type="button" class="close close-toggler" aria-label="Close">
+      <img class="close-icon" src="../public/images/cancel.png" alt="">
+    </button>
+      
 
     <div class="sidebar" id="sidebar">
       <ul class="navbar-nav mr-auto">
