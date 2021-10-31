@@ -16,6 +16,7 @@
 .navbar{
     background-color: white;
     position: relative;
+
     .container{
         .navbar-brand{
             text-transform: uppercase;
@@ -29,59 +30,60 @@
             }
         }
 
-        .navbar-toggler, .close-toggler{
+        .sidebar{
+            width: auto;
+            position: initial;
+
+            .nav-item{
+                .nav-link{
+                    color: rgb(80, 80, 80);
+                }
+            }
+        }
+
+        .navbar-toggler-icon, .close-icon{
             display: none;
+            width: 55px;
+            height: 40px;
+            border-radius: 0.3rem;
+            border: 1px solid lightgray;
             position: absolute;
             top: 20px;
             right: 20px;
             z-index: 101;
-
-            &:focus{
-                outline: none;
-            }
         }
 
-        .close-toggler{
-            width: 53px;
-            height: 38px;
-            text-align: center;
-            border-radius: 0.25rem;
-            color: white;
-            border: 1px solid gray;
-            vertical-align: middle;
-            padding: 0;
-            
-
-            .close-icon{
-                width: 40%;
-                height: 50%;
-
-
-            }
-            
+        .close-icon{
+            padding: 10px 15px;
+            color: lightgray;
         }
 
+        .navbar-toggler-icon{
+            padding: 15px;
+        }
     }
 }
 
 @media (max-width: 991px){
     .navbar{
         .container{
-            .navbar-toggler{
+
+            .navbar-toggler-icon{
                 display: block;
             }
 
+
             .sidebar{
-                background-color: rgb(30,30,30);
+                width: 0px;
+                height: 100%;
                 position: fixed;
                 right: 0px;
                 top: 0px;
-                width: 0px;
-                height: 100%;
                 z-index: 100;
+                background-color: rgb(30,30,30);
                 text-align: center;
-                overflow-x: hidden; //disable horiznotal scroll
-                transition: 0.3s;
+                overflow-x: hidden;
+                transition: 0.2s;
 
                 .navbar-nav{
                     margin-top: 100px;
@@ -104,6 +106,7 @@
             .clicked{
                 width: 300px;
             }
+
         }
     }
 }

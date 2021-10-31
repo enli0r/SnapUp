@@ -11229,52 +11229,53 @@ section .container .section-title #rectangle {
   color: #a51129;
 }
 
-.navbar .container .navbar-toggler,
-.navbar .container .close-toggler {
+.navbar .container .sidebar {
+  width: auto;
+  position: initial;
+}
+
+.navbar .container .sidebar .nav-item .nav-link {
+  color: #505050;
+}
+
+.navbar .container .navbar-toggler-icon,
+.navbar .container .close-icon {
   display: none;
+  width: 55px;
+  height: 40px;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 101;
 }
 
-.navbar .container .navbar-toggler:focus,
-.navbar .container .close-toggler:focus {
-  outline: none;
+.navbar .container .close-icon {
+  padding: 10px 15px;
+  color: lightgray;
 }
 
-.navbar .container .close-toggler {
-  width: 53px;
-  height: 38px;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: white;
-  border: 1px solid gray;
-  vertical-align: middle;
-  padding: 0;
-}
-
-.navbar .container .close-toggler .close-icon {
-  width: 40%;
-  height: 50%;
+.navbar .container .navbar-toggler-icon {
+  padding: 15px;
 }
 
 @media (max-width: 991px) {
-  .navbar .container .navbar-toggler {
+  .navbar .container .navbar-toggler-icon {
     display: block;
   }
 
   .navbar .container .sidebar {
-    background-color: #1e1e1e;
+    width: 0px;
+    height: 100%;
     position: fixed;
     right: 0px;
     top: 0px;
-    width: 0px;
-    height: 100%;
     z-index: 100;
+    background-color: #1e1e1e;
     text-align: center;
     overflow-x: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .navbar .container .sidebar .navbar-nav {

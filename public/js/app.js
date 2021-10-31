@@ -37331,26 +37331,30 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (function(module, exports) {
 
 $(function () {
-  $('.navbar-toggler-icon').on('click', function (event) {
+  $('.navbar-toggler-icon').on('click', function () {
     $('#sidebar').toggleClass('clicked');
-    $('.navbar').toggleClass('navbar-dark');
+    $('.navbar-toggler-icon').css('display', 'none');
+    $('.close-icon').css('display', 'block');
+  });
+  $('.close-icon').on('click', function () {
+    $('#sidebar').toggleClass('clicked');
+    $('.navbar-toggler-icon').css('display', 'block');
+    $('.close-icon').css('display', 'none');
   });
 });
 $(function () {
-  $(document).on('click', function (event) {
-    var opened = $('#sidebar').hasClass('clicked');
-    var clickaway = $(event.target);
+  $(window).resize(function () {
+    if ($(window).width() > 991) {
+      $('.close-icon').css('display', 'none');
+      $('.navbar-toggler-icon').css('display', 'none');
+    }
 
-    if (opened) {
-      $('.navbar-toggler').css('display', 'none');
-      $('.close-toggler').css('display', 'block');
+    if ($(window).width() < 991 && $('#sidebar').hasClass('clicked')) {
+      $('.close-icon').css('display', 'block');
+    }
 
-      if (!clickaway.hasClass('navbar-toggler-icon') && !clickaway.hasClass('sidebar') && !clickaway.hasClass('nav-link')) {
-        $('.navbar-toggler-icon').trigger('click');
-      }
-    } else {
-      $('.navbar-toggler').css('display', 'block');
-      $('.close-toggler').css('display', 'none');
+    if ($(window).width() < 991 && !$('#sidebar').hasClass('clicked')) {
+      $('.navbar-toggler-icon').css('display', 'block');
     }
   });
 });
