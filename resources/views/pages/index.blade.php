@@ -158,9 +158,12 @@
     <section class="testimonial">
         <div class="container">
             <div class="testimonial-wrapper grid-container">
-
                 <div class="grid-item">
-                    <i class="fa fa-quote-left" aria-hidden="true">&#x201C;</i>
+                    <div class="quotes">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                    
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
                     <img src="images/user-1.png" alt="">
                     <div class="user-name">
@@ -170,7 +173,11 @@
                 </div>
 
                 <div class="grid-item">
-                    <i class="fa fa-quote-left" aria-hidden="true">&#x201C;</i>
+                    <div class="quotes">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                                    
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
                     <img src="images/user-2.png" alt="">
                     <div class="user-name">
@@ -180,7 +187,11 @@
                 </div>
 
                 <div class="grid-item">
-                    <i class="fa fa-quote-left" aria-hidden="true">&ldquo;</i>
+                    <div class="quotes">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                    
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
                     <img src="images/user-3.png" alt="">
                     <div class="user-name">
