@@ -1,3 +1,4 @@
+//sidebar toggle
 $(function (){
     $('.navbar-toggler-icon').on('click', function(){
         $('#sidebar').toggleClass('clicked');
@@ -12,6 +13,7 @@ $(function (){
     })
 });
 
+//automatic navbar toggler display manager when resizing
 $(function(){
     $(window).resize(function() {
         if ($(window).width() > 991) {
@@ -28,3 +30,13 @@ $(function(){
         }
     });
 });
+
+//clickaway functionality
+$(function(){
+    $(document).on('click', function(event){
+        var element = $(event.target);
+        if($('#sidebar').hasClass('clicked') && !(element.hasClass('close-icon') || element.hasClass('sidebar') || element.hasClass('navbar-toggler-icon') || element.hasClass('nav-link'))){
+            $('.close-icon').trigger('click');
+        }
+    });
+})

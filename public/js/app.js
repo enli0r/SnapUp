@@ -37358,6 +37358,15 @@ $(function () {
     }
   });
 });
+$(function () {
+  $(document).on('click', function (event) {
+    var element = $(event.target);
+
+    if ($('#sidebar').hasClass('clicked') && !(element.hasClass('close-icon') || element.hasClass('sidebar') || element.hasClass('navbar-toggler-icon') || element.hasClass('nav-link'))) {
+      $('.close-icon').trigger('click');
+    }
+  });
+});
 
 /***/ }),
 
