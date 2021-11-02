@@ -49,47 +49,15 @@
 
                 @foreach ($products as $product)
                     @if ($product->is_featured == 1)
-                    <div class="grid-item">
-                        <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
-                        <div class="basic-info">
-                            <h5>{{ $product->name }}</h5>
-                            <p>{{ $product->price }}</p>
+                        <div class="grid-item">
+                            <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
+                            <div class="basic-info">
+                                <h5>{{ $product->name }}</h5>
+                                <p>{{ $product->price }}</p>
+                            </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
-
-                {{-- <div class="grid-item">
-                    <a href=""><img src="images/product-1.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Red T-Shirt</h5>
-                        <p>$30.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-2.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Sneakers</h5>
-                        <p>$100.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-3.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Sweatsuit</h5>
-                        <p>$60.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-4.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Blue T-Shirt</h5>
-                        <p>$50.00</p>
-                    </div>
-                </div> --}}
 
             </div>
         </div>
@@ -102,39 +70,20 @@
                 <h2>latest products</h2>
                 <div id="rectangle"></div>
             </div>
+
             <div class="latest-products-wrapper grid-container">
 
-                <div class="grid-item">
-                    <a href=""><img src="images/product-5.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Grey shoes</h5>
-                        <p>$80.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-6.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Puma T-Shirt</h5>
-                        <p>$40.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-7.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Socks</h5>
-                        <p>$5.00</p>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/product-8.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Watch</h5>
-                        <p>$500.00</p>
-                    </div>
-                </div>
+                @foreach ($products as $product)
+                    @if ($loop->remaining < 4 )
+                        <div class="grid-item">
+                            <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
+                            <div class="basic-info">
+                                <h5>{{ $product->name }}</h5>
+                                <p>{{ $product->price }}</p>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -161,47 +110,25 @@
     <section class="testimonial">
         <div class="container">
             <div class="testimonial-wrapper grid-container">
-                <div class="grid-item">
-                    <div class="quotes">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right" aria-hidden="true"></i>
-                    </div>
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
-                    <img src="images/user-1.png" alt="">
-                    <div class="user-name">
-                        <h3>Caitlyn</h3>
-                        <h3>Orvel</h3>
-                    </div>
-                </div>
 
-                <div class="grid-item">
-                    <div class="quotes">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right" aria-hidden="true"></i>
-                    </div>
-                                    
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
-                    <img src="images/user-2.png" alt="">
-                    <div class="user-name">
-                        <h3>Theodore</h3>
-                        <h3>Smith</h3>
-                    </div>
-                </div>
 
-                <div class="grid-item">
-                    <div class="quotes">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                @foreach ($testimonials as $testimonial)
+                    <div class="grid-item">
+                        <div class="quotes">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+                        
+                        <p>{{ $testimonial->description }}</p>
+
+                        <div class="image-and-name">
+                            <img src="{{ $testimonial->image }}" alt="">
+                            
+                            <h3 class="user-name">{{ $testimonial->name }}</h3>
+                        </div>
+                        
                     </div>
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quod. Est excepturi reiciendis sed minus tempore ad quas hic ipsam, exercitationem quos, laboriosam natus consequuntur totam esse quibusdam cum at.</p>
-                    <img src="images/user-3.png" alt="">
-                    <div class="user-name">
-                        <h3>Jennifer</h3>
-                        <h3>Lawrence</h3>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
         </div>

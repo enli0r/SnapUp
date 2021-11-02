@@ -11120,7 +11120,11 @@ section .container .section-title #rectangle {
   color: #777;
 }
 
-.testimonial-wrapper .grid-item img {
+.testimonial-wrapper .grid-item .image-and-name {
+  margin-top: auto;
+}
+
+.testimonial-wrapper .grid-item .image-and-name img {
   width: 80px;
   height: 80px;
   margin-top: 15px;
@@ -11128,11 +11132,8 @@ section .container .section-title #rectangle {
   border-radius: 50%;
 }
 
-.testimonial-wrapper .grid-item .user-name {
+.testimonial-wrapper .grid-item .image-and-name h3 {
   text-align: center;
-}
-
-.testimonial-wrapper .grid-item .user-name h3 {
   font-size: 16px;
   color: #777;
   font-weight: bold;
