@@ -37330,6 +37330,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+//sidebar toggle
 $(function () {
   $('.navbar-toggler-icon').on('click', function () {
     $('#sidebar').toggleClass('clicked');
@@ -37341,7 +37342,8 @@ $(function () {
     $('.navbar-toggler-icon').css('display', 'block');
     $('.close-icon').css('display', 'none');
   });
-});
+}); //automatic navbar toggler display manager when resizing
+
 $(function () {
   $(window).resize(function () {
     if ($(window).width() > 991) {
@@ -37357,7 +37359,8 @@ $(function () {
       $('.navbar-toggler-icon').css('display', 'block');
     }
   });
-});
+}); //clickaway functionality
+
 $(function () {
   $(document).on('click', function (event) {
     var element = $(event.target);

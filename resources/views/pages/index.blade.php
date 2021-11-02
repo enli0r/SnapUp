@@ -22,26 +22,16 @@
             </div>
             <div class="featured-categories-wrapper grid-container">
 
-                <div class="grid-item">
-                    <a href=""><img src="images/category-1.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Casual</h5>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/category-2.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Lifestyle</h5>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <a href=""><img src="images/category-3.jpg" alt=""></a>
-                    <div class="basic-info">
-                        <h5>Sport</h5>
-                    </div>
-                </div>
+                @foreach ($categories as $category)
+                    @if ($category->is_featured == 1)
+                        <div class="grid-item">
+                            <a href=""><img src="{{ $category->image }}" alt=""></a>
+                            <div class="basic-info">
+                                <h5>{{ $category->name }}</h5>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -57,7 +47,19 @@
 
             <div class="featured-products-wrapper grid-container">
 
-                <div class="grid-item">
+                @foreach ($products as $product)
+                    @if ($product->is_featured == 1)
+                    <div class="grid-item">
+                        <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
+                        <div class="basic-info">
+                            <h5>{{ $product->name }}</h5>
+                            <p>{{ $product->price }}</p>
+                        </div>
+                    </div>
+                    @endif
+                @endforeach
+
+                {{-- <div class="grid-item">
                     <a href=""><img src="images/product-1.jpg" alt=""></a>
                     <div class="basic-info">
                         <h5>Red T-Shirt</h5>
@@ -87,7 +89,7 @@
                         <h5>Blue T-Shirt</h5>
                         <p>$50.00</p>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>

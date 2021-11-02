@@ -11,10 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //Kada se seeduje onda se izvrsava ovaj kod
-        $this->call('CategoriesTableSeeder'); 
-        $this->call('ProductsTableSeeder');
-        $this->call('ProductImagesTableSeeder');
+        // $this->call('CategoriesTableSeeder'); 
+
         
     }
 }

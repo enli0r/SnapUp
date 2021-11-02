@@ -2,26 +2,22 @@
 
 namespace App;
 
+use App\ProductImage;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     protected $table = 'products';
 
-    protected $fillable = ['name' ,'slug', 'description', 'parent_id', 'featured','menu','image', 'sex'];
+    protected $fillable = ['name', 'code', 'price', 'online_price', 'description', 'quantity', 'status', 'is_featured'];
 
     protected $casts = [
-        'parent_id' =>  'integer',
-        'featured'  =>  'boolean',
-        'menu'      =>  'boolean'
+        'status' => 'boolean',
+        'is_featured' => 'boolean'
     ];
 
-    public function parent(){
-        return $this->belongsTo('App\Category', 'parent_id');
-    }
-
     public function images(){
-        return $this->hasMany('App\ProductImage');
+        return $this->hasMany(ProductImage::class);
     }
 
 }

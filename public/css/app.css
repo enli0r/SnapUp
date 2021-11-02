@@ -11249,6 +11249,20 @@ section .container .section-title #rectangle {
   top: 20px;
   right: 20px;
   z-index: 101;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navbar .container .navbar-toggler-icon:hover,
+.navbar .container .close-icon:hover {
+  cursor: pointer;
+}
+
+.navbar .container .navbar-toggler-icon:focus,
+.navbar .container .close-icon:focus {
+  outline: none;
 }
 
 .navbar .container .close-icon {

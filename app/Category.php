@@ -8,19 +8,18 @@ class Category extends Model
 {
     protected $table = 'categories';
 
-    protected $fillable = ['name', 'slug', 'parent_id', 'image','sex'];
+    protected $fillable = ['name', 'slug', 'description', 'parent_id', 'is_featured', 'image'];
 
-
-    public function parent(){
-        return $this->belongsTo('App\Category', 'parent_id');
-    }
+    protected $casts = [
+        'featured' => 'boolean',
+    ];
 
     public function children(){
-        return $this->hasMany('App\Category', 'parent_id');
+        return $this->hasMany(Category::class, 'parent_id');
     }
 
-    public function products(){
-        return $this->hasMany('App\Product', 'parent_id');
+    public function parent(){
+        return $this->belongsTo(Category::class, 'parent_id');
     }
-
+    
 }
