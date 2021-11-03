@@ -2,7 +2,6 @@
     <x-navbar />
     <x-category-navbar />
 
-    {{-- header --}}
     <div class="header">
         <div class="container">
                 <div class="header-wrapper">
@@ -13,7 +12,6 @@
         </div>
     </div>
 
-    <!-- featured categories -->
     <section class="featured-categories">
         <div class="container">
             <div class="section-title">
@@ -36,7 +34,6 @@
         </div>
     </section>
 
-    <!-- featured products -->
     <section class="featured-products">
         <div class="container">
 
@@ -63,7 +60,6 @@
         </div>
     </section>
 
-    <!-- latest products -->
     <section class="latest-products">
         <div class="container">
             <div class="section-title">
@@ -88,7 +84,6 @@
         </div>
     </section>
 
-    <!-- exclusive offer -->
     <section class="exclusive-offer">
         <div class="container">
             <div class="exclusive-offer-wrapper">
@@ -106,7 +101,6 @@
         </div>
     </section>
 
-    <!-- testimonial -->
     <section class="testimonial">
         <div class="container">
             <div class="testimonial-wrapper grid-container">
@@ -134,7 +128,6 @@
         </div>
     </section>
 
-    <!-- brands -->
     <section class="brands">
         <div class="container">
             <div class="brands-wrapper">

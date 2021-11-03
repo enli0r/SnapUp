@@ -6,7 +6,6 @@
     padding: 0;
 }
 
-
 body{
     color: #2b2b2b;
     font-family: 'Nunito Sans', sans-serif;
@@ -14,7 +13,6 @@ body{
     background: white;
 }
 
-//Header
 .header{
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) , url('https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80');
     background-position: center;
@@ -63,8 +61,7 @@ body{
     }
 
 }
-        
-     
+             
 section{
     margin: 80px auto;
     .container{
@@ -275,7 +272,6 @@ section{
     }
     
 }
-
 
 @media (max-width: 767px){
     .header{
