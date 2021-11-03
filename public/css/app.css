@@ -10986,26 +10986,46 @@ section .container .section-title #rectangle {
   border-radius: 5px;
 }
 
-.grid-container {
+.featured-categories-wrapper,
+.featured-products-wrapper,
+.latest-products-wrapper,
+.testimonial-wrapper,
+.brands-wrapper {
   display: grid;
   justify-content: space-between;
   row-gap: 50px;
 }
 
-.grid-container .grid-item img {
+.featured-categories-wrapper .grid-item img,
+.featured-products-wrapper .grid-item img,
+.latest-products-wrapper .grid-item img,
+.testimonial-wrapper .grid-item img,
+.brands-wrapper .grid-item img {
   width: 100%;
 }
 
-.grid-container .grid-item .basic-info {
+.featured-categories-wrapper .grid-item .basic-info,
+.featured-products-wrapper .grid-item .basic-info,
+.latest-products-wrapper .grid-item .basic-info,
+.testimonial-wrapper .grid-item .basic-info,
+.brands-wrapper .grid-item .basic-info {
   margin-top: 15px;
 }
 
-.grid-container .grid-item .basic-info h5 {
+.featured-categories-wrapper .grid-item .basic-info h5,
+.featured-products-wrapper .grid-item .basic-info h5,
+.latest-products-wrapper .grid-item .basic-info h5,
+.testimonial-wrapper .grid-item .basic-info h5,
+.brands-wrapper .grid-item .basic-info h5 {
   font-size: 18px;
   font-weight: 400;
 }
 
-.grid-container .grid-item .basic-info p {
+.featured-categories-wrapper .grid-item .basic-info p,
+.featured-products-wrapper .grid-item .basic-info p,
+.latest-products-wrapper .grid-item .basic-info p,
+.testimonial-wrapper .grid-item .basic-info p,
+.brands-wrapper .grid-item .basic-info p {
   font-size: 16px;
   font-weight: 300;
 }
@@ -11177,7 +11197,8 @@ section .container .section-title #rectangle {
   .featured-products-wrapper,
   .latest-products-wrapper,
   .testimonial-wrapper,
-  .brands-wrapper {
+  .brands-wrapper,
+  .products-wrapper {
     justify-content: center !important;
   }
 }
@@ -11189,7 +11210,8 @@ section .container .section-title #rectangle {
 
   .featured-products-wrapper,
   .latest-products-wrapper,
-  .testimonial-wrapper {
+  .testimonial-wrapper,
+  .products-wrapper {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -11394,5 +11416,54 @@ section .container .section-title #rectangle {
   background-color: white;
   margin: 10px 0;
   width: 100%;
+}
+
+.products .products-wrapper {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 50px;
+  grid-template-columns: repeat(auto-fit, 250px);
+}
+
+.products .products-wrapper a {
+  transition: 1s;
+  border: none;
+  text-decoration: none;
+}
+
+.products .products-wrapper a:hover {
+  border: 1px solid black;
+}
+
+.products .products-wrapper .grid-item {
+  color: #505050;
+}
+
+.products .products-wrapper .grid-item .product-image {
+  width: 100%;
+}
+
+.products .products-wrapper .grid-item .separator {
+  height: 1px;
+  width: 90%;
+  background-color: black;
+  border-radius: 5px;
+  margin: 15px auto auto auto;
+}
+
+.products .products-wrapper .grid-item .product-info {
+  margin-top: 15px;
+}
+
+.products .products-wrapper .grid-item .product-info .product-name {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.products .products-wrapper .grid-item .product-info .product-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4040be;
 }
 

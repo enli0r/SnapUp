@@ -30,5 +30,5 @@ Route::post('/logout', 'LogoutController@store')->name('logout'); //Has to be po
 
 //Products
 Route::group(['prefix' => 'products'], function(){
-    Route::get('/', 'ProductsController@index')->name('products'); 
+    Route::get('/', 'ProductController@index')->name('products'); 
 });
