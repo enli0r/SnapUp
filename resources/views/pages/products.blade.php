@@ -5,7 +5,7 @@
             <div class="products-wrapper grid-container">
                 @foreach ($products as $product)
 
-                    <a href="#">
+                    <a href="{{ route('show', $product->id) }}">
                         <div class="grid-item">
                             <img class="product-image" src="{{ $product->images->first()->url }}" alt="">
                             

@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Product;
+use App\Attribute;
+use App\AttributeValue;
+use App\ProductAttribute;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\AttributeValueProductAttribute;
 
 class ProductController extends Controller
 {
@@ -49,7 +53,11 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        $productAttributes = $product->attributes;
+        $attributes = Attribute::all();
+
+        return view('pages.show')->with(compact('product', 'productAttributes', 'attributes'));
     }
 
     /**

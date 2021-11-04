@@ -4,6 +4,7 @@ namespace App;
 
 use App\Attribute;
 use App\ProductImage;
+use App\AttributeValue;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -26,7 +27,7 @@ class Product extends Model
     }
 
     public function attributes(){
-        return $this->hasMany(Attribute::class);
+        return $this->hasMany(ProductAttribute::class);
     }
 
 }

@@ -21,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->decimal('online_price');
             $table->text('description')->nullable();
             $table->unsignedInteger('quantity');
-            //$table->foreignId('brand_id')->constrained();
             $table->boolean('status')->default(1);
             $table->boolean('is_featured')->default(0);
             $table->timestamps();

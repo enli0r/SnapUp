@@ -17,6 +17,7 @@ class CreateProductAttributesTable extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained();
             $table->foreignId('attribute_id')->constrained();
+            $table->string('value')->references('value')->on('attribute_values');
             $table->timestamps();
         });
     }
