@@ -1,3 +1,122 @@
-.product-details{
-    color: black;
+.product{
+
+    .container{
+        .product-wrapper{
+            display: grid;
+            grid-template-columns: 400px minmax(300px, 1fr);
+
+            
+
+            .product-image{
+                width: 100%;
+            }
+
+            .product-details{
+                padding: 20px;
+                text-align: left;
+                color: rgb(80,80,80);
+
+                .name{
+                    font-size: 28px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                    letter-spacing: 1.5px;
+                    
+                }
+
+                .code{
+                    font-size: 18px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    margin-bottom: 50px;
+
+                    span{
+                        font-weight: 600;
+                    }
+
+                }
+
+                .price{
+                    margin-bottom: 30px;
+
+                    .store-price{
+                        font-size: 18px;
+                        text-decoration: line-through;
+                    }
+    
+                    .online-price{
+                        font-weight: 600;
+                        font-size: 28px;
+                        margin-top: 0;
+                    }
+                }
+
+                .attribute-name{
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: rgb(80, 80, 80);
+                    margin-top: 30px;
+                }
+
+                .size{
+                    width: 38px;
+                    height: 38px;
+                    padding: 5px;
+                    border: 1px solid black;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    color: rgb(120, 120, 120);
+                    margin-right: 30px;
+                    margin-bottom: 20px;
+                    transition: all 0.3s;
+
+                    &:hover{
+                         background: $crvena;
+                         color: white;
+                         cursor: pointer;
+                    }
+
+                    .size-symbol{
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        font-size: 16px;
+                    }
+                }
+
+                .color{
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    margin-right: 30px;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+                .black{
+                    background: black;
+                }
+
+                .red{
+                    background: $crvena;
+                }
+
+                .blue{
+                    background: rgb(17, 17, 133);
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .product-wrapper{
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 300px) !important;
+    }
 }

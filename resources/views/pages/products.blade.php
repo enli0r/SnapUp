@@ -1,5 +1,6 @@
 <x-layout>
     <x-navbar />
+    <x-category-navbar />
     <section class="products">
         <div class="container">
             <div class="products-wrapper grid-container">

@@ -1,0 +1,27 @@
+.category-navbar{
+    background: $crvena;
+
+
+    .category-navbar-wrapper{
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    a{
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: white;
+        margin: 0;
+        padding: 15px;
+
+        &:hover{
+            text-decoration: none;
+            background: rgba(0,0,0,0.3);
+        }
+        
+    }
+}

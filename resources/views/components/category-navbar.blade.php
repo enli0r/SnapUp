@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+{{-- <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-
+ --}}
 
 
         {{-- DROPDOWN --}}
 
-        <div class="collapse navbar-collapse">
+        {{-- <div class="collapse navbar-collapse">
 
             <ul class="navbar-nav mx-auto">
 
@@ -21,4 +21,17 @@
             </ul>
         </div>
     </div>  
+</nav> --}}
+
+<nav class="category-navbar">
+    <div class="container">
+        <div class="category-navbar-wrapper">
+            <a href="{{ route('products') }}">New collection</a>
+            <a href="{{ route('products') }}">All products</a>
+            <a href="{{ route('products') }}">Male</a>
+            <a href="{{ route('products') }}">Female</a>
+            <a href="{{ route('products') }}">Accessories</a>
+
+        </div>
+    </div>
 </nav>

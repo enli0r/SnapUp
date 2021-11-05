@@ -39,6 +39,6 @@
       <span class="navbar-toggler-icon"></span>
       
   
-      <img class="close-icon" src="../public/images/cancel.png" alt="">
+      <img class="close-icon" src="https://i.ibb.co/6RDhB9Q/cancel.png" alt="hehe">
     </div>
   </nav>

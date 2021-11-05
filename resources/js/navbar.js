@@ -16,16 +16,16 @@ $(function (){
 //automatic navbar toggler display manager when resizing
 $(function(){
     $(window).resize(function() {
-        if ($(window).width() > 991) {
+        if ($(window).width() > 992) {
            $('.close-icon').css('display', 'none');
            $('.navbar-toggler-icon').css('display', 'none');
         }
 
-        if ($(window).width() < 991 && $('#sidebar').hasClass('clicked')) {
+        if ($(window).width() < 992 && $('#sidebar').hasClass('clicked')) {
             $('.close-icon').css('display', 'block');
         }
         
-        if ($(window).width() < 991 && !($('#sidebar').hasClass('clicked'))) {
+        if ($(window).width() < 992 && !($('#sidebar').hasClass('clicked'))) {
             $('.navbar-toggler-icon').css('display', 'block');
         }
     });
