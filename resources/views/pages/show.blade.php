@@ -1,6 +1,4 @@
 <x-layout>
-    <x-navbar />
-    <x-category-navbar />
         <section class="product">
 
             <div class="container">
@@ -10,6 +8,22 @@
                     <div class="product-details grid-item">
                         <h2 class="name">{{ $product->name }}</h2>
                         <h2 class="code"><span>code</span>: {{ $product->code }}</h2>
+
+                        <div class="avaliability">
+                            <ul>
+                                @if ($product->quantity > 0)
+
+                                    <li id="avaliable">Avaliable</li>     
+
+                                @else
+
+                                    <li id="not-avaliable">Not avaliable</li>
+
+                                @endif
+                            </ul>
+                        </div>
+                        
+
                         <div class="price">
                             <h3 class="store-price">${{ $product->price }}</h3>
                         
@@ -60,6 +74,12 @@
                             @endforeach
                         @endforeach
                         
+                    </div>
+
+                    <div class="product-description grid-item">
+                        <h3>Product description</h3>
+                        <hr>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quisquam maiores placeat eligendi? Libero odio omnis dolorem et, itaque quasi consequatur sint earum. Officia cupiditate illum nobis quae, consectetur itaque.</p>
                     </div>
                 </div>
             </div>

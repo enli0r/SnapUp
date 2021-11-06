@@ -57,6 +57,8 @@ class ProductController extends Controller
         $productAttributes = $product->attributes;
         $attributes = Attribute::all();
 
+        dd($product->categories);
+
         return view('pages.show')->with(compact('product', 'productAttributes', 'attributes'));
     }
 

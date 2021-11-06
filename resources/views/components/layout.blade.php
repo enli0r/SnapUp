@@ -14,8 +14,10 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
-
+        <x-navbar />
+        <x-category-navbar />
         {{$slot}}
+        <x-footer />
         
         <script src="{{ asset('js/main.js') }}"></script>
     </body>

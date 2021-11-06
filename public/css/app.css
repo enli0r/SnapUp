@@ -11494,11 +11494,46 @@ section .container .section-title #rectangle {
   font-size: 18px;
   font-weight: 300;
   text-transform: capitalize;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .product .container .product-wrapper .product-details .code span {
   font-weight: 600;
+}
+
+.product .container .product-wrapper .product-details .avaliability {
+  margin-bottom: 30px;
+}
+
+.product .container .product-wrapper .product-details .avaliability ul {
+  color: #505050;
+  list-style-type: none;
+}
+
+.product .container .product-wrapper .product-details .avaliability ul #avaliable,
+.product .container .product-wrapper .product-details .avaliability ul #not-avaliable {
+  position: relative;
+  vertical-align: middle;
+}
+
+.product .container .product-wrapper .product-details .avaliability ul #avaliable::before,
+.product .container .product-wrapper .product-details .avaliability ul #not-avaliable::before {
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+}
+
+.product .container .product-wrapper .product-details .avaliability ul #avaliable::before {
+  background-image: url("https://i.ibb.co/DwYg7BC/green-circle.png");
+}
+
+.product .container .product-wrapper .product-details .avaliability ul #not-avaliable::before {
+  background-image: url("https://i.ibb.co/qBV5kBC/red-circle.png");
 }
 
 .product .container .product-wrapper .product-details .price {
@@ -11571,6 +11606,19 @@ section .container .section-title #rectangle {
 
 .product .container .product-wrapper .product-details .blue {
   background: #111185;
+}
+
+.product .container .product-wrapper .product-description {
+  margin-top: 40px;
+  color: #505050;
+  text-align: left;
+  width: 100%;
+}
+
+.product .container .product-wrapper .product-description h3 {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 767px) {

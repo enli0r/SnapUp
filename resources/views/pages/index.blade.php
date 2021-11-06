@@ -1,7 +1,4 @@
 <x-layout>
-    <x-navbar />
-    <x-category-navbar />
-
     <div class="header">
         <div class="container">
                 <div class="header-wrapper">
