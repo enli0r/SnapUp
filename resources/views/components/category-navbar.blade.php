@@ -3,7 +3,9 @@
         <div class="category-navbar-wrapper">
             <a href="{{ route('products') }}">All products</a>
             @foreach ($categories as $category)
-                <a href="{{ route('categories', $category->slug) }}">{{ $category->name }}</a>
+                @if ($category->parent_id == null)
+                    <a href="{{ route('categories', $category->slug) }}">{{ $category->name }}</a>
+                @endif
             @endforeach
         </div>
     </div>

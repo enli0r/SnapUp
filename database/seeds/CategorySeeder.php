@@ -47,5 +47,21 @@ class CategorySeeder extends Seeder
             'is_featured' => 0,
             'image' => null
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'clothes',
+            'slug' => 'men-clothes',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 4
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'clothes',
+            'slug' => 'women-clothes',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 5
+        ]);
     }
 }

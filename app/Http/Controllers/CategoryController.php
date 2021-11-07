@@ -12,6 +12,10 @@ class CategoryController extends Controller
 {
     public function show(Category $category){
 
-        return view('pages.products')->with('products', $category->products);
+        return view('pages.products')->with([
+            'products' => $category->products,
+            'child_categories' => $category->children,
+            
+        ]);
     }
 }

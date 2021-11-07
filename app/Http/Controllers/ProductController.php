@@ -59,14 +59,6 @@ class ProductController extends Controller
         $attributes = $product->attributes;
         $attributeProducts = $product->attributeProducts;
 
-        //dd($product->attributeProducts[0]->attributeValues);
-    
-
-        dd($product->attributes[0]->pivot->attributeValues);
-
-        $attributeValues = $product->attributes[0]->pivot->attributeValues();
-        dd($attributeValues);
-
         return view('pages.show')->with(compact('product', 'attributes', 'attributeProducts'));
     }
 
