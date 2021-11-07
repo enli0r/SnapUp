@@ -21,8 +21,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $child_categories = [];
 
-        return view('pages.products')->with(compact('products'));
+        return view('pages.products')->with(compact('products', 'child_categories'));
     }
 
     /**

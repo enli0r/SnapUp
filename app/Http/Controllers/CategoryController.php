@@ -15,7 +15,6 @@ class CategoryController extends Controller
         return view('pages.products')->with([
             'products' => $category->products,
             'child_categories' => $category->children,
-            
         ]);
     }
 }
