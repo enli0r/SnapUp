@@ -26,53 +26,42 @@
 
                         <div class="price">
                             <h3 class="store-price">${{ $product->price }}</h3>
-                        
+                       
                             <h3 class="online-price">${{ $product->online_price }}</h3>
 
                             <p>Listed price is only for online purchase!</p>
                         </div>
 
                         <hr>
-                        
 
-                        @foreach ($attributes as $attribute)
-                            <h1 class="attribute-name">avaliable {{ $attribute->name }}s</h1>
-                            @foreach ($productAttributes as $productAttribute)
-                                @if ($attribute->id == $productAttribute->attribute_id)
-                                    
-                                    @if ($attribute->name == 'Size')
-                                        <div class="size">
+                       @foreach ($attributes as $attribute)
+                           <p>{{ $attribute->name }}</p>
 
-                                            @php
-                                                $sizeSymbol = substr($productAttribute->value, 0,1);
-                                            @endphp
+                           <!-- cycling through attribute products associated with product -->
+                           @foreach ($attributeProducts as $attributeProduct) 
+                                <!-- cycling through attributeValues associated with current attribute through pivot table -->
+                               @foreach ($attributeProduct->attributeValues()->where('attribute_id', $attribute->id)->get() as $attributeValue)
 
+                                <!-- creating s/m/l symbols using first letter, it will change latter-->
+                                @php
+                                    $sizeSymbol = substr($attributeValue->value, 0,1);
+                                @endphp
 
-                                            <p class="size-symbol">{{$sizeSymbol}}</p>
-                                        </div>
+                                <!-- setting div class based on attribute and its value -->
+                                <div class="{{ $attribute->code }} {{ $attributeValue->value }}">
+
+                                    <!-- adding symbol only to size attribute -->
+                                    @if ($attribute->code == 'size')
+                                        <p class="size-symbol">{{ $sizeSymbol }}</p>
                                     @endif
 
-                                    @if ($attribute->name == 'Color') 
-                                        <div class="color 
-                                         @php
-                                            if($productAttribute->value == 'black'){
-                                                echo('black');
-                                            }else if($productAttribute->value == 'red'){
-                                                echo('red');
-                                            }else if($productAttribute->value == 'blue'){
-                                                echo('blue');
-                                            }
-                                        @endphp">
+                                </div>
 
-
-                                            <p class="size-symbol">{{$sizeSymbol}}</p>
-                                        </div>
-                                    @endif
-
-
-                                @endif
-                            @endforeach
-                        @endforeach
+                                   
+                               @endforeach
+                           @endforeach
+                           
+                       @endforeach
                         
                     </div>
 

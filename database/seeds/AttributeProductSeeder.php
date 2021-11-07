@@ -5,7 +5,7 @@ use App\Attribute;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ProductAttributeSeeder extends Seeder
+class AttributeProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,14 +19,11 @@ class ProductAttributeSeeder extends Seeder
         
         foreach($products as $product){
             foreach($attributes as $attribute){
-                foreach($attribute->values as $value){
-                    DB::table('product_attributes')->insert([
-                        'product_id' => $product->id,
-                        'attribute_id' => $attribute->id,
-                        'value' => $value->value,
-                    ]);
-                }
-            }
+                DB::table('attribute_product')->insert([
+                    'product_id' => $product->id,
+                    'attribute_id' => $attribute->id,
+                ]);
+        }
         }
         
     }

@@ -4,6 +4,7 @@ namespace App;
 
 use App\Product;
 use App\AttributeValue;
+use App\ProductAttribute;
 use Illuminate\Database\Eloquent\Model;
 
 class Attribute extends Model
@@ -20,4 +21,10 @@ class Attribute extends Model
     public function values(){
         return $this->hasMany(AttributeValue::class);
     }
+
+    //method for accessing products through pivot table
+    public function products(){
+        return $this->belongsToMany(Product::class)->using(AttributeProduct::class);
+    }
+
 }

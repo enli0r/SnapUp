@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Product;
+use App\CategoryProduct;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
@@ -22,9 +23,10 @@ class Category extends Model
     public function parent(){
         return $this->belongsTo(Category::class, 'parent_id');
     }
-
-    public function products(){
-        return $this->hasMany(Product::class);
-    }
     
+    //method for accessing products through pivot table
+    public function products(){
+        return $this->belongsToMany(Product::class)->using(CategoryProduct::class);
+    }
+
 }

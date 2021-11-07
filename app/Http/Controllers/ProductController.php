@@ -9,6 +9,7 @@ use App\ProductAttribute;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\AttributeValueProductAttribute;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -53,13 +54,20 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+
         $product = Product::find($id);
-        $productAttributes = $product->attributes;
-        $attributes = Attribute::all();
+        $attributes = $product->attributes;
+        $attributeProducts = $product->attributeProducts;
 
-        dd($product->categories);
+        //dd($product->attributeProducts[0]->attributeValues);
+    
 
-        return view('pages.show')->with(compact('product', 'productAttributes', 'attributes'));
+        dd($product->attributes[0]->pivot->attributeValues);
+
+        $attributeValues = $product->attributes[0]->pivot->attributeValues();
+        dd($attributeValues);
+
+        return view('pages.show')->with(compact('product', 'attributes', 'attributeProducts'));
     }
 
     /**
@@ -93,6 +101,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
+
 }

@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 
+Route::get('/categories/{category:slug}', 'CategoryController@show')->name('categories');
+
 //Register
 Route::get('/register', 'RegisterController@index')->name('register');
 Route::post('/register', 'RegisterController@store'); //Inheriting the name register
@@ -31,5 +33,5 @@ Route::post('/logout', 'LogoutController@store')->name('logout'); //Has to be po
 //Products
 Route::group(['prefix' => 'products'], function(){
     Route::get('/', 'ProductController@index')->name('products');
-    Route::get('/{id}', 'ProductController@show')->name('show');
+    Route::get('/{post:id}', 'ProductController@show')->name('show');
 });

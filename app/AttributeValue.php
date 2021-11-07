@@ -16,9 +16,9 @@ class AttributeValue extends Model
         return $this->belongsTo(Attribute::class);
     }
 
-    public function productAtrributes(){
-        return $this->belongsToMany(ProductAttribute::class);
+    //method for defining relationship with attributeProduct through pivot table
+    public function attributeProducts(){
+        return $this->belongsToMany(AttributeProduct::class, 'attribute_value_attribute_product', 'attribute_value_id', 'attribute_product_id')->using(AttributeValueAttributeProduct::class);
     }
-
 
 }
