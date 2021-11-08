@@ -1,7 +1,7 @@
 <x-layout>
 
     <!-- Section only appears if there are some child categories -->
-    @if (count($child_categories) > 0)
+    {{-- @if (count($child_categories) > 0)
 
         <section class="categories">
             <div class="container">
@@ -30,11 +30,18 @@
             </div>
         </section>
 
-    @endif
+    @endif --}}
 
+    @php
+        $hasProducts = false;
+        foreach($categories as $category){
+            if(count($category->products) > 0){
+                $hasProducts = true;
+            }
+        }
+    @endphp
 
-    @if (!$products->isEmpty())
-        
+    @if ($hasProducts)
         <section class="products">
             <div class="container">
 
@@ -45,31 +52,35 @@
                 <hr>
 
                 <div class="products-wrapper grid-container">
-                    @foreach ($products as $product)
-                        <a href="{{ route('show', $product->id) }}">
-                            <div class="grid-item">
-                                <img class="product-image" src="{{ $product->images->first()->url }}" alt="">
-                                
-                                <div class="separator"></div>
+                    @foreach ($categories as $category)
+                        @foreach ($category->products as $product)
+                            <a href="{{ route('show', $product->id) }}">
+                                <div class="grid-item">
+                                    <img class="product-image" src="{{ $product->images->first()->url }}" alt="">
+                                    
+                                    <div class="separator"></div>
 
-                                <div class="product-info">
-                                    <h5 class="product-name">{{ $product->name }}</h5>
-                                    <p class="product-price">${{ $product->price }}</p>
+                                    <div class="product-info">
+                                        <h5 class="product-name">{{ $product->name }}</h5>
+                                        <p class="product-price">${{ $product->price }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    @endforeach
+                            </a>
+                        @endforeach
+                    @endforeach      
                 </div>
             </div>
         </section>
-
     @else
         <div class="container my-5">
             <div class="alert alert-danger">
                 <p class="my-2">There are currently no products in this category!</p>
             </div>
         </div>
-        
     @endif
+
+        
+
+        
 
 </x-layout>

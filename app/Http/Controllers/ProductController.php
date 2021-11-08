@@ -18,12 +18,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($categorySlug = null, $subcategorySlug = null, $subsubcategorySlug = null)
     {
-        $products = Product::all();
-        $child_categories = [];
+        $this->routeControll($categorySlug, $subcategorySlug, $subsubcategorySlug);
+        $categories = $this->getCategories($categorySlug, $subcategorySlug, $subsubcategorySlug);
 
-        return view('pages.products')->with(compact('products', 'child_categories'));
+        return view('pages.products')->with(compact('categories'));
     }
 
     /**
@@ -95,6 +95,59 @@ class ProductController extends Controller
     public function destroy($id)
     {
         
+    }
+
+    public function getCategories($categorySlug, $subcategorySlug, $subsubcategorySlug)
+    {
+                
+        if($categorySlug != null){
+            $categories = Category::whereIn('slug', [$categorySlug, $subcategorySlug, $subsubcategorySlug])->get();
+        }else{
+            $categories = Category::all();
+        }
+
+
+        return $categories;
+    }
+
+    public function routeControll($categorySlug, $subcategorySlug, $subsubcategorySlug){
+
+        //Not allowing parent categories to be sub categories
+        if($subcategorySlug != null){
+            $subcategory = Category::where('slug', $subcategorySlug)->first();
+
+            if($subcategory->parent_id == null){
+                return abort(404);
+            }
+
+        }
+
+        //Not allowing parent categories to be subsub categories
+        if($subsubcategorySlug != null){
+            $subsubcategory = Category::where('slug', $subsubcategorySlug)->first();
+
+            if($subsubcategory->parent_id == null){
+                return abort(404);
+            }
+        }
+
+
+        //Redirecting to error 404 page if category slugs dont exist
+        $allCategorySlugs = Category::all()->pluck('slug')->toArray();
+        $routeCategorySlugs = array($categorySlug, $subcategorySlug, $subsubcategorySlug);
+        $routeCategorySlugs = array_filter($routeCategorySlugs); //removing null values
+
+        
+        //Making sure we are not array intersecting with null values in arrar
+        foreach($routeCategorySlugs as $slug){
+            if(!in_array($slug, $allCategorySlugs)){
+                return abort(404);
+            }
+        }
+
+        if(count(array_intersect($routeCategorySlugs, $allCategorySlugs)) != count($routeCategorySlugs)){
+            return abort(404);
+        }
     }
 
 }
