@@ -4,7 +4,7 @@
             <a href="{{ route('products') }}">All products</a>
             @foreach ($categories as $category)
                 @if ($category->parent_id == null)
-                    <a href="{{ route('products', $category->slug) }}">{{ $category->name }}</a>
+                    <a href="{{ route('products.categories', $category->slug) }}">{{ $category->name }}</a>
                 @endif
             @endforeach
         </div>
