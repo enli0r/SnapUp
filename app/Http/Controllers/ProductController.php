@@ -99,14 +99,15 @@ class ProductController extends Controller
 
     public function getCategories($categorySlug, $subcategorySlug, $subsubcategorySlug)
     {
+        $routeCategorySlugs = array($categorySlug, $subcategorySlug, $subsubcategorySlug);
+        $routeCategorySlugs = array_filter($routeCategorySlugs); //removing null values
+        $categories = Category::all();
                 
-        if($categorySlug != null){
-            $categories = Category::whereIn('slug', [$categorySlug, $subcategorySlug, $subsubcategorySlug])->get();
-        }else{
-            $categories = Category::all();
+        foreach($routeCategorySlugs as $slug){
+            $categories = $categories->where('slug', $slug);
         }
 
-
+        //dd($categories);
         return $categories;
     }
 
