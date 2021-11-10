@@ -16,7 +16,7 @@
                         @if (count($category->children) > 0)
                             
                             <ul>
-                                <li class="category-name"><a href="{{ route('products.categories', $category->slug) }}">{{ $category->name }}</a></li>
+                                <li class="category-name"><a href="{{ route('products.categories', $category->slug) }}?gender=men">{{ $category->name }}</a></li>
                                 
                                 @foreach ($category->children as $subcategory)
                                     <li><a class="dropdown-item" href="{{ route('products.categories', [$category->slug, $subcategory->slug]) }}?gender=men">{{ $subcategory->name }}</a></li>
@@ -41,7 +41,7 @@
                         @if (count($category->children) > 0)
                             
                             <ul>
-                                <li class="category-name">{{ $category->name }}</li>
+                                <li class="category-name"><a href="{{ route('products.categories', $category->slug) }}?gender=women">{{ $category->name }}</a></li>
 
                                 @foreach ($category->children as $subcategory)
                                     <li><a class="dropdown-item" href="{{ route('products.categories', [$category->slug, $subcategory->slug]) }}?gender=women">{{ $subcategory->name }}</a></li>

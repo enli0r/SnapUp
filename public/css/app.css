@@ -11737,15 +11737,6 @@ section .container .section-title #rectangle {
   margin-left: -100px;
 }
 
-.category-navbar .category-navbar-wrapper .dropdown-menu .category-name {
-  color: #787878;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
 .category-navbar .category-navbar-wrapper .dropdown-menu ul {
   list-style-type: none;
   padding: 0;
@@ -11764,17 +11755,12 @@ section .container .section-title #rectangle {
   color: black;
 }
 
-.category-navbar .category-navbar-wrapper a {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 300;
-  color: white;
-  margin: 0;
-  padding: 15px;
-}
-
-.category-navbar .category-navbar-wrapper a:hover {
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.3);
+.category-navbar .category-navbar-wrapper .dropdown-menu .category-name {
+  color: #787878;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  padding: 0;
 }
 

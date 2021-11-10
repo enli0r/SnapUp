@@ -48,20 +48,8 @@
             padding: 20px;
             justify-content: left;
             margin-left: -50%;
-            margin-left: -100px;
+            margin-left: -100px; 
 
-
-
-            .category-name{
-                color: rgb(120,120,120);
-                font-weight: 700;
-                font-size: 18px;
-                text-transform: capitalize;
-                margin-bottom: 20px;
-                padding: 0;
-
-            }
-            
             ul{
                 list-style-type: none;
                 padding: 0;
@@ -81,25 +69,21 @@
                 }
             }
 
-            
-        }
-
-
-        a{
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 300;
-            color: white;
-            margin: 0;
-            padding: 15px;
+            .category-name{
+                color: rgb(120,120,120);
+                font-weight: 700;
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                padding: 0;
     
-            &:hover{
-                text-decoration: none;
-                background: rgba(0,0,0,0.3);
             }
+
             
         }
 
+
+        
 
 
     }
