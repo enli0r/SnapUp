@@ -32,16 +32,7 @@
 
     @endif --}}
 
-    @php
-        $hasProducts = false;
-        foreach($categories as $category){
-            if(count($category->products) > 0){
-                $hasProducts = true;
-            }
-        }
-    @endphp
-
-    @if ($hasProducts)
+ 
         <section class="products">
             <div class="container">
 
@@ -51,9 +42,10 @@
 
                 <hr>
 
-                <div class="products-wrapper grid-container">
-                    @foreach ($categories as $category)
-                        @foreach ($category->products as $product)
+                @if (count($products) > 0)
+
+                    <div class="products-wrapper grid-container">
+                        @foreach ($products as $product)
                             <a href="{{ route('show', $product->id) }}">
                                 <div class="grid-item">
                                     <img class="product-image" src="{{ $product->images->first()->url }}" alt="">
@@ -66,18 +58,11 @@
                                     </div>
                                 </div>
                             </a>
-                        @endforeach
-                    @endforeach      
-                </div>
+                        @endforeach      
+                    </div>
+                @endif
             </div>
         </section>
-    @else
-        <div class="container my-5">
-            <div class="alert alert-danger">
-                <p class="my-2">There are currently no products in this category!</p>
-            </div>
-        </div>
-    @endif
 
         
 

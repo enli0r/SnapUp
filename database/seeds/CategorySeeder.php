@@ -14,6 +14,20 @@ class CategorySeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
+            'name' => 'men',
+            'slug' => 'men',
+            'is_featured' => 0,
+            'image' => null
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'women',
+            'slug' => 'women',
+            'is_featured' => 0,
+            'image' => null
+        ]);
+
+        DB::table('categories')->insert([
             'name' => 'casual',
             'slug' => 'casual',
             'is_featured' => 1,
@@ -34,34 +48,51 @@ class CategorySeeder extends Seeder
             'image' => 'https://i.ibb.co/5KKrnC0/category-3.jpg',
         ]);
 
-        DB::table('categories')->insert([
-            'name' => 'men',
-            'slug' => 'men',
-            'is_featured' => 0,
-            'image' => null
-        ]);
-
-        DB::table('categories')->insert([
-            'name' => 'women',
-            'slug' => 'women',
-            'is_featured' => 0,
-            'image' => null
-        ]);
-
+    
         DB::table('categories')->insert([
             'name' => 'clothes',
-            'slug' => 'men-clothes',
+            'slug' => 'clothes',
             'is_featured' => 0,
             'image' => null,
-            'parent_id' => 4
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'clothes',
-            'slug' => 'women-clothes',
+            'name' => 'jackets',
+            'slug' => 'jackets',
             'is_featured' => 0,
             'image' => null,
-            'parent_id' => 5
+            'parent_id' => 6
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 't-shirts',
+            'slug' => 't-shirts',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 6
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'footwear',
+            'slug' => 'footwear',
+            'is_featured' => 0,
+            'image' => null,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'shoes',
+            'slug' => 'shoes',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 9
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'boots',
+            'slug' => 'boots',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 9
         ]);
     }
 }

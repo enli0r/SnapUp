@@ -1,1 +1,1 @@
-If category is set in route and subcategory exists but its empty, it still shows products form main category even though they search items from subcategory.
+adding products to category_products (men and women) category and making sure route parameter is working (try out with query scopes)

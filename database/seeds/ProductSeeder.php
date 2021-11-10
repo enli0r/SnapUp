@@ -86,5 +86,45 @@ class ProductSeeder extends Seeder
             'is_featured' => 0
         ]);
 
+        ////////////////boots
+
+        DB::table('products')->insert([
+            'name' => 'boots1',
+            'code' => '12312412312312312',
+            'price' => 100.00,
+            'online_price' => 90.00,
+            'quantity' => 4,
+            'is_featured' => 1
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'boots2',
+            'code' => '1231412312312312',
+            'price' => 100.00,
+            'online_price' => 90.00,
+            'quantity' => 4,
+            'is_featured' => 1
+        ]);
+
+
+        //jackets
+        DB::table('products')->insert([
+            'name' => 'jacket1',
+            'code' => '12312345566333',
+            'price' => 5.00,
+            'online_price' => 4.65,
+            'quantity' => 5,
+            'is_featured' => 0
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'jacket2',
+            'code' => '123126333123333',
+            'price' => 5.00,
+            'online_price' => 4.65,
+            'quantity' => 5,
+            'is_featured' => 0
+        ]);
+
     }
 }

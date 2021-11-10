@@ -53,5 +53,28 @@ class ProductImageSeeder extends Seeder
             'product_id' => 8,
             'url' => 'https://i.ibb.co/M2Qky9p/product-8.jpg'
         ]);
+
+        //boots
+        DB::table('product_images')->insert([
+            'product_id' => 9,
+            'url' => 'https://i.ibb.co/r5Y3qnT/11821006-80.jpg'
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => 10,
+            'url' => 'https://i.ibb.co/r5Y3qnT/11821006-80.jpg'
+        ]);
+
+        //jackets
+        DB::table('product_images')->insert([
+            'product_id' => 11,
+            'url' => 'https://i.ibb.co/xXdFpDg/Lightweight-Jackets-2021-Uniqlo.jpg'
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => 12,
+            'url' => 'https://i.ibb.co/xXdFpDg/Lightweight-Jackets-2021-Uniqlo.jpg'
+        ]);
+
     }
 }

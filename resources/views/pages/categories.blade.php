@@ -4,7 +4,6 @@
         @foreach ($categories as $category)
             <ul>
 
-            
                 @if ($category->parent_id == null)
                     <li>{{ $category->name }}</li>
                         @foreach ($category->children as $child_category)

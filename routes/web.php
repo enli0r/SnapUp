@@ -32,7 +32,6 @@ Route::post('/logout', 'LogoutController@store')->name('logout'); //Has to be po
 //Products
 Route::group(['prefix' => 'products'], function(){
     Route::get('/', 'ProductController@index')->name('products');
-    Route::get('/categories/{category?}/{subcategory?}/{subsubcategory?}', 'ProductController@index')->name('products.categories');
     Route::get('/{post:id}', 'ProductController@show')->name('show');
+    Route::get('/categories/{category}/{subcategorySlug?}', 'CategoryController@index')->name('products.categories');
 });
-
