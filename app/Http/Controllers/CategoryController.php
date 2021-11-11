@@ -15,6 +15,7 @@ class CategoryController extends Controller
 
     public function index(Request $request, $categorySlug, $subcategorySlug = null){
         
+        $this->routeControll($categorySlug, $subcategorySlug, $request);
         $products = $this->getProducts($categorySlug, $subcategorySlug, $request);
 
         return view('pages.products')->with(compact('products'));
@@ -61,7 +62,19 @@ class CategoryController extends Controller
     }
 
 
-    public function getGenderProducts($products, $product, $request){
+    public function routeControll($categorySlug, $subcategorySlug, $request){
+         $childrenCategorySlugs = Category::where('slug', $categorySlug)->first()->children->pluck('slug')->toArray();
+         $genders = ['men', 'women'];
+
+        if(!in_array($request->gender, $genders)){
+            return abort(404);
+        }
+
+         if(!in_array($subcategorySlug, $childrenCategorySlugs)){
+             return abort(404);
+         }
+
+         
     }
 
 }

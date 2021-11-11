@@ -1,1 +1,1 @@
-adding products to category_products (men and women) category and making sure route parameter is working (try out with query scopes)
+put route controll for subcategory optional parameter in products.categories route
