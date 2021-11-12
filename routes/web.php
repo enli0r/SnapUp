@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 
-
 //Register
 Route::get('/register', 'RegisterController@index')->name('register');
 Route::post('/register', 'RegisterController@store'); //Inheriting the name register

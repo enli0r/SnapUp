@@ -1,1 +1,1 @@
-put route controll for subcategory optional parameter in products.categories route
+filtering

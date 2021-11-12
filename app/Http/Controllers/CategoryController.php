@@ -61,16 +61,15 @@ class CategoryController extends Controller
         return $products;
     }
 
-
     public function routeControll($categorySlug, $subcategorySlug, $request){
          $childrenCategorySlugs = Category::where('slug', $categorySlug)->first()->children->pluck('slug')->toArray();
          $genders = ['men', 'women'];
 
-        if(!in_array($request->gender, $genders)){
+        if($request->gender != null && !in_array($request->gender, $genders)){
             return abort(404);
         }
 
-         if(!in_array($subcategorySlug, $childrenCategorySlugs)){
+         if($subcategorySlug != null && !in_array($subcategorySlug, $childrenCategorySlugs)){
              return abort(404);
          }
 
