@@ -11298,6 +11298,10 @@ section .container .section-title #rectangle {
 }
 
 @media (max-width: 991px) {
+  .navbar .container {
+    padding: 0px 15px;
+  }
+
   .navbar .container .navbar-toggler-icon {
     display: block;
   }
@@ -11762,5 +11766,46 @@ section .container .section-title #rectangle {
   text-transform: capitalize;
   margin-bottom: 20px;
   padding: 0;
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-sidebar {
+  width: 300px;
+  border-right: 1px solid lightgray;
+  text-align: left;
+}
+
+.filter-sidebar .block {
+  border: 1px solid #505050;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.filter-sidebar .block a {
+  color: #505050;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-sidebar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #505050;
+  margin-bottom: 20px;
+}
+
+.products-wrapper {
+  padding: 0 10px;
+  width: 800px;
 }
 

@@ -1,15 +1,14 @@
 <x-layout>
+   
+
+
     <section class="products">
-        <div class="container">
+    
+        <div class="container products-container">
 
-            <div class="section-title">
-                <h2>Products</h2>
-            </div>
-
-            <hr>
+            <x-filter-sidebar />
 
             @if (count($products) > 0)
-
                 <div class="products-wrapper grid-container">
                     @foreach ($products as $product)
                         <a href="{{ route('show', $product->id) }}">
@@ -29,4 +28,6 @@
             @endif
         </div>
     </section>
+
+
 </x-layout>

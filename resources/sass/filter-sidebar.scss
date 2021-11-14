@@ -1,0 +1,41 @@
+.products-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.filter-sidebar{
+    width: 300px;
+    border-right: 1px solid lightgray;
+    text-align: left;
+
+    .block{
+        border: 1px solid rgb(80,80,80);
+        display: inline-block;
+        vertical-align: middle;      
+        margin: 0 10px 10px 0;
+        text-align: center;
+        padding: 10px 15px;
+
+        a{
+            color: rgb(80,80,80);
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+        font-weight: 800;
+        color: rgb(80,80,80);
+        margin-bottom: 20px;
+    }
+
+}
+
+.products-wrapper{
+    padding: 0 10px;
+    width: 800px;
+}
