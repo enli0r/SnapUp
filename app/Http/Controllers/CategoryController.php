@@ -18,7 +18,12 @@ class CategoryController extends Controller
         $this->routeControll($categorySlug, $subcategorySlug, $request);
         $products = $this->getProducts($categorySlug, $subcategorySlug, $request);
 
-        return view('pages.products')->with(compact('products'));
+
+        return view('pages.products')->with([
+            'products' => $products,
+            'url' => $request->url(),
+            'gender' => $request->gender
+        ]);
     }
 
     public function getProducts($categorySlug, $subcategorySlug, $request){
