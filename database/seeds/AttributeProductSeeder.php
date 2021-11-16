@@ -2,6 +2,7 @@
 
 use App\Product;
 use App\Attribute;
+use App\AttributeProduct;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -23,7 +24,7 @@ class AttributeProductSeeder extends Seeder
                     'product_id' => $product->id,
                     'attribute_id' => $attribute->id,
                 ]);
-        }
+            }
         }
         
     }

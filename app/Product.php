@@ -34,7 +34,7 @@ class Product extends Model
         return $this->belongsToMany(Category::class)->using(CategoryProduct::class);
     }
 
-    //method for accessing attributeProducts
+    // //method for accessing attributeProducts
     public function attributeProducts(){
         return $this->hasMany(AttributeProduct::class);
     }

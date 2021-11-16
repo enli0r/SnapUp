@@ -14,52 +14,52 @@ class CategoryProductSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('category_product')->insert([
-        //     'product_id' => 1,
-        //     'category_id' => 8,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 1,
+            'category_id' => 8,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 2,
-        //     'category_id' => 10,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 2,
+            'category_id' => 10,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 4,
-        //     'category_id' => 8,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 4,
+            'category_id' => 8,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 5,
-        //     'category_id' => 10,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 5,
+            'category_id' => 10,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 6,
-        //     'category_id' => 8,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 6,
+            'category_id' => 8,
+        ]);
 
-        // //boots
-        // DB::table('category_product')->insert([
-        //     'product_id' => 9,
-        //     'category_id' => 11,
-        // ]);
+        //boots
+        DB::table('category_product')->insert([
+            'product_id' => 9,
+            'category_id' => 11,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 10,
-        //     'category_id' => 11,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 10,
+            'category_id' => 11,
+        ]);
 
-        // //jackets
-        // DB::table('category_product')->insert([
-        //     'product_id' => 11,
-        //     'category_id' => 7,
-        // ]);
+        //jackets
+        DB::table('category_product')->insert([
+            'product_id' => 11,
+            'category_id' => 7,
+        ]);
 
-        // DB::table('category_product')->insert([
-        //     'product_id' => 12,
-        //     'category_id' => 7,
-        // ]);
+        DB::table('category_product')->insert([
+            'product_id' => 12,
+            'category_id' => 7,
+        ]);
 
         //Men women
         foreach(Product::all() as $product){

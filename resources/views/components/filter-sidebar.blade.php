@@ -29,7 +29,7 @@
             @foreach ($categories as $category)
                 @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 1)
                     <div class="input-label">
-                        <input type="checkbox" id="{{ $category->slug }}" name="category" value="{{ $category->slug }}">
+                        <input type="checkbox" id="{{ $category->slug }}" name="featured_category" value="{{ $category->slug }}">
                         <label for="{{ $category->slug }}">{{ $category->name }}</label>
                     </div>
                 @endif

@@ -4,7 +4,6 @@ namespace App;
 
 use App\Product;
 use App\AttributeValue;
-use App\ProductAttribute;
 use Illuminate\Database\Eloquent\Model;
 
 class Attribute extends Model
