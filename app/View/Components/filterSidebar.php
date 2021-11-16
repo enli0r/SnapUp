@@ -8,9 +8,8 @@ use Illuminate\View\Component;
 
 class filterSidebar extends Component
 {
-    public $url;
+    public $currentCategory;
     public $gender;
-
 
     /**
      * Create a new component instance.
@@ -19,9 +18,9 @@ class filterSidebar extends Component
      */
 
 
-    public function __construct($url, $gender)
+    public function __construct($currentCategory, $gender)
     {
-        $this->url = $url;
+        $this->currentCategory = $currentCategory;
         $this->gender = $gender;
     }
 

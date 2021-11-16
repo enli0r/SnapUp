@@ -1,8 +1,9 @@
 <x-layout>
-<section class="products">
-
+    <section class="products">
         <div class="container products-container">
-            <x-filter-sidebar :url="$url" :gender="$gender"/>
+
+
+            <x-filter-sidebar :currentCategory="$currentCategory" :gender="$gender"/>
 
             @if (count($products) > 0)
                 <div class="products-wrapper grid-container">

@@ -14,19 +14,30 @@ class CategoryController extends Controller
 {
 
     public function index(Request $request, $categorySlug, $subcategorySlug = null){
-        
-        $this->routeControll($categorySlug, $subcategorySlug, $request);
+
+        // $this->routeControll($categorySlug, $subcategorySlug, $request);
         $products = $this->getProducts($categorySlug, $subcategorySlug, $request);
-
-
+        
         return view('pages.products')->with([
             'products' => $products,
-            'url' => $request->url(),
-            'gender' => $request->gender
+            'gender' => $request->gender,
+            'currentCategory' => Category::where('slug', $categorySlug)->first()
         ]);
     }
 
+    public function filter(Request $request, $categorySlug, $subcategorySlug = null){
+        $request->random="xd";
+
+        $products = $this->getProducts($categorySlug, $subcategorySlug, $request);
+
+
+        
+    }
+
     public function getProducts($categorySlug, $subcategorySlug, $request){
+
+        dd($request->random);
+
         $all_products = Product::all();
         $products = collect();
         $cat_slugs = [$subcategorySlug, $request->gender];

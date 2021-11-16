@@ -11810,3 +11810,21 @@ section .container .section-title #rectangle {
   width: 800px;
 }
 
+.form-group-heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: #505050;
+  margin-bottom: 15px;
+}
+
+.form-group .input-label {
+  display: block;
+}
+
+.form-group .input-label label {
+  font-size: 14px;
+  font-weight: 300px;
+  text-transform: capitalize;
+  color: #505050;
+}
+

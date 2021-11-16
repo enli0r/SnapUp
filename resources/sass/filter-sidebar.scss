@@ -40,3 +40,23 @@
     padding: 0 10px;
     width: 800px;
 }
+
+.form-group-heading{
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(80,80,80);
+    margin-bottom: 15px;
+}
+
+.form-group{
+    .input-label{
+        display: block;
+
+        label{
+            font-size: 14px;
+            font-weight: 300px;
+            text-transform: capitalize;
+            color: rgb(80,80,80);
+        }
+    }
+}

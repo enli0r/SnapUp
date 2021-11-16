@@ -19,11 +19,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.products')->with([
-            'products' => Product::all()
-        ]);
+        $products = Product::all();
+
+        return view('pages.products')->with(compact('products'));
     }
 
     /**

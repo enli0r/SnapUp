@@ -37278,6 +37278,8 @@ __webpack_require__(/*! ./navbar.js */ "./resources/js/navbar.js");
 
 __webpack_require__(/*! ./category-navbar.js */ "./resources/js/category-navbar.js");
 
+__webpack_require__(/*! ./filter.js */ "./resources/js/filter.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37329,6 +37331,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!*****************************************!*\
   !*** ./resources/js/category-navbar.js ***!
   \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./resources/js/filter.js":
+/*!********************************!*\
+  !*** ./resources/js/filter.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
