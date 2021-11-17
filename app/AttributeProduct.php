@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
@@ -10,7 +11,11 @@ class AttributeProduct extends Pivot //Pivot table that has pivot table
     protected $table = 'attribute_product';
 
     public function products(){
-        return $this->belongsToMany(Product::class);
+        return $this->belongsTo(Product::class);
+    }
+
+    public function attribute(){
+        return $this->belongsTo(Attribute::class);
     }
 
     //method for accessing products through pivot table

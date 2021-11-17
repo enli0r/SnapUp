@@ -43,7 +43,7 @@
                 @if ($attribute->name == "Color")
                     @foreach ($attribute->values as $value)
                         <div class="input-label">
-                            <input type="checkbox" id="{{ $value->value }}" name="color" value="{{ $value->value }}">
+                            <input type="checkbox" id="{{ $value->value }}" name="color[]" value="{{ $value->value }}">
                             <label for="{{ $value->value }}">{{ $value->value }}</label>
                         </div>
                         
@@ -59,7 +59,7 @@
                 @if ($attribute->name == "Size")
                     @foreach ($attribute->values as $value)
                         <div class="input-label">
-                            <input type="checkbox" id="{{ $value->value }}" name="size" value="{{ $value->value }}">
+                            <input type="checkbox" id="{{ $value->value }}" name="size[]" value="{{ $value->value }}">
                             <label for="{{ $value->value }}">{{ $value->value }}</label>
                         </div>
                         

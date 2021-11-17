@@ -29,8 +29,7 @@ class CategoryController extends Controller
     }
 
     public function getProducts($categorySlug, $subcategorySlug, $gender, $POST){
-        
-
+    
         $filters = [];
         $filterAttributes = ['color', 'size'];
         foreach($filterAttributes as $filterAttribute){
@@ -106,17 +105,24 @@ class CategoryController extends Controller
     }
 
     public function filter($products, $product, $filters){
-
+        
         if($filters != null){
-            foreach($product->attributeProducts as $attirbuteProduct){
-                foreach($attirbuteProduct->attributeValues as $attributeValue){
-                    foreach($filters as $filterName=>$filterValue){
-                        if($attributeValue->value == $filterValue){
-                            $products->push($product);
-                        }
+            $counter = 0;
+
+            foreach($filters as $key=>$values){ //Cycling through filters 
+                foreach($product->attributeProducts as $attributeProduct){ //cycling through attribute products (we can access values from there)
+                    if(in_array($attributeProduct->attribute->code, array_keys($filters)) && count(array_intersect($values, $attributeProduct->attributeValues->pluck('value')->toArray())) == count($values)){
+                        $counter++;
+                    }else{
+                        continue;
                     }
                 }
             }
+
+        if($counter == count($filters)){
+            $products->push($product);
+        }
+            
         }else{
             $products->push($product);
         }
