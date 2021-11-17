@@ -22,8 +22,10 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $products = Product::all();
+        $currentcategory = null;
+        $gender = null;
 
-        return view('pages.products')->with(compact('products'));
+        return view('pages.products')->with(compact('products', 'currentcategory', 'gender'));
     }
 
     /**

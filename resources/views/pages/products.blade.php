@@ -2,8 +2,7 @@
     <section class="products">
         <div class="container products-container">
 
-
-            <x-filter-sidebar :currentCategory="$currentCategory" :gender="$gender"/>
+            <x-filter-sidebar :currentcategory="$currentcategory" :gender="$gender"/>
 
             @if (count($products) > 0)
                 <div class="products-wrapper grid-container">

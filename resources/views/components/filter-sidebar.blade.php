@@ -1,4 +1,4 @@
-@props(['currentCategory', 'gender'])
+@props(['currentcategory', 'gender'])
 
 <div class="filter-sidebar">
     <h1>Filters</h1>

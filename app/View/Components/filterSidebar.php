@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class filterSidebar extends Component
 {
-    public $currentCategory;
+    public $currentcategory;
     public $gender;
 
     /**
@@ -18,9 +18,9 @@ class filterSidebar extends Component
      */
 
 
-    public function __construct($currentCategory, $gender)
+    public function __construct($currentcategory, $gender)
     {
-        $this->currentCategory = $currentCategory;
+        $this->currentcategory = $currentcategory;
         $this->gender = $gender;
     }
 
