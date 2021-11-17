@@ -5,7 +5,7 @@
 }
 
 .filters-open-button{
-    display: none;
+    display: none !important;
 }
 
 .filter-sidebar{
@@ -73,7 +73,7 @@
 
 @media (max-width: 768px){
     .filters-open-button{
-        display: block;
+        display: block !important;
         background: white;
         color: rgb(80,80,80);
         border-radius: 20px;

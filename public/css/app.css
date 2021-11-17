@@ -11758,7 +11758,7 @@ section .container .section-title #rectangle {
 }
 
 .filters-open-button {
-  display: none;
+  display: none !important;
 }
 
 .filter-sidebar {
@@ -11824,7 +11824,7 @@ section .container .section-title #rectangle {
 
 @media (max-width: 768px) {
   .filters-open-button {
-    display: block;
+    display: block !important;
     background: white;
     color: #505050;
     border-radius: 20px;
