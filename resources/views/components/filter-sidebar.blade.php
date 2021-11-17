@@ -1,9 +1,13 @@
 @props(['currentcategory', 'gender'])
 
-<div class="filter-sidebar">
-    <h1>Filters</h1>
+<button class="filters-open-button">Filters &#8594;</button>
 
-    <form action="" method="post">
+<div class="filter-sidebar">
+    <img class="filters-close-icon" src="https://i.ibb.co/6RDhB9Q/cancel.png" alt="hehe">
+
+    <h1 class="filters-heading">Filters</h1>
+
+    <form action="" method="post" class="filters-form">
         @csrf
         <input type="hidden" name="_method" value="PUT">
         <hr>

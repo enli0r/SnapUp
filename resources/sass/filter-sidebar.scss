@@ -4,11 +4,21 @@
     
 }
 
+.filters-open-button{
+    display: none;
+}
+
 .filter-sidebar{
+    position: normal;
+    display: block;
     width: 300px;
     min-width: 200px;
     border-right: 1px solid lightgray;
     text-align: left;
+
+    .filters-close-icon{
+        display: none !important;
+    }
 
     .block{
         border: 1px solid rgb(80,80,80);
@@ -57,6 +67,61 @@
             font-weight: 300px;
             text-transform: capitalize;
             color: rgb(80,80,80);
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .filters-open-button{
+        display: block;
+        background: white;
+        color: rgb(80,80,80);
+        border-radius: 20px;
+        padding: 6px 12px;
+        border: 1px solid rgb(80,80,80);
+        position: absolute;
+        top: 150px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .filter-sidebar{
+        position: absolute;
+        min-width: 0;
+        width: 0px !important;
+        top: 131px;
+        left: 0;
+        bottom: 0;
+        background: white;
+        z-index: 100;
+        transition: 0.3s;
+        overflow-x: hidden;
+
+        .filters-form, .filters-heading{
+            margin: 20px;
+        }
+
+        .filters-close-icon{
+            display: none;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 25px;
+            left: 195px;
+            z-index: 101;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .opened{
+        width: 250px !important;
+
+        .filters-close-icon{
+            display: block !important;
         }
     }
 }

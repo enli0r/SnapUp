@@ -24,7 +24,8 @@ class CategoryController extends Controller
         return view('pages.products')->with([
             'products' => $products,
             'gender' => $request->gender,
-            'currentcategory' => Category::where('slug', $categorySlug)->first()
+            'currentcategory' => Category::where('slug', $categorySlug)->first(),
+            'previouspost' => $_POST
         ]);
     }
 

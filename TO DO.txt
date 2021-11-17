@@ -1,4 +1,3 @@
-improve filtering
 ?gender needs to be form or something
 checkbox needs to be checked
 make sure only one checkbox is checked at the time

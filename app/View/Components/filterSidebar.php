@@ -10,6 +10,7 @@ class filterSidebar extends Component
 {
     public $currentcategory;
     public $gender;
+    public $previouspost;
 
     /**
      * Create a new component instance.
@@ -18,10 +19,11 @@ class filterSidebar extends Component
      */
 
 
-    public function __construct($currentcategory, $gender)
+    public function __construct($currentcategory, $gender, $previouspost)
     {
         $this->currentcategory = $currentcategory;
         $this->gender = $gender;
+        $this->previouspost = $previouspost;
     }
 
     /**
