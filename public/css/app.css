@@ -11688,6 +11688,17 @@ section .container .section-title #rectangle {
   align-items: center;
 }
 
+.category-navbar .category-navbar-wrapper .category-link {
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.category-navbar .category-navbar-wrapper .category-link:hover {
+  background: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
 .category-navbar .category-navbar-wrapper .home {
   padding: 0;
 }
