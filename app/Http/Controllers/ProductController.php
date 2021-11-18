@@ -24,8 +24,9 @@ class ProductController extends Controller
         $products = Product::all();
         $currentcategory = null;
         $gender = null;
+        $previouspost = null;
 
-        return view('pages.products')->with(compact('products', 'currentcategory', 'gender'));
+        return view('pages.products')->with(compact('products', 'currentcategory', 'gender', 'previouspost'));
     }
 
     /**
