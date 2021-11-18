@@ -11833,6 +11833,10 @@ section .container .section-title #rectangle {
   color: #505050;
 }
 
+.form-group .subcategory {
+  margin-left: 15px;
+}
+
 @media (max-width: 768px) {
   .filters-open-button {
     display: block !important;

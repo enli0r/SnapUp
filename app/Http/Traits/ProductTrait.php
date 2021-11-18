@@ -8,8 +8,7 @@ use App\Category;
 
 trait ProductTrait{
 
-    public function getProducts($categorySlug, $subcategorySlug, $gender, $POST){
-    
+    public function getProducts($categorySlug, $subcategorySlug, $gender, $POST){    
         $filters = [];
         $filterAttributes = ['color', 'size'];
         foreach($filterAttributes as $filterAttribute){
@@ -18,7 +17,7 @@ trait ProductTrait{
         
         $all_products = Product::all();
         $products = collect();
-        $cat_slugs = array_filter([$subcategorySlug]);
+        $cat_slugs = [$subcategorySlug];
 
         if($POST!=null){
             if(isset($POST['gender'])){
@@ -32,39 +31,53 @@ trait ProductTrait{
         }else{
             array_push($cat_slugs, $gender);
         }
+        $cat_slugs = array_filter($cat_slugs);
+
+
+
+        //If subcategory selected but category isnt, category automaticaly becomes parent of subcategory
+        if($subcategorySlug != null && $categorySlug == null){
+            $categorySlug = Category::where('slug', $subcategorySlug)->first()->parent->slug;
+        }
         
+        //If category is not in request nor selected (products controller)
+        if($categorySlug != null){
 
-        $children_slugs = Category::where('slug', $categorySlug)->first()->children->pluck('slug')->toArray();
+            $children_slugs = Category::where('slug', $categorySlug)->first()->children->pluck('slug')->toArray();
+            foreach($all_products as $product){
 
-        foreach($all_products as $product){
-
-
-            //If subslug is not null, it will push prodcuts that have same slugs as in array cat_slugs (sub slug and gender if selected)
-            if(in_array($subcategorySlug, $children_slugs)){
-                //Checking to see if product belongs to all categories in cat_slug
-                $belongsToAllCategories = count(array_intersect($cat_slugs, $product->categories->pluck('slug')->toArray())) == count($cat_slugs);
-                if($belongsToAllCategories){
-                    $this->filter($products, $product, $filters);
-                }
-
-
-            //If subsulug is null push products from all childcategories
-            }else{
-                foreach($children_slugs as $child_slug){
-                    array_push($cat_slugs, $child_slug);
-
+                //If subslug is not null, it will push prodcuts that have same slugs as in array cat_slugs (sub slug and gender if selected)
+                if(in_array($subcategorySlug, $children_slugs)){
+                    //Checking to see if product belongs to all categories in cat_slug
                     $belongsToAllCategories = count(array_intersect($cat_slugs, $product->categories->pluck('slug')->toArray())) == count($cat_slugs);
-
                     if($belongsToAllCategories){
                         $this->filter($products, $product, $filters);
                     }
-                    array_pop($cat_slugs);
-                }
 
+
+                //If subsulug is null push products from all childcategories
+                }else{
+                    foreach($children_slugs as $child_slug){
+                        array_push($cat_slugs, $child_slug);
+
+                        $belongsToAllCategories = count(array_intersect($cat_slugs, $product->categories->pluck('slug')->toArray())) == count($cat_slugs);
+
+                        if($belongsToAllCategories){
+                            $this->filter($products, $product, $filters);
+                        }
+                        array_pop($cat_slugs);
+                    }
+
+                }
+        
+                
             }
-    
-            
+        }else{
+            foreach($all_products as $product){
+                $this->filter($products, $product, $filters);
+            }
         }
+        
 
         return $products;
     }

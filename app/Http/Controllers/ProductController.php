@@ -11,9 +11,13 @@ use App\Http\Controllers\Controller;
 use App\AttributeValueProductAttribute;
 use App\Category;
 use App\CategoryProduct;
+use App\Http\Traits\ProductTrait;
 
 class ProductController extends Controller
 {
+
+    use ProductTrait;
+
     /**
      * Display a listing of the resource.
      *
@@ -21,10 +25,14 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+
         $products = Product::all();
         $currentcategory = null;
-        $gender = null;
-        $previouspost = null;
+
+        $products = $this->getProducts(isset($_POST['category']) ? $_POST['category'] : null, isset($_POST['subcategory']) ? $_POST['subcategory'] : null, isset($_POST['gender']) ? $_POST['gender'] : null , $_POST);
+
+        isset($_POST) ? $previouspost = $_POST : $previouspost = null;
+        isset($_POST['gender']) ? $gender = $_POST['gender'] : $gender = null;
 
         return view('pages.products')->with(compact('products', 'currentcategory', 'gender', 'previouspost'));
     }
@@ -58,7 +66,6 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-
         $product = Product::find($id);
         $attributes = $product->attributes;
         $attributeProducts = $product->attributeProducts;

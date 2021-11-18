@@ -59,6 +59,7 @@
 }
 
 .form-group{
+
     .input-label{
         display: block;
 
@@ -69,6 +70,11 @@
             color: rgb(80,80,80);
         }
     }
+
+    .subcategory{
+        margin-left: 15px;
+    }
+
 }
 
 @media (max-width: 768px){

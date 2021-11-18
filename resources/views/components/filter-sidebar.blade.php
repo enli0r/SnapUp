@@ -1,4 +1,4 @@
-@props(['currentcategory', 'gender'])
+@props(['currentcategory', 'gender', 'previouspost'])
 
 <button class="filters-open-button">Filters &#8594;</button>
 
@@ -15,25 +15,80 @@
         
         <div class="form-group gender">
             <div class="input-label">
-                <input type="checkbox" id="gender-men" name="gender" value="men" @if ($gender == 'men') checked @endif>
+                <input type="checkbox" id="gender-men" name="gender" value="men"
+                @if (isset($previouspost['gender'])) 
+                    @if ($previouspost['gender'] == 'men')
+                        checked
+                    @endif
+                @else
+                    checked
+                @endif>
                 <label for="gender-men">Men</label>
             </div>
             
             <div class="input-label">
-                <input type="checkbox" id="gender-men" name="gender" value="women" @if ($gender == 'women') checked @endif>
+                <input type="checkbox" id="gender-men" name="gender" value="women"
+                @if (isset($previouspost['gender'])) 
+                    @if ($previouspost['gender'] == 'women')
+                        checked
+                    @endif
+                @else
+                    checked
+                @endif>
                 <label for="gender-men">Women</label>
             </div>
         </div>
 
+
+        @if ($currentcategory == null)
+            <h4 class="form-group-heading">Category</h4>
+            
+            <div class="form-group category">
+                @foreach ($categories as $category)
+                    @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
+                        <div class="input-label"> 
+                            <input type="checkbox" id="{{ $category->slug }}" name="category" value="{{ $category->slug }}"
+                            @php 
+                                if(isset($previouspost['category'])){
+                                    if($previouspost['category'] == $category->slug){
+                                        echo('checked');
+                                    }
+                                }
+                            @endphp>
+
+
+                            <label for="{{ $category->slug }}">{{ $category->name }}</label>
+                        </div>
+
+                        @foreach ($category->children as $child)
+                            <div class="input-label subcategory">
+                                <input type="checkbox" id="{{ $child->slug }}" name="subcategory" value="{{ $child->slug }}">
+                                <label for="{{ $child->slug }}">{{ $child->name }}</label>
+                            </div>
+                        @endforeach
+
+                    @endif
+                @endforeach
+            </div>
+        @endif
+        
+
         
         <hr>
-        <h4 class="form-group-heading">Category</h4>
+        <h4 class="form-group-heading">Featured category</h4>
         
         <div class="form-group category">
             @foreach ($categories as $category)
                 @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 1)
                     <div class="input-label">
-                        <input type="checkbox" id="{{ $category->slug }}" name="featured_category" value="{{ $category->slug }}">
+                        <input type="checkbox" id="{{ $category->slug }}" name="featured_category" value="{{ $category->slug }}"
+                        @php 
+                            if(isset($previouspost['featured_category'])){
+                                if($previouspost['featured_category'] == $category->slug){
+                                    echo('checked');
+                                }
+                            }                                    
+                        @endphp>
                         <label for="{{ $category->slug }}">{{ $category->name }}</label>
                     </div>
                 @endif
@@ -47,7 +102,18 @@
                 @if ($attribute->name == "Color")
                     @foreach ($attribute->values as $value)
                         <div class="input-label">
-                            <input type="checkbox" id="{{ $value->value }}" name="color[]" value="{{ $value->value }}">
+                            {{-- checking the checkbox if its filtered --}}
+                            <input type="checkbox" id="{{ $value->value }}" name="color[]" value="{{ $value->value }}"  
+                            @php 
+                                if(isset($previouspost['color'])){
+                                    foreach($previouspost['color'] as $color){
+                                        if($color == $value->value){
+                                            echo('checked');
+                                        }
+                                    }
+                                }                                    
+                            @endphp>
+
                             <label for="{{ $value->value }}">{{ $value->value }}</label>
                         </div>
                         
@@ -63,7 +129,16 @@
                 @if ($attribute->name == "Size")
                     @foreach ($attribute->values as $value)
                         <div class="input-label">
-                            <input type="checkbox" id="{{ $value->value }}" name="size[]" value="{{ $value->value }}">
+                            <input type="checkbox" id="{{ $value->value }}" name="size[]" value="{{ $value->value }}"
+                            @php 
+                                if(isset($previouspost['size'])){
+                                    foreach($previouspost['size'] as $size){
+                                        if($size == $value->value){
+                                            echo('checked');
+                                        }
+                                    }
+                                }                                    
+                            @endphp>
                             <label for="{{ $value->value }}">{{ $value->value }}</label>
                         </div>
                         
