@@ -19,12 +19,11 @@ class CategoryController extends Controller
 
     public function index(Request $request, $categorySlug, $subcategorySlug = null){
 
-        $products = $this->getProducts($categorySlug, $subcategorySlug, $request->gender, $_POST); //Function get products is from ProductTrait
+        $products = $this->getProducts($categorySlug, $subcategorySlug, $_POST); //Function get products is from ProductTrait
 
 
         return view('pages.products')->with([
             'products' => $products,
-            'gender' => $request->gender,
             'currentcategory' => Category::where('slug', $categorySlug)->first(),
             'previouspost' => $_POST
         ]);

@@ -37,7 +37,7 @@
         }
 
         .dropdown{
-            button{
+            .dropdown-button{
                 background: none;
                 border: none;
                 padding: 15px;
@@ -50,44 +50,53 @@
                 }
             }
 
-        }
-
-        .dropdown-menu{
-            display: flex;
-            gap: 100px;
-            padding: 20px;
-            justify-content: left;
-            margin-left: -50%;
-            margin-left: -100px; 
-
-            ul{
-                list-style-type: none;
-                padding: 0;
-                text-align: left;
-
-                li a{
-                    text-transform: capitalize;
-                    padding: 0;
-                    margin-bottom: 15px;
-                    color: rgb(100,100,100);
-                    
+            .dropdown-menu{
+                display: flex;
+                gap: 100px;
+                padding: 20px;
+                justify-content: left;
+                margin-left: -50%;
+                margin-left: -100px; 
     
-                    &:hover{
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    text-align: left;
+
+                    .category-name{
+                        color: rgb(120,120,120);
+                        font-weight: 700;
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        margin-bottom: 20px;
+                        padding: 0;
+                        border: none;
                         background: none;
-                        color: black;
+
+                        &:hover{
+                            color: black;
+                            text-decoration: underline;
+                        }
+            
+                    }
+    
+                    .dropdown-item{
+                        text-transform: capitalize;
+                        padding: 0;
+                        margin-bottom: 15px;
+                        color: rgb(100,100,100);
+                        
+                        &:hover{
+                            background: none;
+                            color: black;
+                            text-decoration: underline;
+                        }
                     }
                 }
-            }
 
-            .category-name{
-                color: rgb(120,120,120);
-                font-weight: 700;
-                font-size: 18px;
-                text-transform: capitalize;
-                margin-bottom: 20px;
-                padding: 0;
-    
-            }
+        }
+
+            
 
             
         }

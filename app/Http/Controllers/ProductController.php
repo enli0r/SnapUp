@@ -29,12 +29,11 @@ class ProductController extends Controller
         $products = Product::all();
         $currentcategory = null;
 
-        $products = $this->getProducts(isset($_POST['category']) ? $_POST['category'] : null, isset($_POST['subcategory']) ? $_POST['subcategory'] : null, isset($_POST['gender']) ? $_POST['gender'] : null , $_POST);
+        $products = $this->getProducts(isset($_POST['category']) ? $_POST['category'] : null, isset($_POST['subcategory']) ? $_POST['subcategory'] : null, $_POST);
 
         isset($_POST) ? $previouspost = $_POST : $previouspost = null;
-        isset($_POST['gender']) ? $gender = $_POST['gender'] : $gender = null;
 
-        return view('pages.products')->with(compact('products', 'currentcategory', 'gender', 'previouspost'));
+        return view('pages.products')->with(compact('products', 'currentcategory', 'previouspost'));
     }
 
     /**

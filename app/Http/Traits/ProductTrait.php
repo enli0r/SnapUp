@@ -8,7 +8,7 @@ use App\Category;
 
 trait ProductTrait{
 
-    public function getProducts($categorySlug, $subcategorySlug, $gender, $POST){    
+    public function getProducts($categorySlug, $subcategorySlug, $POST){  
         $filters = [];
         $filterAttributes = ['color', 'size'];
         foreach($filterAttributes as $filterAttribute){
@@ -27,12 +27,8 @@ trait ProductTrait{
             if(isset($POST['featured_category'])){
                 array_push($cat_slugs, $POST['featured_category']);
             }
-
-        }else{
-            array_push($cat_slugs, $gender);
         }
         $cat_slugs = array_filter($cat_slugs);
-
 
 
         //If subcategory selected but category isnt, category automaticaly becomes parent of subcategory
@@ -74,7 +70,11 @@ trait ProductTrait{
             }
         }else{
             foreach($all_products as $product){
-                $this->filter($products, $product, $filters);
+                $belongsToAllCategories = count(array_intersect($cat_slugs, $product->categories->pluck('slug')->toArray())) == count($cat_slugs);
+
+                if($belongsToAllCategories){
+                    $this->filter($products, $product, $filters);
+                }
             }
         }
         
