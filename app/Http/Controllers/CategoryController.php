@@ -19,6 +19,8 @@ class CategoryController extends Controller
 
     public function index(Request $request, $categorySlug, $subcategorySlug = null){
 
+        dd($_POST['category2']);
+
         $products = $this->getProducts($categorySlug, $subcategorySlug, $_POST); //Function get products is from ProductTrait
 
 

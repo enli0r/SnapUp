@@ -37,6 +37,11 @@
         }
 
         .dropdown{
+
+            button{
+                outline: none;
+            }
+
             .dropdown-button{
                 background: none;
                 border: none;
@@ -47,7 +52,9 @@
                 &:hover{
                     background: rgba(0,0,0,0.5);
                     border-radius: 0;
+                    border: none;
                 }
+
             }
 
             .dropdown-menu{
@@ -73,6 +80,7 @@
                         border: none;
                         background: none;
 
+
                         &:hover{
                             color: black;
                             text-decoration: underline;
@@ -85,6 +93,7 @@
                         padding: 0;
                         margin-bottom: 15px;
                         color: rgb(100,100,100);
+
                         
                         &:hover{
                             background: none;

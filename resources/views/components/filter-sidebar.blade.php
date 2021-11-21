@@ -11,6 +11,8 @@
         @csrf
         <input type="hidden" name="_method" value="PUT">
         <hr>
+
+        {{-- Gender --}}
         <h4 class="form-group-heading">Gender</h4>
         
         <div class="form-group gender">
@@ -21,7 +23,6 @@
                 @endif>
                 <label for="men-women">Men & Women</label>
             </div>
-
 
             <div class="input-label">
                 <input type="radio" id="gender-men" name="gender" value="men"
@@ -44,44 +45,47 @@
             </div>
         </div>
 
-
+        {{-- Category --}}
         @if ($currentcategory == null)
             <h4 class="form-group-heading">Category</h4>
             
             <div class="form-group category">
                 @foreach ($categories as $category)
                     @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
-                        <div class="input-label"> 
-                            <form action="{{route('products.categories', $category->slug)}}" method="post">
-                                <input type="hidden" name="_method" value="put">
-                            
-                                <button type="submit" value="{{$category->slug}}" name="category" 
-                                @php 
-                                    if(isset($previouspost['category'])){
-                                        if($previouspost['category'] == $category->slug){
-                                            echo('button-checked');
-                                        }
-                                    }
-                                @endphp>
-                                    {{$category->name}}
-                                </button>
-                            </form>
-                        </div>
 
+                        {{-- Category button --}}
+                        <button type="submit" value="{{$category->slug}}" name="category" class="parent-category"
+                            @php 
+                                if(isset($previouspost['category'])){
+                                    if($previouspost['category'] == $category->slug){
+                                        echo('button-checked');
+                                    }
+                                }
+                            @endphp>
+                                {{$category->name}}
+                        </button>
+
+                        {{-- Category children radio buttons --}}
                         @foreach ($category->children as $child)
                             <div class="input-label subcategory">
-                                <input type="radio" id="{{ $child->slug }}" name="subcategory" value="{{ $child->slug }}">
+                                <input type="radio" id="{{ $child->slug }}" name="subcategory" value="{{ $child->slug }}" class="child-category"
+                                    @if ($previouspost['subcategory'] == $child->slug)
+                                        checked
+                                    @endif
+
+                                >
                                 <label for="{{ $child->slug }}">{{ $child->name }}</label>
                             </div>
                         @endforeach
-
+ 
                     @endif
                 @endforeach
             </div>
         @endif
         
 
-        
+    
+        {{-- Featured category --}}    
         <hr>
         <h4 class="form-group-heading">Featured category</h4>
         
@@ -103,6 +107,7 @@
             @endforeach
         </div>
 
+        {{-- Color --}}
         <h4 class="form-group-heading">Color</h4>        
         <hr>
         <div class="form-group color">
@@ -130,6 +135,7 @@
             @endforeach
         </div>
 
+        {{-- Size --}}
         <hr>
         <h4 class="form-group-heading">Size</h4>        
         <div class="form-group color">
@@ -155,6 +161,6 @@
             @endforeach
         </div>
 
-        <button type="submit" class="btn btn-primary" value="submited">Submit</button>
+        <button type="submit" class="btn btn-primary" name="filter-submit" value="submited">Submit</button>
     </form>
 </div>

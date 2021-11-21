@@ -11714,6 +11714,10 @@ section .container .section-title #rectangle {
   background: none;
 }
 
+.category-navbar .category-navbar-wrapper .dropdown button {
+  outline: none;
+}
+
 .category-navbar .category-navbar-wrapper .dropdown .dropdown-button {
   background: none;
   border: none;
@@ -11725,6 +11729,7 @@ section .container .section-title #rectangle {
 .category-navbar .category-navbar-wrapper .dropdown .dropdown-button:hover {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0;
+  border: none;
 }
 
 .category-navbar .category-navbar-wrapper .dropdown .dropdown-menu {
@@ -11830,6 +11835,21 @@ section .container .section-title #rectangle {
   margin-bottom: 15px;
 }
 
+.form-group .parent-category {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  color: #505050;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-group .parent-category:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+}
+
 .form-group .input-label {
   display: block;
 }
@@ -11843,6 +11863,10 @@ section .container .section-title #rectangle {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.form-group .input-label label:hover {
+  color: black;
 }
 
 .form-group .input-label label:hover,
