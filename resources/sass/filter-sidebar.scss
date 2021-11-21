@@ -68,6 +68,13 @@
             font-weight: 300px;
             text-transform: capitalize;
             color: rgb(80,80,80);
+            user-select: none;
+        }
+
+        label, input{
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 

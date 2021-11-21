@@ -27,7 +27,7 @@
             </div>
             
             <div class="input-label">
-                <input type="checkbox" id="gender-men" name="gender" value="women"
+                <input type="checkbox" id="gender-women" name="gender" value="women"
                 @if (isset($previouspost['gender'])) 
                     @if ($previouspost['gender'] == 'women')
                         checked
@@ -35,7 +35,7 @@
                 @else
                     checked
                 @endif>
-                <label for="gender-men">Women</label>
+                <label for="gender-women">Women</label>
             </div>
         </div>
 

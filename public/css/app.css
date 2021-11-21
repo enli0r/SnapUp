@@ -11831,6 +11831,15 @@ section .container .section-title #rectangle {
   font-weight: 300px;
   text-transform: capitalize;
   color: #505050;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form-group .input-label label:hover,
+.form-group .input-label input:hover {
+  cursor: pointer;
 }
 
 .form-group .subcategory {
