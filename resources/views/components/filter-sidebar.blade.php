@@ -1,4 +1,4 @@
-@props(['currentcategory', 'gender', 'previouspost'])
+@props(['currentcategory', 'previouspost'])
 
 <button class="filters-open-button">Filters &#8594;</button>
 
@@ -15,13 +15,20 @@
         
         <div class="form-group gender">
             <div class="input-label">
+                <input type="checkbox" id="men-women" name="gender" value=""
+                @if (!isset($previouspost['gender']))
+                    checked
+                @endif>
+                <label for="men-women">Men & Women</label>
+            </div>
+
+
+            <div class="input-label">
                 <input type="checkbox" id="gender-men" name="gender" value="men"
                 @if (isset($previouspost['gender'])) 
                     @if ($previouspost['gender'] == 'men')
                         checked
                     @endif
-                @else
-                    checked
                 @endif>
                 <label for="gender-men">Men</label>
             </div>
@@ -32,8 +39,6 @@
                     @if ($previouspost['gender'] == 'women')
                         checked
                     @endif
-                @else
-                    checked
                 @endif>
                 <label for="gender-women">Women</label>
             </div>
