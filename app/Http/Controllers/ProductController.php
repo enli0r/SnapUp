@@ -25,7 +25,6 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-
         $products = Product::all();
         $currentcategory = null;
 

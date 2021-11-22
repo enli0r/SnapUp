@@ -47,6 +47,7 @@
 
         {{-- Category --}}
         @if ($currentcategory == null)
+            <hr>
             <h4 class="form-group-heading">Category</h4>
             
             <div class="form-group category">
@@ -69,10 +70,11 @@
                         @foreach ($category->children as $child)
                             <div class="input-label subcategory">
                                 <input type="radio" id="{{ $child->slug }}" name="subcategory" value="{{ $child->slug }}" class="child-category"
-                                    @if ($previouspost['subcategory'] == $child->slug)
+                                @if (isset($previouspost['category']))
+                                    @if ($previouspost['category'] == $child->slug)
                                         checked
                                     @endif
-
+                                @endif 
                                 >
                                 <label for="{{ $child->slug }}">{{ $child->name }}</label>
                             </div>

@@ -37,6 +37,6 @@ Route::group(['prefix' => 'products'], function(){
 
 
     Route::get('/categories/{category}/{subcategorySlug?}', 'CategoryController@index')->name('products.categories');
-    Route::put('/categories/{category}/{subcategorySlug?}', 'CategoryController@index');
+    Route::put('/categories/{category?}/{subcategorySlug?}', 'CategoryController@index');
     
 });
