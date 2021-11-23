@@ -72,7 +72,6 @@
                     
                 }
 
-
                 .price{
                     margin-bottom: 30px;
 
@@ -90,60 +89,24 @@
 
                 .attribute-name{
                     text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: 22px;
+                    font-weight: 700;
+                    font-size: 20px;
                     color: rgb(80, 80, 80);
                     margin-top: 30px;
                 }
 
-                .size{
-                    width: 38px;
-                    height: 38px;
-                    padding: 5px;
-                    border: 1px solid black;
-                    display: inline-block;
-                    vertical-align: middle;
-                    text-align: center;
-                    color: rgb(120, 120, 120);
-                    margin-right: 30px;
-                    margin-bottom: 20px;
-                    transition: all 0.3s;
+                .attribute-values{
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 30px;
 
-                    &:hover{
-                         background: $crvena;
-                         color: white;
-                         cursor: pointer;
+                    .order-input-label{
+                        user-select: none;
                     }
 
-                    .size-symbol{
-                        text-transform: uppercase;
-                        font-weight: 900;
-                        font-size: 16px;
-                    }
                 }
 
-                .color{
-                    width: 40px;
-                    height: 40px;
-                    display: inline-block;
-                    margin-right: 30px;
-
-                    &:hover{
-                        cursor: pointer;
-                    }
-                }
-
-                .black{
-                    background: black;
-                }
-
-                .red{
-                    background: $crvena;
-                }
-
-                .blue{
-                    background: rgb(17, 17, 133);
-                }
+                
             }
 
             .product-description{

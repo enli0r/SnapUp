@@ -10,6 +10,7 @@
                     @endforeach      
                 </div>
             @endif
+
         </div>
     </section>
 </x-layout>

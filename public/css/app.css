@@ -11598,59 +11598,23 @@ section .container .section-title #rectangle {
 
 .product .container .product-wrapper .product-details .attribute-name {
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 20px;
   color: #505050;
   margin-top: 30px;
 }
 
-.product .container .product-wrapper .product-details .size {
-  width: 38px;
-  height: 38px;
-  padding: 5px;
-  border: 1px solid black;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  color: #787878;
-  margin-right: 30px;
-  margin-bottom: 20px;
-  transition: all 0.3s;
+.product .container .product-wrapper .product-details .attribute-values {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
 }
 
-.product .container .product-wrapper .product-details .size:hover {
-  background: #a51129;
-  color: white;
-  cursor: pointer;
-}
-
-.product .container .product-wrapper .product-details .size .size-symbol {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 16px;
-}
-
-.product .container .product-wrapper .product-details .color {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-.product .container .product-wrapper .product-details .color:hover {
-  cursor: pointer;
-}
-
-.product .container .product-wrapper .product-details .black {
-  background: black;
-}
-
-.product .container .product-wrapper .product-details .red {
-  background: #a51129;
-}
-
-.product .container .product-wrapper .product-details .blue {
-  background: #111185;
+.product .container .product-wrapper .product-details .attribute-values .order-input-label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .product .container .product-wrapper .product-description {

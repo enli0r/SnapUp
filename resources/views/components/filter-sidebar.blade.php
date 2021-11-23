@@ -55,14 +55,14 @@
                     @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
 
                         {{-- Category button --}}
-                        <button type="submit" value="{{$category->slug}}" name="category" class="parent-category"
+                        <button type="submit" value="{{$category->slug}}" name="category" class="parent-category
                             @php 
                                 if(isset($previouspost['category'])){
                                     if($previouspost['category'] == $category->slug){
                                         echo('button-checked');
                                     }
                                 }
-                            @endphp>
+                            @endphp">
                                 {{$category->name}}
                         </button>
 

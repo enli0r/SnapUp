@@ -32,7 +32,11 @@ class ProductController extends Controller
 
         isset($_POST) ? $previouspost = $_POST : $previouspost = null;
 
-        return view('pages.products')->with(compact('products', 'currentcategory', 'previouspost'));
+        return view('pages.products')->with([
+            'products' => $products,
+            'currentcategory' => $currentcategory,
+            'previouspost' => $previouspost
+        ]);
     }
 
     /**

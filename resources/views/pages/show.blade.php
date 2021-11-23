@@ -1,6 +1,14 @@
 <x-layout>
     <section class="product">
         <div class="container">
+
+            {{-- if order not validated --}}
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <p class="my-0">Please fill in all product details!</p>
+                </div>
+            @endif
+
             <div class="product-wrapper grid-container">
                 <img class="grid-item product-image" src="{{ $product->images->first()->url }}" alt="">
 
@@ -22,6 +30,7 @@
                         </ul>
                     </div>
                     
+                    
 
                     <div class="price">
                         <h3 class="store-price">${{ $product->price }}</h3>
@@ -31,39 +40,41 @@
                         <p>Listed price is only for online purchase!</p>
                     </div>
 
-                    <hr>
-
-                    @foreach ($attributes as $attribute)
-                        <p>{{ $attribute->name }}</p>
-
-                        <!-- cycling through attribute products associated with product -->
-                        @foreach ($attributeProducts as $attributeProduct) 
-                            <!-- cycling through attributeValues associated with current attribute through pivot table -->
-                            @foreach ($attributeProduct->attributeValues()->where('attribute_id', $attribute->id)->get() as $attributeValue)
-
-                            <!-- creating s/m/l symbols using first letter, it will change latter-->
-                            @php
-                                $sizeSymbol = substr($attributeValue->value, 0,1);
-                            @endphp
-
-                            <!-- setting div class based on attribute and its value -->
-                            <div class="{{ $attribute->code }} {{ $attributeValue->value }}">
-
-                                <!-- adding symbol only to size attribute -->
-                                @if ($attribute->code == 'size')
-                                    <p class="size-symbol">{{ $sizeSymbol }}</p>
-                                @endif
-
-                            </div>
-
-                                
-                            @endforeach
-                        @endforeach
-                        
-                    @endforeach
                     
-                </div>
+                    {{-- order form --}}
+                    <form action="" method="post" class="order-form">
+                        @csrf
+                        <input type="hidden" name="_method" value="put">
+                        
 
+                        
+                            @foreach ($attributes as $attribute)
+                                <p class="attribute-name">{{ $attribute->name }}</p>
+                                <div class="{{ $attribute->code }} attribute-values">
+
+                                    @foreach ($attributeProducts as $attributeProduct)
+                                        @foreach ($attributeProduct->attributeValues()->where('attribute_id', $attribute->id)->get() as $attributeValue)
+                                            @php
+                                                $id = $attributeProduct->id.$attributeValue->id;
+                                            @endphp
+                                            <div class="order-input-label">
+                                                <input type="radio" name="{{ $attribute->code }}" id="{{ $id }}" value="{{ $attributeValue->value }}">
+                                                <label for="{{ $id }}">{{ $attributeValue->value }}</label>
+                                            </div>
+                                            
+                                        @endforeach
+                                    @endforeach
+                                </div>
+                            @endforeach
+
+                            <button class="btn btn-primary" type="submit" value="submitted">Add to cart</button>
+                                                    
+                    </form>
+
+
+                </div>
+                <hr>
+                    
                 <div class="product-description grid-item">
                     <h3>Product description</h3>
                     <hr>
