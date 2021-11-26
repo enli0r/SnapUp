@@ -42,10 +42,10 @@
 
                     
                     {{-- order form --}}
-                    <form action="" method="post" class="order-form">
+                    <form action="{{ route('products.addToCart', [$product->id]) }}" method="post" class="order-form">
                         @csrf
-                        <input type="hidden" name="_method" value="put">
-                        
+                        <input type="hidden" name="_method" value="put" />
+                        <input type="hidden" name="product_id" value={{ $product->id }} />
 
                         
                             @foreach ($attributes as $attribute)

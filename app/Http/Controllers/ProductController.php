@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
 use App\Attribute;
 use App\AttributeValue;
+use App\CategoryProduct;
 use App\ProductAttribute;
 use Illuminate\Http\Request;
+use App\Http\Traits\ProductTrait;
 use App\Http\Controllers\Controller;
 use App\AttributeValueProductAttribute;
-use App\Category;
-use App\CategoryProduct;
-use App\Http\Traits\ProductTrait;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class ProductController extends Controller
 {
@@ -108,4 +109,12 @@ class ProductController extends Controller
     {
         
     }
+
+
+    public function addToCart(Request $request){
+        Cart::add('hehe', 'product1', 1, 55);
+
+        dd(Cart::content()->count());
+    }
+
 }
