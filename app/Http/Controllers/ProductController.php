@@ -122,7 +122,6 @@ class ProductController extends Controller
             0,
             ['size' => $request->size, 'color' => $request->color]
         );
-
         
     }
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -14,7 +14,7 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
-        <x-navbar />
+        <x-navbar render="render"/>
         <x-category-navbar />
         {{$slot}}
         <x-footer />

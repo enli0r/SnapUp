@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,6 @@ Route::group(['prefix' => 'products'], function(){
 
     Route::get('/categories/{category}/{subcategorySlug?}', 'CategoryController@index')->name('products.categories');
     Route::put('/categories/{category?}/{subcategorySlug?}', 'CategoryController@index');
-    
 });
+
+Route::get('/cart', 'CartController@index')->name('cart');
