@@ -13,6 +13,13 @@ class CartController extends Controller
     }
 
     public function store(Request $request){
+
+        $validated = $request->validate([
+            'size' => 'required',
+            'color' => 'required'
+        ]);
+
+
         $product = Product::findOrFail($request->product_id);
         $alert = '';
 
