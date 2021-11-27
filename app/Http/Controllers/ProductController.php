@@ -111,18 +111,4 @@ class ProductController extends Controller
     }
 
 
-    public function addToCart(Request $request){
-        $product = Product::findOrFail($request->product_id);
-
-        Cart::add(
-            $product->id,
-            $product->name,
-            1,
-            $product->price,
-            0,
-            ['size' => $request->size, 'color' => $request->color]
-        );
-        
-    }
-
 }

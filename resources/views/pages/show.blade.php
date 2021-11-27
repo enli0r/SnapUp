@@ -9,6 +9,12 @@
                 </div>
             @endif
 
+            @if (session('message'))
+                <div class="alert alert-{{ session('alert') }}">
+                    <p class="my-0">{{ session('message') }}</p>
+                </div>
+            @endif
+
             <div class="product-wrapper grid-container">
                 <img class="grid-item product-image" src="{{ $product->images->first()->url }}" alt="">
 
@@ -42,7 +48,7 @@
 
                     
                     {{-- order form --}}
-                    <form action="{{ route('products.addToCart', [$product->id]) }}" method="post" class="order-form">
+                    <form action="{{ route('cart.store', [$product->id]) }}" method="post" class="order-form">
                         @csrf
                         <input type="hidden" name="_method" value="put" />
 
