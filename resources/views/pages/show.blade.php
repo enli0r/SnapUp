@@ -75,6 +75,8 @@
                                 </div>
                             @endforeach
 
+                            <input type="number" name="quantity" placeholder="1" step="1" pattern="\d+">
+
                             <button class="btn btn-primary" type="submit" value="submitted">Add to cart</button>
                                                     
                     </form>
