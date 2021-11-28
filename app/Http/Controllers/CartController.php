@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use App\ProductImage;
 use Illuminate\Http\Request;
@@ -9,9 +10,10 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
+
     public function index(){
-        $products = Cart::content();
-        $images = ProductImage::all();
+         $products = Cart::content();
+         $images = ProductImage::all();
 
         return view('pages.cart')->with(compact('products', 'images'));
     }
@@ -53,5 +55,11 @@ class CartController extends Controller
             'message' => $message,
             'alert' => $alert
         ]);
+    }
+    
+    public function destroy($id){
+        Cart::remove($id);
+
+        return redirect()->back();
     }
 }

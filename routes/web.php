@@ -42,4 +42,6 @@ Route::group(['prefix' => 'products'], function(){
 });
 
 Route::get('/cart', 'CartController@index')->name('cart');
+Route::post('/cart/{id}', 'CartController@destroy')->name('cart.remove');
+
 Route::get('/cart/order', 'OrderController@index')->name('order');

@@ -11898,13 +11898,20 @@ section .container .section-title #rectangle {
   }
 }
 
-.cart-container {
-  width: 1000px;
+.cart-container .emnpty-cart {
+  border-radius: 5px !important;
+}
+
+.cart-container .emnpty-cart p {
+  font-size: 15px !important;
+  color: white !important;
 }
 
 .cart-container .cart-wrapper {
+  max-width: 1000px;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   padding: 25px;
+  margin: auto;
   margin-bottom: 30px;
 }
 
@@ -12020,6 +12027,8 @@ section .container .section-title #rectangle {
 }
 
 .cart-container .continue-and-checkout {
+  width: 1000px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
 }
