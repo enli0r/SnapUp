@@ -1,65 +1,145 @@
 .cart-container{
+    width: 1000px;
 
-    .cart-header{
-        background: lightgray;
-        margin-bottom: 5px;
-
-        .cart-header-wrapper{
-            color: rgb(80,80,80);
-            display: flex;
-            margin-left: 150px;
-
-            h3{
-                flex: 1;
-                font-weight: 700;
-                font-size: 18px;
-                text-transform: uppercase;
-                margin: 5px 0;
-            }
-        }
-        
-        
-    }
-
-    .cart-product{
-        display: flex;
-        justify-content: left;
-        border: 0.2px solid lightgray;
+    .cart-wrapper{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        padding: 25px;
         margin-bottom: 30px;
-        align-items: center;
+        
+        .product-separator{
+            margin: 20px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1)
+        }
 
-        .cart-product-details{
+        .cart-header{
+            background: white;
+            margin-bottom: 5px;
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
+            
+
+            .right-space-filler{
+                flex: 0.5;
+            }
+    
+            .cart-header-wrapper{
+                flex: 2.5;
+                display: flex;
+                
+                .left-space-filler{
+                    width: 150px;
+                }  
+                    
+                h3{
+                    flex: 1;
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin: 5px 0;
+                    color: rgb(120,120,120);
+
+                }
+            }
+            
+            
+        }
+    
+        .cart-product-wrapper{
+            display: flex;
             align-items: center;
             
-            .cart-product-name{
-                flex: 1;
-                font-weight: 700;
-                font-size: 18px;
-                color: rgb(80,80,80);
-                text-transform: capitalize;
+            .cart-product{
+                flex: 2.5;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+        
+                .cart-product-details{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    align-items: center;
+                    
+                    .cart-product-name{
+                        flex: 1;
+                        font-weight: 600;
+                        font-size:15px;
+                        
+                        text-transform: uppercase;
+                    }
+        
+                    .cart-product-quantity{
+                        flex: 1;
+                        font-size: 15px;
+                        font-weight: 600;
+        
+                    }
+        
+                    .cart-product-price{
+                        flex: 1;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    
+                }
+        
+                img{
+                    width: 150px;
+                }
             }
 
-            .cart-product-quantity{
-                flex: 1;
-                font-size: 18px;
-                font-weight: 700;
+            .product-remove-form{
+                padding: 0;
+                flex: 0.5;
 
+                .remove-btn{
+                    
+                    border-radius: 3px;
+                    font-size: 15px;
+                }
             }
-
-            .cart-product-price{
-                flex: 1;
-                font-size: 18px;
-                font-weight: 700;
-            }
-            
         }
 
-        img{
-            width: 150px;
+        
+    
+        .total{
+            display: flex;
+            align-items: center;
+    
+            .total-price-wrapper{
+                flex: 2.5;
+                justify-content: space-between;
+                display: flex;
+
+                .left-space-filler{
+                    width: 150px;
+                }
+
+                .total-price{
+                    flex: 0.33;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: rgb(80,80,80);
+                }
+            }
+
+            .right-space-filler{
+                flex: 0.5;
+            }
+    
         }
+    }
+
+
+    .continue-and-checkout{
+        display: flex;
+        justify-content: space-between;
+
+        a{
+            font-size: 15px;
+            padding: 7px 14px;
+            border-radius: 3px;
+            color: white;
+        }
+
     }
 }

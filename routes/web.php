@@ -42,3 +42,4 @@ Route::group(['prefix' => 'products'], function(){
 });
 
 Route::get('/cart', 'CartController@index')->name('cart');
+Route::get('/cart/order', 'OrderController@index')->name('order');

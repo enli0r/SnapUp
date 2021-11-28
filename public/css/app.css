@@ -11898,62 +11898,228 @@ section .container .section-title #rectangle {
   }
 }
 
-.cart-container .cart-header {
-  background: lightgray;
+.cart-container {
+  width: 1000px;
+}
+
+.cart-container .cart-wrapper {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.cart-container .cart-wrapper .product-separator {
+  margin: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-container .cart-wrapper .cart-header {
+  background: white;
   margin-bottom: 5px;
-}
-
-.cart-container .cart-header .cart-header-wrapper {
-  color: #505050;
   display: flex;
-  margin-left: 150px;
 }
 
-.cart-container .cart-header .cart-header-wrapper h3 {
+.cart-container .cart-wrapper .cart-header .right-space-filler {
+  flex: 0.5;
+}
+
+.cart-container .cart-wrapper .cart-header .cart-header-wrapper {
+  flex: 2.5;
+  display: flex;
+}
+
+.cart-container .cart-wrapper .cart-header .cart-header-wrapper .left-space-filler {
+  width: 150px;
+}
+
+.cart-container .cart-wrapper .cart-header .cart-header-wrapper h3 {
   flex: 1;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   margin: 5px 0;
+  color: #787878;
 }
 
-.cart-container .cart-product {
+.cart-container .cart-wrapper .cart-product-wrapper {
   display: flex;
-  justify-content: left;
-  border: 0.2px solid lightgray;
-  margin-bottom: 30px;
   align-items: center;
 }
 
-.cart-container .cart-product .cart-product-details {
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product {
+  flex: 2.5;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product .cart-product-details {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
   align-items: center;
 }
 
-.cart-container .cart-product .cart-product-details .cart-product-name {
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product .cart-product-details .cart-product-name {
   flex: 1;
-  font-weight: 700;
-  font-size: 18px;
-  color: #505050;
-  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
-.cart-container .cart-product .cart-product-details .cart-product-quantity {
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product .cart-product-details .cart-product-quantity {
   flex: 1;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product .cart-product-details .cart-product-price {
+  flex: 1;
+  font-size: 16px;
   font-weight: 700;
 }
 
-.cart-container .cart-product .cart-product-details .cart-product-price {
-  flex: 1;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.cart-container .cart-product img {
+.cart-container .cart-wrapper .cart-product-wrapper .cart-product img {
   width: 150px;
+}
+
+.cart-container .cart-wrapper .cart-product-wrapper .product-remove-form {
+  padding: 0;
+  flex: 0.5;
+}
+
+.cart-container .cart-wrapper .cart-product-wrapper .product-remove-form .remove-btn {
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.cart-container .cart-wrapper .total {
+  display: flex;
+  align-items: center;
+}
+
+.cart-container .cart-wrapper .total .total-price-wrapper {
+  flex: 2.5;
+  justify-content: space-between;
+  display: flex;
+}
+
+.cart-container .cart-wrapper .total .total-price-wrapper .left-space-filler {
+  width: 150px;
+}
+
+.cart-container .cart-wrapper .total .total-price-wrapper .total-price {
+  flex: 0.33;
+  font-size: 20px;
+  font-weight: 700;
+  color: #505050;
+}
+
+.cart-container .cart-wrapper .total .right-space-filler {
+  flex: 0.5;
+}
+
+.cart-container .continue-and-checkout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-container .continue-and-checkout a {
+  font-size: 15px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  color: white;
+}
+
+.order .order-container .order-wrapper .order-form {
+  margin: auto;
+  max-width: 600px;
+  padding: 25px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.order .order-container .order-wrapper .order-form .form-group {
+  text-align: left;
+}
+
+.order .order-container .order-wrapper .order-form .form-group .input-label input {
+  width: 100%;
+  display: block;
+  border: 0.2px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.order .order-container .order-wrapper .order-form .form-group .input-label input:hover {
+  cursor: initial;
+}
+
+.order .order-container .order-wrapper .order-form .form-group .input-label label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #505050;
+}
+
+.order .order-container .order-wrapper .order-form .payment-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #505050;
+  text-align: left;
+}
+
+.order .order-container .order-wrapper .order-form .form-group-payment {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.order .order-container .order-wrapper .order-form .form-group-payment .input-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.order .order-container .order-wrapper .order-form .form-group-payment .input-label label {
+  margin: 0;
+}
+
+.order .order-container .order-wrapper .order-form .form-group-payment .input-label input {
+  display: inline-block !important;
+  width: initial !important;
+}
+
+.order .order-container .order-wrapper .order-form .name-surname {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.order .order-container .order-wrapper .order-form .name-surname .input-label {
+  flex: 1;
+}
+
+.order .order-container .order-wrapper .order-form .city-zip-code {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.order .order-container .order-wrapper .order-form .city-zip-code .input-label-city {
+  flex: 2.3;
+}
+
+.order .order-container .order-wrapper .order-form .city-zip-code .input-label-zip {
+  flex: 0.7;
+}
+
+.order .order-container .order-wrapper .order-form .submit-order-btn {
+  text-align: right;
 }
 
