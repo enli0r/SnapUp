@@ -11898,15 +11898,6 @@ section .container .section-title #rectangle {
   }
 }
 
-.cart-container .emnpty-cart {
-  border-radius: 5px !important;
-}
-
-.cart-container .emnpty-cart p {
-  font-size: 15px !important;
-  color: white !important;
-}
-
 .cart-container .cart-wrapper {
   max-width: 1000px;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
@@ -12040,18 +12031,21 @@ section .container .section-title #rectangle {
   color: white;
 }
 
-.order .order-container .order-wrapper .order-form {
+.order-details .order-details-container .order-details-wrapper {
   margin: auto;
   max-width: 600px;
+}
+
+.order-details .order-details-container .order-details-wrapper .order-details-form {
   padding: 25px;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-.order .order-container .order-wrapper .order-form .form-group {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group {
   text-align: left;
 }
 
-.order .order-container .order-wrapper .order-form .form-group .input-label input {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group .input-label input {
   width: 100%;
   display: block;
   border: 0.2px solid rgba(0, 0, 0, 0.2);
@@ -12062,18 +12056,18 @@ section .container .section-title #rectangle {
   font-weight: 600;
 }
 
-.order .order-container .order-wrapper .order-form .form-group .input-label input:hover {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group .input-label input:hover {
   cursor: initial;
 }
 
-.order .order-container .order-wrapper .order-form .form-group .input-label label {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group .input-label label {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 800;
   color: #505050;
 }
 
-.order .order-container .order-wrapper .order-form .payment-label {
+.order-details .order-details-container .order-details-wrapper .order-details-form .payment-label {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 800;
@@ -12081,13 +12075,13 @@ section .container .section-title #rectangle {
   text-align: left;
 }
 
-.order .order-container .order-wrapper .order-form .form-group-payment {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group-payment {
   display: flex;
   justify-content: flex-start;
   gap: 40px;
 }
 
-.order .order-container .order-wrapper .order-form .form-group-payment .input-label {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group-payment .input-label {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -12095,40 +12089,43 @@ section .container .section-title #rectangle {
   margin-bottom: 10px;
 }
 
-.order .order-container .order-wrapper .order-form .form-group-payment .input-label label {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group-payment .input-label label {
   margin: 0;
 }
 
-.order .order-container .order-wrapper .order-form .form-group-payment .input-label input {
+.order-details .order-details-container .order-details-wrapper .order-details-form .form-group-payment .input-label input {
   display: inline-block !important;
   width: initial !important;
 }
 
-.order .order-container .order-wrapper .order-form .name-surname {
+.order-details .order-details-container .order-details-wrapper .order-details-form .name-surname {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-.order .order-container .order-wrapper .order-form .name-surname .input-label {
+.order-details .order-details-container .order-details-wrapper .order-details-form .name-surname .input-label {
   flex: 1;
 }
 
-.order .order-container .order-wrapper .order-form .city-zip-code {
+.order-details .order-details-container .order-details-wrapper .order-details-form .city-zip-code {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-.order .order-container .order-wrapper .order-form .city-zip-code .input-label-city {
+.order-details .order-details-container .order-details-wrapper .order-details-form .city-zip-code .input-label-city {
   flex: 2.3;
 }
 
-.order .order-container .order-wrapper .order-form .city-zip-code .input-label-zip {
+.order-details .order-details-container .order-details-wrapper .order-details-form .city-zip-code .input-label-zip {
   flex: 0.7;
 }
 
-.order .order-container .order-wrapper .order-form .submit-order-btn {
-  text-align: right;
+.order-details .order-details-container .order-details-wrapper .order-details-form .back-order {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 

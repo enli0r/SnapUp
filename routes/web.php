@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -44,4 +45,8 @@ Route::group(['prefix' => 'products'], function(){
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart/{id}', 'CartController@destroy')->name('cart.remove');
 
+Route::get('/cart/order-details', 'OrderDetailsController@index')->name('order-details');
+Route::put('/cart/order-details', 'OrderDetailsController@store');
+
 Route::get('/cart/order', 'OrderController@index')->name('order');
+

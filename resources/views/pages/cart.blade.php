@@ -80,7 +80,7 @@
 
                 <div class="continue-and-checkout">
                     <a class="continue btn btn-primary" href="{{ url()->previous() }}">Continue shopping</a>
-                    <a class="checkout btn btn-success" href="{{ route('order') }}">Checkout now</a>
+                    <a class="checkout btn btn-success" href="{{ route('order-details') }}">Checkout now</a>
                 </div>
 
             @else
