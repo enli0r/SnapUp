@@ -12,7 +12,7 @@
                     </div>
                 @endif
 
-                <form action="" method="POST" class="order-details-form">
+                <form action="{{ route('order-details') }}" method="POST" class="order-details-form">
                     @csrf
 
                     <input type="hidden" name="_method" value="put">

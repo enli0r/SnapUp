@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\OrderDetails;
+use App\ProductImage;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -12,7 +14,7 @@ class OrderDetailsController extends Controller
         return view('pages.order-details');
     }
 
-    public function store(Request $request){
+    public function validation(Request $request){
         $validated = $request->validate([
             'name' => 'required|max:255',
             'surname' => 'required|max:25',
@@ -24,16 +26,24 @@ class OrderDetailsController extends Controller
         ]);
 
 
-        OrderDetails::create([
+        $order_details = [
             'name' => $request->name,
             'surname' => $request->surname,
             'country' => $request->country,
-            'zipCode' => $request->zipCode,
+            'city' => $request->city,
+            'zip-code' => $request->zipCode,
             'adress' => $request->adress,
-            'phoneNumber' => $request->phoneNumber,
+            'phone-number' => $request->phoneNumber,
             'payment' => $request->payment,
-        ]);
+        ];
 
-        return view('order')->with('post', $request);
+        $products = Cart::content();
+        $images = ProductImage::all();
+
+        return view('pages.order')->with([
+            'order_details' => $order_details,
+            'products' => $products,
+            'images' => $images,
+        ]);
     }
 }

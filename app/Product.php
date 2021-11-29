@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Order;
 use App\Attribute;
 use App\ProductImage;
 use App\AttributeValue;
@@ -37,5 +38,9 @@ class Product extends Model
     // //method for accessing attributeProducts
     public function attributeProducts(){
         return $this->hasMany(AttributeProduct::class);
+    }
+
+    public function orders(){
+        return $this->hasMany(Order::class);
     }
 }

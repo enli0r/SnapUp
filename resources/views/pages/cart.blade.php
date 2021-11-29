@@ -50,7 +50,7 @@
 
                         
 
-                        <hr class="product-separator">
+                        <hr id="product-separator">
                     @endforeach
         
                     @php
@@ -62,19 +62,7 @@
                         }
         
                     @endphp
-        
-
-                        <div class="total">
-                            <div class="total-price-wrapper">
-
-                                <div class="left-space-filler"></div>
-
-                                <h3 class="total-price">Total: ${{ $total_price }}</h3>
-                            </div>
-
-
-                            <div class="right-space-filler"></div>
-                        </div>   
+   
                     
                 </div>
 

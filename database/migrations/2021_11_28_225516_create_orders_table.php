@@ -14,7 +14,14 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            
+            $table->id();
+            $table->foreignId('order_details_id')->constrained();
+            $table->foreignId('product_id')->constrained();
+            $table->string('size');
+            $table->string('color');
+            $table->bigInteger('quantity');
+            $table->decimal('total_price');
+            $table->timestamps();
         });
     }
 

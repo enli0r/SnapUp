@@ -46,7 +46,8 @@ Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart/{id}', 'CartController@destroy')->name('cart.remove');
 
 Route::get('/cart/order-details', 'OrderDetailsController@index')->name('order-details');
-Route::put('/cart/order-details', 'OrderDetailsController@store');
+Route::put('/cart/order-details', 'OrderDetailsController@validation');
 
-Route::get('/cart/order', 'OrderController@index')->name('order');
+
+Route::put('/cart/order', 'OrderController@store')->name('order.store');
 
