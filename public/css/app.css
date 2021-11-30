@@ -11003,6 +11003,7 @@ section .container .section-title #rectangle {
 .testimonial-wrapper .grid-item img,
 .brands-wrapper .grid-item img {
   width: 100%;
+  height: 335px;
 }
 
 .featured-categories-wrapper .grid-item .basic-info,
@@ -11011,6 +11012,7 @@ section .container .section-title #rectangle {
 .testimonial-wrapper .grid-item .basic-info,
 .brands-wrapper .grid-item .basic-info {
   margin-top: 15px;
+  color: #323232;
 }
 
 .featured-categories-wrapper .grid-item .basic-info h5,
@@ -11018,8 +11020,9 @@ section .container .section-title #rectangle {
 .latest-products-wrapper .grid-item .basic-info h5,
 .testimonial-wrapper .grid-item .basic-info h5,
 .brands-wrapper .grid-item .basic-info h5 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .featured-categories-wrapper .grid-item .basic-info p,
@@ -11028,11 +11031,25 @@ section .container .section-title #rectangle {
 .testimonial-wrapper .grid-item .basic-info p,
 .brands-wrapper .grid-item .basic-info p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .featured-categories-wrapper {
   grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.featured-categories-wrapper #featured-category-form button {
+  background: none;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.featured-categories-wrapper #featured-category-form button .basic-info h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #323232;
+  text-transform: capitalize;
 }
 
 .featured-products-wrapper,
@@ -11179,6 +11196,7 @@ section .container .section-title #rectangle {
   filter: grayscale(100%);
   cursor: pointer;
   width: 100%;
+  height: auto;
 }
 
 .brands-wrapper .grid-item img:hover {

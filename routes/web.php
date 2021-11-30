@@ -38,7 +38,7 @@ Route::group(['prefix' => 'products'], function(){
     Route::get('/{post:id}', 'ProductController@show')->name('show');
     Route::put('/{post:id}', 'CartController@store')->name('cart.store');
 
-    Route::get('/categories/{category}/{subcategorySlug?}', 'CategoryController@index')->name('products.categories');
+    Route::get('/categories/{category?}/{subcategorySlug?}', 'CategoryController@index')->name('products.categories');
     Route::put('/categories/{category?}/{subcategorySlug?}', 'CategoryController@index');
 });
 

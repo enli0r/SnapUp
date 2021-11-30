@@ -20,10 +20,19 @@
                 @foreach ($categories as $category)
                     @if ($category->is_featured == 1)
                         <div class="grid-item">
-                            <a href=""><img src="{{ $category->image }}" alt=""></a>
-                            <div class="basic-info">
-                                <h5>{{ $category->name }}</h5>
-                            </div>
+                            <form action="{{ route('products') }}" method="post" id="featured-category-form">
+                                @csrf
+                                <input type="hidden" name="_method" value="put">
+                                <input type="hidden" name="featured_category" value="{{ $category->slug }}">
+
+                                <button type="submit">
+                                    <a href="{{ route('products.categories', $category->slug) }}"><img src="{{ $category->image }}" alt=""></a>
+                                    <div class="basic-info">
+                                        <h5>{{ $category->name }}</h5>
+                                    </div>
+                                </button>
+                            </form>
+                            
                         </div>
                     @endif
                 @endforeach
@@ -41,21 +50,34 @@
 
             <div class="featured-products-wrapper grid-container">
 
-                @foreach ($products as $product)
+                @php
+                    $counter = 0;
+                @endphp
+
+                @foreach ($products->reverse() as $product)
                     @if ($product->is_featured == 1)
                         <div class="grid-item">
-                            <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
+                            <a href="{{ route('show', $product->id) }}"><img src="{{ $product->images->first()->url }}" alt=""></a>
                             <div class="basic-info">
                                 <h5>{{ $product->name }}</h5>
-                                <p>{{ $product->price }}</p>
+                                <p>${{ $product->price }}</p>
                             </div>
                         </div>
+
+                        @php
+                            $counter += 1;
+                        @endphp
+                    @endif
+                    
+                    @if ($counter > 3)
+                        @break;
                     @endif
                 @endforeach
 
             </div>
         </div>
     </section>
+
 
     <section class="latest-products">
         <div class="container">
@@ -69,10 +91,10 @@
                 @foreach ($products as $product)
                     @if ($loop->remaining < 4 )
                         <div class="grid-item">
-                            <a href=""><img src="{{ $product->images->first()->url }}" alt=""></a>
+                            <a href="{{ route('show', $product->id) }}"><img src="{{ $product->images->first()->url }}" alt=""></a>
                             <div class="basic-info">
                                 <h5>{{ $product->name }}</h5>
-                                <p>{{ $product->price }}</p>
+                                <p>${{ $product->price }}</p>
                             </div>
                         </div>
                     @endif

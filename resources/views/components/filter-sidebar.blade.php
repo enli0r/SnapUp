@@ -84,7 +84,6 @@
                 @endforeach
             </div>
         @endif
-        
 
     
         {{-- Featured category --}}    
