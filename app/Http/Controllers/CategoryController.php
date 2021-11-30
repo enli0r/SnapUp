@@ -18,7 +18,6 @@ class CategoryController extends Controller
     use ProductTrait;
 
 
-
     public function index(Request $request, $categorySlug = null, $subcategorySlug = null){
         $products = $this->getProducts($categorySlug, $subcategorySlug, $_POST); //Function get products is from ProductTrait
 

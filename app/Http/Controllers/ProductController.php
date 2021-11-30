@@ -70,6 +70,11 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
+
+        if($product == null){
+            return abort(404);
+        }
+
         $attributes = $product->attributes;
         $attributeProducts = $product->attributeProducts;
 
