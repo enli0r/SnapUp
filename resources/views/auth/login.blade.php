@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout>
     <div class="d-flex container justify-content-center my-2 flex-column">
 
         @if (session('status'))
@@ -45,4 +43,4 @@
             </form>
         </div>
     </div>
-@endsection
+</x-layout>
