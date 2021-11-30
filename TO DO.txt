@@ -1,3 +1,4 @@
 pagination
-ordering
-carttt
+fixing filter sidebar bugs
+improving visuals all over the site
+improving visuals on all forms

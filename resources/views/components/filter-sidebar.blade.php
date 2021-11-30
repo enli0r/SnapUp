@@ -70,8 +70,8 @@
                         @foreach ($category->children as $child)
                             <div class="input-label subcategory">
                                 <input type="radio" id="{{ $child->slug }}" name="subcategory" value="{{ $child->slug }}" class="child-category"
-                                @if (isset($previouspost['category']))
-                                    @if ($previouspost['category'] == $child->slug)
+                                @if (isset($previouspost['subcategory']))
+                                    @if ($previouspost['subcategory'] == $child->slug)
                                         checked
                                     @endif
                                 @endif 
