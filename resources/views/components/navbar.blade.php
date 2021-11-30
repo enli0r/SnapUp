@@ -19,18 +19,18 @@
         </li>
 
         @auth
-            <li class="nav-item py-0">
-              <a class="nav-link py-0" href="{{route('login')}}">{{Auth::user()->name}}</a>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('login')}}">{{Auth::user()->username}}</a>
             </li>
             
-            <form action="{{route('logout')}}" method="POST">
+            <form action="{{route('logout')}}" id="logout-form" method="POST">
                 @csrf
 
-                <button type="submit" class="btn nav-link py-0">Logout</button>
+                <button type="submit" class="nav-link" id="logout-btn">Logout</button>
             </form>
 
 
-          @endauth
+        @endauth
             
           @guest
             <li class="nav-item">
