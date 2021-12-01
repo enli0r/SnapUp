@@ -1,4 +1,10 @@
 .products{
+
+    .products-container{
+        display: flex;
+        justify-content: space-between; 
+    }
+
     .section-title{
         margin-bottom: 15px;
         text-align: left;
@@ -10,6 +16,8 @@
         row-gap: 50px;
         column-gap: 15px;
         grid-template-columns: repeat(auto-fit, 250px);
+        padding: 0 10px;
+        width: 800px;
 
         a{
             transition: 0.2s;
