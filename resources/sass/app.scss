@@ -4,7 +4,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
 // Custom
+@import 'global';
+
 @import 'index';
 
 @import 'navbar';

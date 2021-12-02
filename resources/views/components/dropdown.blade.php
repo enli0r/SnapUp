@@ -1,7 +1,7 @@
 @props(['buttonName', 'categories', 'gender'])
 
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle dropdown-button category-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       {{ $buttonName }}
     </button>
 

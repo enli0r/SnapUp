@@ -37280,6 +37280,8 @@ __webpack_require__(/*! ./category-navbar.js */ "./resources/js/category-navbar.
 
 __webpack_require__(/*! ./filter.js */ "./resources/js/filter.js");
 
+__webpack_require__(/*! ./carousel.js */ "./resources/js/carousel.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37324,6 +37326,21 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/carousel.js":
+/*!**********************************!*\
+  !*** ./resources/js/carousel.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.carousel').carousel({
+    interval: 4000
+  });
+});
 
 /***/ }),
 
