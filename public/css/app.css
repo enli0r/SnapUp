@@ -10924,25 +10924,25 @@ body {
 }
 
 .header-carousel {
-  height: 550px;
+  height: 100%;
   margin-top: 50px;
   position: relative;
 }
 
 .header-carousel .carousel {
-  height: 550px;
+  height: 100%;
 }
 
 .header-carousel .carousel-item {
-  height: 550px !important;
+  height: 100% !important;
 }
 
 .header-carousel .carousel-inner {
-  height: 550px;
+  height: 100%;
 }
 
 .header-carousel .carousel-inner img {
-  height: 550px;
+  height: 100%;
 }
 
 .header-carousel .carousel-control-prev,
@@ -11080,21 +11080,22 @@ section .container .section-title h2 {
 .exclusive-offer {
   margin: 50px auto;
   border: none;
-  background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
+  padding: 20px;
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper .exclusive-offer-product {
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper .exclusive-offer-product img {
-  width: 500px;
+  width: 100%;
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper .offer-description {
@@ -11109,7 +11110,7 @@ section .container .section-title h2 {
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper .offer-description p {
-  color: lightgray;
+  color: white;
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
@@ -11266,12 +11267,6 @@ section .container .section-title h2 {
 
   .brands-wrapper {
     justify-content: center !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header-carousel {
-    max-width: 1400px;
   }
 }
 
@@ -12011,7 +12006,7 @@ section .container .section-title h2 {
 
 .cart-container .cart-wrapper .cart-header {
   background: white;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   display: flex;
 }
 

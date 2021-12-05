@@ -101,7 +101,6 @@
     </section>
 
 
-
     <section class="brands">
         <div class="container">
             <div class="brands-wrapper">
@@ -165,7 +164,7 @@
 
    
     
-    <section class="testimonial">
+    {{-- <section class="testimonial">
         <div class="container">
             <div class="testimonial-wrapper grid-container">
 
@@ -192,6 +191,6 @@
             </div>
         </div>
     </section>
-    
+     --}}
 
 </x-layout>

@@ -176,24 +176,29 @@ section{
 .exclusive-offer{
     margin: 50px auto;
     border: none;
-    background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
 
     .container{
         .exclusive-offer-wrapper{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+            background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
+            padding: 20px;
+
+
 
             .exclusive-offer-product{
-                max-width: 500px;
+                max-width: 450px;
+                // border: 1px solid red;
 
                 img{
-                    width: 500px;
+                    width: 100%;
                 }
             }
 
             .offer-description{
                 max-width: 400px;
+                // border: 1px solid green;
 
                 p,h2,small{
                     width: 100%;
@@ -201,7 +206,7 @@ section{
                 }
         
                 p{
-                    color: lightgray;
+                    color: white;
                     font-size: 18px;
                     font-weight: 300;
                     text-transform: uppercase;
@@ -248,7 +253,6 @@ section{
         }
     }
 }
-
 
 .testimonial-wrapper{
     grid-template-columns: repeat(auto-fit, 300px);
@@ -374,10 +378,10 @@ section{
 }
 
 
-//new container breakpoints
-@media (min-width: 1200px){
-    .header-carousel{
-         max-width: 1400px;
-    }
-}
+// new container breakpoints
+// @media (min-width: 1200px){
+//     .header-carousel{
+//          max-width: 1400px;
+//     }
+// }
 
