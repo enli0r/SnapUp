@@ -11222,13 +11222,13 @@ section .container .section-title h2 {
 
 .base-categories .base-categories-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-columns: repeat(auto-fit, 300px);
   justify-content: space-between;
   gap: 10px;
 }
 
 .base-categories .base-categories-wrapper .category {
-  height: 420px;
+  height: 390px;
   position: relative;
 }
 

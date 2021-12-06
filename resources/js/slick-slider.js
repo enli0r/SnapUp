@@ -7,6 +7,9 @@ $(document).ready(function(){
         adaptiveHeight: true,
         prevArrow: $('.latest-prev'),
         nextArrow: $('.latest-next'),
+        speed: 800,
+
+        
 
         responsive: [
             {
@@ -27,6 +30,8 @@ $(document).ready(function(){
         adaptiveHeight: true,
         prevArrow: $('.featured-prev'),
         nextArrow: $('.featured-next'),
+        speed: 800,
+
 
         responsive: [
             {
@@ -40,8 +45,11 @@ $(document).ready(function(){
     });
 
     $('.header-slider').slick({
-        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 7500,
+        speed: 800,
         prevArrow: $('.header-prev'),
         nextArrow: $('.header-next'),
+        fade: true,
     });
 });
