@@ -6,10 +6,10 @@
 .filter-sidebar{
     position: normal;
     display: block;
-    width: 300px;
+    width: 250px;
     min-width: 200px;
-    border-right: 1px solid lightgray;
     text-align: left;
+    padding-left: 20px;
 
     .filters-close-icon{
         display: none !important;
@@ -30,6 +30,7 @@
             margin: 0;
         }
     }
+
     h1{
         margin: 0;
         padding: 0;
@@ -143,7 +144,8 @@
         padding: 6px 12px;
         border: 1px solid rgb(80,80,80);
         position: absolute;
-        top: 150px;
+        top: 210px;
+        left: 30px;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 14px;
@@ -160,6 +162,7 @@
         z-index: 100;
         transition: 0.3s;
         overflow-x: hidden;
+        padding-left: 0 !important;
 
         .filters-form, .filters-heading{
             margin: 20px;
@@ -181,7 +184,8 @@
     }
 
     .opened{
-        width: 250px !important;
+        width: 300px !important;
+        padding-left: 20px;
 
         .filters-close-icon{
             display: block !important;
