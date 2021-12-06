@@ -1,28 +1,28 @@
 <x-layout>
 
-    <div class="container header-carousel">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://i.ibb.co/TgChnZZ/SV-FW21-Desktop.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://i.ibb.co/YBks3Hp/sv-gym-time-oct21-2-desk.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://i.ibb.co/cYjhv8K/SV-New-trends-21-1200x526.jpg" alt="Third slide">
-                  </div>
+    <section class="header">
+        <div class="container header-container">
+            <div class="header-wrapper ">
+                <i class="fas fa-chevron-left prev header-prev arrow"></i>
+                <i class="fas fa-chevron-right next header-next arrow"></i>
+
+                <div class="header-slider">
+                    <div class="header-slide">
+                        <img src="https://i.ibb.co/TgChnZZ/SV-FW21-Desktop.jpg" alt="">
+                    </div>
+
+                    <div class="header-slide">
+                        <img src="https://i.ibb.co/YBks3Hp/sv-gym-time-oct21-2-desk.jpg" alt="">
+                    </div>
+
+                    <div class="header-slide">
+                        <img src="https://i.ibb.co/cYjhv8K/SV-New-trends-21-1200x526.jpg" alt="">
+                    </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>        
-    </div>
+            </div>
+        </div>
+
+    </section>
 
     <section class="featured-categories">
         <div class="container">
@@ -66,8 +66,7 @@
             </div>
         </div>
     </section>
-
-    
+   
     <section class="base-categories">
         <div class="container">
             <div class="base-categories-wrapper">
@@ -114,6 +113,27 @@
         
     </section>
 
+    <section class="brands">
+        <div class="container">
+            <div class="brands-wrapper">
+                <div class="grid-item">
+                    <img src="images/logo-godrej.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="images/logo-oppo.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="images/logo-coca-cola.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="images/logo-paypal.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="images/logo-philips.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="latest-products">
         <div class="container">
@@ -143,27 +163,6 @@
         </div>
     </section>
 
-    <section class="brands">
-        <div class="container">
-            <div class="brands-wrapper">
-                <div class="grid-item">
-                    <img src="images/logo-godrej.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="images/logo-oppo.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="images/logo-coca-cola.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="images/logo-paypal.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="images/logo-philips.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="featured-products">
         <div class="container">

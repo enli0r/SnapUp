@@ -10923,46 +10923,42 @@ body {
   margin: 0;
 }
 
-.header-carousel {
-  height: 100%;
-  margin-top: 50px;
+.header .header-wrapper {
   position: relative;
+  margin-top: 40px;
 }
 
-.header-carousel .carousel {
-  height: 100%;
-}
-
-.header-carousel .carousel-item {
-  height: 100% !important;
-}
-
-.header-carousel .carousel-inner {
-  height: 100%;
-}
-
-.header-carousel .carousel-inner img {
-  height: 100%;
-}
-
-.header-carousel .carousel-control-prev,
-.header-carousel .carousel-control-next {
-  background: black !important;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  align-items: center;
+.header .header-wrapper .arrow {
+  top: 40%;
+  display: block;
   position: absolute;
   top: 50%;
-  transform: translatey(-50%);
+  z-index: 100;
+  transition: 0.1s;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: lightgray;
 }
 
-.header-carousel .carousel-control-prev {
-  left: 50px;
+.header .header-wrapper .arrow:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
 
-.header-carousel .carousel-control-next {
-  right: 50px;
+.header .header-wrapper .prev {
+  left: 30px;
+}
+
+.header .header-wrapper .next {
+  right: 30px;
+}
+
+.header .header-wrapper .slick-slide img {
+  width: 100%;
+  height: 450px;
 }
 
 section {
@@ -11295,9 +11291,20 @@ section .container .section-title h2 {
   color: white;
 }
 
+@media (max-width: 1200px) {
+  .base-categories-wrapper {
+    grid-template-columns: repeat(auto-fit, 300px) !important;
+  }
+
+  .base-categories-wrapper .category {
+    height: 390px !important;
+  }
+}
+
 @media (max-width: 991px) {
   .exclusive-offer-wrapper {
     flex-direction: column;
+    gap: 30px !important;
   }
 
   .featured-products-wrapper,
@@ -11311,6 +11318,21 @@ section .container .section-title h2 {
 
   .brands-wrapper {
     justify-content: center !important;
+  }
+
+  .base-categories-wrapper {
+    row-gap: 50px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-container,
+  .base-categories-wrapper {
+    justify-content: center !important;
+  }
+
+  .header .header-wrapper .slick-slide img {
+    height: 250px !important;
   }
 }
 

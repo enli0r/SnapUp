@@ -1,4 +1,10 @@
 pagination
-fixing filter sidebar bugs
-improving visuals all over the site
-improving visuals on all forms
+
+layout{
+    change footer
+}
+
+homepage{
+    media queries on featured and base categories
+    change carousel images when on mobile size
+}
