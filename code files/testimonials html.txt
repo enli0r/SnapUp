@@ -1,0 +1,27 @@
+<section class="testimonial">
+	<div class="container">
+		<div class="testimonial-wrapper grid-container">
+
+
+			@foreach ($testimonials as $testimonial)
+				<div class="grid-item">
+
+					<i class="fa fa-quote-left" aria-hidden="true"></i>
+					
+					<p>{{ $testimonial->description }}</p>
+
+					<i class="fa fa-quote-right" aria-hidden="true"></i>
+
+
+					<div class="image-and-name">
+						<img src="{{ $testimonial->image }}" alt="">
+						
+						<h3 class="user-name">{{ $testimonial->name }}</h3>
+					</div>
+					
+				</div>
+			@endforeach
+
+		</div>
+	</div>
+</section>

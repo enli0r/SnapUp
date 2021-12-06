@@ -12,6 +12,11 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+
+        {{-- slick slider --}}
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        {{----}}
     </head>
     <body>
         <x-navbar render="render"/>
@@ -19,6 +24,10 @@
         {{$slot}}
         <x-footer />
         
+        
         <script src="{{ asset('js/main.js') }}"></script>
+        {{-- slick slider --}}
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        {{--  --}}
     </body>
 </html>

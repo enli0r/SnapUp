@@ -37282,6 +37282,8 @@ __webpack_require__(/*! ./filter.js */ "./resources/js/filter.js");
 
 __webpack_require__(/*! ./carousel.js */ "./resources/js/carousel.js");
 
+__webpack_require__(/*! ./slick-slider.js */ "./resources/js/slick-slider.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37447,6 +37449,36 @@ $(function () {
     if ($('#sidebar').hasClass('clicked') && !(element.hasClass('close-icon') || element.hasClass('sidebar') || element.hasClass('navbar-toggler-icon') || element.hasClass('nav-link'))) {
       $('.close-icon').trigger('click');
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/slick-slider.js":
+/*!**************************************!*\
+  !*** ./resources/js/slick-slider.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('.latest-products-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    variableWidth: true,
+    adaptiveHeight: true,
+    prevArrow: $('.latest-prev'),
+    nextArrow: $('.latest-next')
+  });
+  $('.featured-products-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    variableWidth: true,
+    adaptiveHeight: true,
+    prevArrow: $('.featured-prev'),
+    nextArrow: $('.featured-next')
   });
 });
 

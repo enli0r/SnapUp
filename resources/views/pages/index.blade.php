@@ -23,36 +23,27 @@
                 </a>
               </div>        
     </div>
-    
-    
 
     <section class="featured-categories">
         <div class="container">
-            {{-- <div class="section-title">
-                <h2>Featured categories</h2>
-                <div id="rectangle"></div>
-            </div> --}}
             <div class="featured-categories-wrapper grid-container">
 
                 @foreach ($categories as $category)
                     @if ($category->is_featured == 1)
-                        <div class="grid-item featured-{{ $category->slug }}">
-                            <form action="{{ route('products') }}" method="post" id="featured-category-form">
-                                @csrf
-                                <input type="hidden" name="_method" value="put">
-                                <input type="hidden" name="featured_category" value="{{ $category->slug }}">
+                        <form class="grid-item featured-{{ $category->slug }}" action="{{ route('products') }}" method="post" id="featured-category-form">
+                            @csrf
+                            <input type="hidden" name="_method" value="put">
+                            <input type="hidden" name="featured_category" value="{{ $category->slug }}">
 
-                                <button type="submit" class="category-btn">
-                                    <img class="cat-img" src="{{ $category->image }}" alt="">
+                            <button type="submit" class="category-btn">
+                                <img class="cat-img" src="{{ $category->image }}" alt="">
 
-                                    <div class="cat-name-bg">
-                                        <h5>{{ $category->name }}</h5>
-                                    </div>
-                                    
-                                </button>
-                            </form>
-                            
-                        </div>
+                                <div class="cat-name-bg">
+                                    <h5>{{ $category->name }}</h5>
+                                </div>
+                                
+                            </button>
+                        </form>
                     @endif
                 @endforeach
             </div>
@@ -76,6 +67,54 @@
         </div>
     </section>
 
+    
+    <section class="base-categories">
+        <div class="container">
+            <div class="base-categories-wrapper">
+                <div class="category men">
+                    <img src="https://i.ibb.co/cDNCSdc/hmgoepprod-2.jpg" alt="">
+
+                    <a href="#">Men</a>
+
+                    <form action="{{ route('products') }}">
+                        <button type="submit" name="category" value="clothes">Clothes</button>
+                        <button type="submit" name="category" value="footwear">footwear</button>
+                    </form>
+                </div>
+
+                <div class="category women">
+                    <img src="https://i.ibb.co/xqK99L4/women.jpg" alt="">
+
+                    <a href="#">Women</a>
+
+                    <form action="{{ route('products') }}">
+                        <button type="submit" name="category" value="clothes">Clothes</button>
+                        <button type="submit" name="category" value="footwear">footwear</button>
+                    </form>
+
+                </div>
+
+                <div class="category kids">
+                    <img src="https://i.ibb.co/gSyFd40/kids.jpg" alt="">
+
+                    <a href="#">Kids</a>
+
+                    <form action="{{ route('products') }}">
+                        <button type="submit" name="category" value="clothes">Clothes</button>
+                        <button type="submit" name="category" value="footwear">footwear</button>
+                    </form>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+
+        
+    </section>
+
+
     <section class="latest-products">
         <div class="container">
             <div class="section-title">
@@ -83,23 +122,26 @@
                 <div id="rectangle"></div>
             </div>
 
-            <div class="latest-products-wrapper grid-container">
+            <div class="latest-products-wrapper">
 
-                @foreach ($products as $product)
-                    @if ($loop->remaining < 4 )
-                        <div class="grid-item">
+                <i class="fas fa-chevron-left prev latest-prev arrow"></i>
+                <i class="fas fa-chevron-right next latest-next arrow"></i>
+
+                <div class="latest-products-slider products-slider">
+                    @foreach ($products as $product)
+                        <div class="latest-product">
                             <a href="{{ route('show', $product->id) }}"><img src="{{ $product->images->first()->url }}" alt=""></a>
                             <div class="basic-info">
                                 <h5>{{ $product->name }}</h5>
                                 <p>${{ $product->price }}</p>
                             </div>
                         </div>
-                    @endif
-                @endforeach
+                    @endforeach
+
+                </div>
             </div>
         </div>
     </section>
-
 
     <section class="brands">
         <div class="container">
@@ -123,7 +165,6 @@
         </div>
     </section>
 
-
     <section class="featured-products">
         <div class="container">
 
@@ -132,65 +173,29 @@
                 <div id="rectangle"></div>
             </div>
 
-            <div class="featured-products-wrapper grid-container">
+            <div class="featured-products-wrapper">
 
-                @php
-                    $counter = 0;
-                @endphp
+                <i class="fas fa-chevron-left prev featured-prev arrow"></i>
+                <i class="fas fa-chevron-right next featured-next arrow"></i>
 
-                @foreach ($products->reverse() as $product)
-                    @if ($product->is_featured == 1)
-                        <div class="grid-item">
-                            <a href="{{ route('show', $product->id) }}"><img src="{{ $product->images->first()->url }}" alt=""></a>
-                            <div class="basic-info">
-                                <h5>{{ $product->name }}</h5>
-                                <p>${{ $product->price }}</p>
+
+                <div class="featured-products-slider products-slider">
+                    @foreach ($products->reverse() as $product)
+                        @if ($product->is_featured == 1)
+                            <div class="featured-product">
+                                <a href="{{ route('show', $product->id) }}"><img src="{{ $product->images->first()->url }}" alt=""></a>
+                                <div class="basic-info">
+                                    <h5>{{ $product->name }}</h5>
+                                    <p>${{ $product->price }}</p>
+                                </div>
                             </div>
-                        </div>
-
-                        @php
-                            $counter += 1;
-                        @endphp
-                    @endif
-                    
-                    @if ($counter > 3)
-                        @break;
-                    @endif
-                @endforeach
+                        @endif
+                    @endforeach
+                </div>
+                
 
             </div>
         </div>
     </section>
-
-   
-    
-    {{-- <section class="testimonial">
-        <div class="container">
-            <div class="testimonial-wrapper grid-container">
-
-
-                @foreach ($testimonials as $testimonial)
-                    <div class="grid-item">
-
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                        
-                        <p>{{ $testimonial->description }}</p>
-
-                        <i class="fa fa-quote-right" aria-hidden="true"></i>
-
-
-                        <div class="image-and-name">
-                            <img src="{{ $testimonial->image }}" alt="">
-                            
-                            <h3 class="user-name">{{ $testimonial->name }}</h3>
-                        </div>
-                        
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-     --}}
 
 </x-layout>

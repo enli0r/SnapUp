@@ -7,3 +7,5 @@ require('./category-navbar.js');
 require('./filter.js');
 
 require('./carousel.js');
+
+require('./slick-slider.js');
