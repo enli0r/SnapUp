@@ -6,10 +6,10 @@
 .filter-sidebar{
     position: normal;
     display: block;
-    width: 250px;
-    min-width: 200px;
+    min-width: 300px;
     text-align: left;
     padding-left: 20px;
+    margin-right: 10px;
 
     .filters-close-icon{
         display: none !important;
@@ -129,9 +129,6 @@
     }
 
 }
-
-
-
 
 
 
