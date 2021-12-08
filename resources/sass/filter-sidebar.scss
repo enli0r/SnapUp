@@ -4,11 +4,12 @@
 
 .filter-sidebar{
     position: normal;
-    display: block;
-    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
     text-align: left;
     padding-left: 20px;
     margin-right: 10px;
+    border: 1px solid red;
 
     .filters-close-icon{
         display: none !important;

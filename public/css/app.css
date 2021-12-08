@@ -11551,44 +11551,30 @@ section .container .section-title h2 {
 }
 
 .products .filters-products-wrapper {
-  display: flex;
   max-width: 1400px !important;
-  width: 100%;
   margin: auto;
-}
-
-.products .filters-products-wrapper .section-title {
-  margin-bottom: 15px;
-  text-align: left;
+  display: flex;
+  align-items: flex-start;
 }
 
 .products .filters-products-wrapper .products-wrapper {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(auto-fit, 35%);
+  --column-number: 4;
   width: 100%;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(var(--column-number), 1fr);
+  grid-auto-rows: auto;
   gap: 5px;
-  height: auto;
 }
 
 .products .filters-products-wrapper .products-wrapper .grid-item {
-  transition: 0.2s;
-  border: none;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  border: 1px solid red;
+  max-height: 100%;
 }
 
-.products .filters-products-wrapper .products-wrapper .grid-item:hover {
-  filter: brightness(85%);
-  -webkit-filter: brightness(85%);
-}
-
-.products .filters-products-wrapper .products-wrapper .grid-item .product-image {
+.products .filters-products-wrapper .products-wrapper .grid-item img {
+  aspect-ratio: 26/35;
   width: 100%;
-  height: 80%;
 }
 
 .products .filters-products-wrapper .products-wrapper .grid-item .product-info {
@@ -11614,17 +11600,20 @@ section .container .section-title h2 {
   justify-content: left;
 }
 
+.section-title {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
 @media (max-width: 1200px) {
-  .products-wrapper {
-    grid-template-columns: repeat(3, auto) !important;
-    grid-template-rows: repeat(auto-fit, 25%) !important;
+  .products .filters-products-wrapper .products-wrapper {
+    --column-number: 3;
   }
 }
 
-@media (max-width: 991px) {
-  .products-wrapper {
-    grid-template-columns: repeat(2, auto) !important;
-    grid-template-rows: repeat(auto-fit, 17%) !important;
+@media (max-width: 981px) {
+  .products .filters-products-wrapper .products-wrapper {
+    --column-number: 2;
   }
 }
 
@@ -11865,11 +11854,12 @@ section .container .section-title h2 {
 
 .filter-sidebar {
   position: normal;
-  display: block;
-  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
   text-align: left;
   padding-left: 20px;
   margin-right: 10px;
+  border: 1px solid red;
 }
 
 .filter-sidebar .filters-close-icon {
