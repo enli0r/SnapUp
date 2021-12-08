@@ -4,6 +4,12 @@
     color: $dark-text;
 }
 
+html{
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
 p,h1,a{
     margin: 0;
     padding: 0;

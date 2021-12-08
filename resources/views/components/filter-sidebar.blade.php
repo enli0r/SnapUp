@@ -5,9 +5,6 @@
 <div class="filter-sidebar">
     <img class="filters-close-icon" src="https://i.ibb.co/6RDhB9Q/cancel.png" alt="hehe">
 
-    <h1 class="filters-heading">Filters</h1>
-
-    <hr>
 
     <form action="" method="post" class="filters-form">
         @csrf
@@ -15,23 +12,27 @@
 
         {{-- Gender --}}
         <div class="form-section form-section-gender">
-            <h4 class="form-group-heading" id="heading-gender">Gender <i id="arrow-down" class="arrow  down"></i></h4>
+            <h4 class="form-group-heading" id="heading-gender">Gender</i></h4>
             <span class="caret"></span>
+            
         
-            <div class="form-group" id="form-group-gender">
+            <div class="form-group">
                 <div class="input-label">
-                    <input type="radio" id="men-women" name="gender" value="" @if (!isset($previouspost['gender'])) checked @endif>
-                    <label for="men-women">Men & Women</label>
+                    <x-filtering.checkbox-bounce id="men" name="gender" value="men" />
+
+                    <label for="men">Men</label>
                 </div>
-    
+
                 <div class="input-label">
-                    <x-filtering.filter-radio id="gender-men" name="gender" value="men" :previouspost="$previouspost"/>
-                    <label for="gender-men">Men</label>
+                    <x-filtering.checkbox-bounce id="women" name="gender" value="women" />
+
+                    <label for="women">Women</label>
                 </div>
-                
+
                 <div class="input-label">
-                    <x-filtering.filter-radio id="gender-women" name="gender" value="women" :previouspost="$previouspost"/>
-                    <label for="gender-women">Women</label>
+                    <x-filtering.checkbox-bounce id="unisex" name="gender" value="unisex" />
+
+                    <label for="women">Unisex</label>
                 </div>
             </div>
         </div>
@@ -45,14 +46,15 @@
                 <div class="form-group" id="form-group-category">
                     @foreach ($categories as $category)
                         @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
-
-                            <x-filtering.category-button type="submit" class="parent-category" name="category" :category="$category"/>
+{{-- 
+                            <x-filtering.category-button type="submit" class="parent-category" name="category" :category="$category"/> --}}
 
                             {{-- category-children radio buttons --}}
                             @foreach ($category->children as $child)
 
                                 <div class="input-label subcategory">
-                                    <x-filtering.filter-radio :id="$child->slug" name="subcategory" :value="$child->slug" :previouspost="$previouspost"/>
+                                    <x-filtering.checkbox-bounce :id="$child->slug" name="subcategory" :value="$child->slug"/>
+
                                     <label for="{{ $child->slug }}">{{ $child->name }}</label>
                                 </div>
 
@@ -74,7 +76,8 @@
                     @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 1)
                         <div class="input-label">
 
-                            <x-filtering.filter-radio :id="$category->slug" name="featured_category" :value="$category->slug" :previouspost="$previouspost"/>
+                            <x-filtering.checkbox-bounce :id="$category->slug" name="featured_category" :value="$category->slug" />
+
                             <label for="{{ $category->slug }}">{{ $category->name }} ({{count($category->products)}})</label>
 
                         </div>
@@ -94,7 +97,7 @@
                         @foreach ($attribute->values as $value)
                             <div class="input-label">
     
-                                <x-filtering.filter-checkbox :id="$value->value" name="color" :value="$value->value" :previouspost="$previouspost" />
+                                <x-filtering.checkbox-bounce :id="$value->value" name="color" :value="$value->value"/>
                                 <label for="{{ $value->value }}">{{ $value->value }}</label>
     
                             </div>
@@ -115,7 +118,7 @@
                         @foreach ($attribute->values as $value)
                             <div class="input-label">
     
-                                <x-filtering.filter-checkbox :id="$value->value" name="size" :value="$value->value" :previouspost="$previouspost" />
+                                <x-filtering.checkbox-bounce :id="$value->value" name="size" :value="$value->value"/>
                                 <label for="{{ $value->value }}">{{ $value->value }}</label>
     
                             </div>
@@ -125,9 +128,5 @@
                 @endforeach
             </div>
         </div>
-
-        
-
-        <button type="submit" id="filter-submit" name="filter-submit" value="submited">Filter</button>
     </form>
 </div>

@@ -2,7 +2,6 @@
     display: none !important;
 }
 
-
 .filter-sidebar{
     position: normal;
     display: block;
@@ -48,9 +47,9 @@
         margin-bottom: 15px;
 
         .form-group-heading{
-            font-size: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
             font-weight: 800;
-            color: rgb(80,80,80);
             position: relative;
 
             .arrow{
@@ -73,14 +72,13 @@
         }
 
         .form-group{
-            margin: auto;
-            display: none;
+            margin-top: 10px;
+
         
             .parent-category{
                 border: none;
                 background: none;
                 text-transform: uppercase;
-                color: rgb(80,80,80);
                 font-weight: 700;
                 margin-bottom: 5px;
         
@@ -92,13 +90,15 @@
             }
         
             .input-label{
-                display: block;
-        
+                display: flex;
+                justify-content: flex-start;
+                align-content: center;
+                gap: 5px;
+
                 label{
                     font-size: 14px;
                     font-weight: 300px;
                     text-transform: capitalize;
-                    color: rgb(80,80,80);
                     user-select: none;
         
                     &:hover{
@@ -113,9 +113,6 @@
                 }
             }
         
-            .subcategory{
-                margin-left: 15px;
-            }
         }
     }
 
@@ -189,3 +186,4 @@
         }
     }
 }
+
