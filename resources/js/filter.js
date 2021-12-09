@@ -2,7 +2,7 @@ $(function() {
     $(".filters-form input").change(function() {
       $(".filters-form").submit();
     });
-  });
+});
 
 
 // $(function(){

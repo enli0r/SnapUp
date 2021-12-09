@@ -91,15 +91,24 @@
         <div class="form-section form-section-color">
             <h4 class="form-group-heading" id="heading-color">Color</h4>        
 
-            <div class="form-group" id="form-group-color">
+            <div class="form-group form-group-colors ">
                 @foreach ($all_attributes as $attribute)
                     @if ($attribute->name == "Color")
                         @foreach ($attribute->values as $value)
                             <div class="input-label">
     
-                                <x-filtering.checkbox-bounce :id="$value->value" name="color" :value="$value->value"/>
-                                <label for="{{ $value->value }}">{{ $value->value }}</label>
-    
+                                <input type="checkbox" name="color[]" id="{{ $value->value }}" value="{{ $value->value }}" class="color color-{{ $value->value }}"
+                                
+                                @if (isset($previouspost['color']))
+                                    @foreach ($previouspost['color'] as $color)
+                                        @if ($color == $value->value)
+                                            checked
+                                        @endif
+                                    @endforeach
+                                @endif
+
+                                >
+                    
                             </div>
                             
                         @endforeach
