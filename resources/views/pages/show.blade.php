@@ -14,6 +14,7 @@
                     <p class="my-0">{{ session('message') }}</p>
                 </div>
             @endif
+            {{--  --}}
 
             <div class="product-wrapper grid-container">
                 <img class="grid-item product-image" src="{{ $product->images->first()->url }}" alt="">
@@ -39,7 +40,7 @@
                     
 
                     <div class="price">
-                        <h3 class="store-price">${{ $product->price }}</h3>
+                        {{-- <h3 class="store-price">${{ $product->price }}</h3> --}}
                     
                         <h3 class="online-price">${{ $product->online_price }}</h3>
 
@@ -56,41 +57,64 @@
                         <input type="hidden" name="price" value="{{ $product->price }}" />
 
                         
-                            @foreach ($attributes as $attribute)
-                                <p class="attribute-name">{{ $attribute->name }}</p>
-                                <div class="{{ $attribute->code }} attribute-values">
+                        @foreach ($attributeProducts as $attributeProduct)
+                            @if ($attributeProduct->product_id == $product->id)
+                                @if ($attributeProduct->attribute->code == 'size')
 
-                                    @foreach ($attributeProducts as $attributeProduct)
-                                        @foreach ($attributeProduct->attributeValues()->where('attribute_id', $attribute->id)->get() as $attributeValue)
-                                            @php
-                                                $id = $attributeProduct->id.$attributeValue->id;
-                                            @endphp
-                                            <div class="order-input-label">
-                                                <input type="radio" name="{{ $attribute->code }}" id="{{ $id }}" value="{{ $attributeValue->value }}">
-                                                <label for="{{ $id }}">{{ $attributeValue->value }}</label>
-                                            </div>
+                                    <div class="sizes">
+                                        <h3 class="attribute-name">Select size</h3>
+
+                                        <div class="sizes-wrapper">
+                                            @foreach ($attributeProduct->attributeValues as $value)
+                                                
+                                            <input type="radio" name="size" id="{{ $value->value }}" value="{{ $value->value }}">
+
+                                            <label class="size-label label-for-{{ $value->value }}" for="{{ $value->value }}">{{ ucfirst($value->value) }}</label>
                                             
+                                        
                                         @endforeach
-                                    @endforeach
-                                </div>
-                            @endforeach
+                                        </div>
+                                            
+                                    </div>
+                                    
+                                    
+                                @endif
 
-                            <input type="number" name="quantity" placeholder="1" step="1" pattern="\d+">
+                                @if ($attributeProduct->attribute->code == 'color')
+                                    <h3 class="attribute-name">
+                                        Choose color
+                                    </h3>
+                                    
+                                    <div class="colors">
+                                        @foreach ($attributeProduct->attributeValues as $value)
+                                            <input type="radio" name="color" id="{{ $value->value }}" value="{{ $value->value }}" class="color color-{{ $value->value }}">
+                                        @endforeach
+                                    </div>
+                                    
+                                @endif
 
-                            <button class="btn btn-primary" type="submit" value="submitted">Add to cart</button>
+
+                            @endif
+                    
+                        @endforeach
+
+                        <input class="quantity" type="number" name="quantity" placeholder="1" value="1" min="1" step="1" pattern="\d+">
+
+                        <button class="btn btn-primary" type="submit" value="submitted">Add to cart</button>
                                                     
                     </form>
 
 
                 </div>
                 <hr>
-                    
-                <div class="product-description grid-item">
-                    <h3>Product description</h3>
-                    <hr>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quisquam maiores placeat eligendi? Libero odio omnis dolorem et, itaque quasi consequatur sint earum. Officia cupiditate illum nobis quae, consectetur itaque.</p>
-                </div>
             </div>
+
+            <div class="product-description">
+                <h3>Product description</h3>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quisquam maiores placeat eligendi? Libero odio omnis dolorem et, itaque quasi consequatur sint earum. Officia cupiditate illum nobis quae, consectetur itaque.</p>
+            </div>
+
         </div>
     </section>        
     <x-footer />

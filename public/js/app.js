@@ -37284,6 +37284,8 @@ __webpack_require__(/*! ./carousel.js */ "./resources/js/carousel.js");
 
 __webpack_require__(/*! ./slick-slider.js */ "./resources/js/slick-slider.js");
 
+__webpack_require__(/*! ./sizes.js */ "./resources/js/sizes.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37453,6 +37455,22 @@ $(function () {
     if ($('#sidebar').hasClass('clicked') && !(element.hasClass('close-icon') || element.hasClass('sidebar') || element.hasClass('navbar-toggler-icon') || element.hasClass('nav-link'))) {
       $('.close-icon').trigger('click');
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/sizes.js":
+/*!*******************************!*\
+  !*** ./resources/js/sizes.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.sizes-wrapper .size-label').on('click', function () {
+    $('.size-label').removeClass('checked');
+    $(this).toggleClass('checked');
   });
 });
 

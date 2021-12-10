@@ -90,7 +90,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            gap: 7px;
+            gap: 10px;
 
             .color{
                 height: 18px;
@@ -111,11 +111,11 @@
             }
 
             .color-black{
-                background-color: black;
+                background-color: rgba(0,0,0);
             }
 
             .color-blue{
-                background-color: rgb(0, 102, 204);
+                background-color: rgba(0, 102, 204);
             }
 
             .color-red{

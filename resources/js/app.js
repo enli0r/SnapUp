@@ -9,3 +9,5 @@ require('./filter.js');
 require('./carousel.js');
 
 require('./slick-slider.js');
+
+require('./sizes.js');
