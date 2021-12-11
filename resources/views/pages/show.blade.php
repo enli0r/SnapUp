@@ -17,7 +17,32 @@
             {{--  --}}
 
             <div class="product-wrapper grid-container">
-                <img class="grid-item product-image" src="{{ $product->images->first()->url }}" alt="">
+
+                <div class="product-images">
+
+                    {{-- <div class="secondary-image">4</div>
+                    <div class="secondary-image">5</div>
+                    <div class="secondary-image">6</div> --}}
+
+
+                    {{-- <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+--}}
+                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+
+
+                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+
+                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+                     
+                    <img class="grid-item main-image" src="{{ $product->images->first()->url }}" alt="">
+
+                    
+                    
+                </div>
+
+                
+                
+
 
                 <div class="product-details grid-item">
                     <h2 class="name">{{ $product->name }}</h2>
@@ -98,9 +123,16 @@
                     
                         @endforeach
 
-                        <input class="quantity" type="number" name="quantity" placeholder="1" value="1" min="1" step="1" pattern="\d+">
+                        <div class="quantity-and-submit">
+                            <input class="quantity" type="number" name="quantity" placeholder="1" value="1" min="1" step="1" pattern="\d+">
 
-                        <button class="btn btn-primary" type="submit" value="submitted">Add to cart</button>
+                            <button class="btn btn-primary" type="submit" value="submitted">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to cart
+                            </button>
+                        </div>
+
+                        
                                                     
                     </form>
 

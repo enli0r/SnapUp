@@ -1,16 +1,51 @@
 .product{
-    .container{
-        .product-wrapper{
-            display: grid;
-            grid-template-columns: 400px minmax(300px, 1fr);
 
-            .product-image{
-                width: 100%;
+    .container{
+        margin-bottom: 0;
+
+        .product-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .product-images{
+                display: grid;
+                grid-template-columns: 0.7fr 1fr 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                gap: 10px;
+                width: 600px;
+                min-width: 350px;    
+
+                .main-image{
+                    grid-column: 2 / 4;
+                    grid-row: 1 / 4;
+                }
+
+                .secondary-image{
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        filter: brightness(0.9);
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .secondary-image{
+                    aspect-ratio: 26 / 35;
+                }
             }
 
+
             .product-details{
-                padding: 0 20px;
                 text-align: left;
+                min-width: 300px;
+                flex: 1;
+
 
                 .name{
                     font-size: 24px;
@@ -81,11 +116,13 @@
     
                     .online-price{
                         font-size: 22px;
-                        margin-top: 0;
+                        margin: 0;
                         font-weight: 700;
+                        padding-bottom: 0;
                     }
 
                     p{
+                        margin-top: 5px;
                         color: gray;
                     }
                 }
@@ -102,6 +139,7 @@
             margin-top: 30px;
 
             .sizes-wrapper{
+                margin-top: 15px;
                 display: flex;
                 gap: 15px;
     
@@ -124,13 +162,13 @@
                     align-items: center;
     
                     &:hover{
-                        background: black;
-                        color: white;
+                        border: 1px solid black;
                         cursor: pointer;
                     }
                 }
     
                 .checked{
+                    transition: 0.2s;
                     background: black;
                     color: white;
                 }
@@ -144,6 +182,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-top: 15px;
+
 
             .color{
                 height: 18px;
@@ -180,13 +220,63 @@
             }
         }
 
-        .quantity{
+
+        .quantity-and-submit{
+            display: flex;
+            gap: 5px;
+            align-items: center;
             margin-top: 30px;
+
+            .quantity{
+                width: 60px;
+                height: 50px;
+                font-size: 14px;
+                font-weight: 500;
+                border-radius: 0;
+                border: 1px solid black;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 25px;
+            }
+
+            button{
+                width: 200px;
+                height: 50px;
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                background: black;
+                border: 2px solid black;
+                color: white;
+                transition: 0.1s;
+                font-weight: 700;
+
+                i{
+                    color: white;
+                }
+
+    
+                &:hover{
+                    background-color: white;
+                    color: black;
+
+                    i{
+                        color: black;
+                    }
+                }
+            }
         }
+             
 
         .product-description{
             text-align: left; 
             width: 100%;
+            margin-top: 30px;
 
             h3{
                 font-weight: 700;
@@ -197,9 +287,3 @@
     }
 }
 
-@media (max-width: 767px){
-    .product-wrapper{
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, 300px) !important;
-    }
-}

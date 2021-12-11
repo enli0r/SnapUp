@@ -11637,18 +11637,52 @@ section .container .section-title h2 {
   }
 }
 
-.product .container .product-wrapper {
-  display: grid;
-  grid-template-columns: 400px minmax(300px, 1fr);
+.product .container {
+  margin-bottom: 0;
 }
 
-.product .container .product-wrapper .product-image {
+.product .container .product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product .container .product-wrapper .product-images {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 600px;
+  min-width: 350px;
+}
+
+.product .container .product-wrapper .product-images .main-image {
+  grid-column: 2/4;
+  grid-row: 1/4;
+}
+
+.product .container .product-wrapper .product-images .secondary-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product .container .product-wrapper .product-images .secondary-image:hover {
+  filter: brightness(0.9);
+}
+
+.product .container .product-wrapper .product-images img {
   width: 100%;
+  height: 100%;
+}
+
+.product .container .product-wrapper .product-images .secondary-image {
+  aspect-ratio: 26/35;
 }
 
 .product .container .product-wrapper .product-details {
-  padding: 0 20px;
   text-align: left;
+  min-width: 300px;
+  flex: 1;
 }
 
 .product .container .product-wrapper .product-details .name {
@@ -11719,11 +11753,13 @@ section .container .section-title h2 {
 
 .product .container .product-wrapper .product-details .price .online-price {
   font-size: 22px;
-  margin-top: 0;
+  margin: 0;
   font-weight: 700;
+  padding-bottom: 0;
 }
 
 .product .container .product-wrapper .product-details .price p {
+  margin-top: 5px;
   color: gray;
 }
 
@@ -11738,6 +11774,7 @@ section .container .section-title h2 {
 }
 
 .product .container .sizes .sizes-wrapper {
+  margin-top: 15px;
   display: flex;
   gap: 15px;
 }
@@ -11764,12 +11801,12 @@ section .container .section-title h2 {
 }
 
 .product .container .sizes .sizes-wrapper label:hover {
-  background: black;
-  color: white;
+  border: 1px solid black;
   cursor: pointer;
 }
 
 .product .container .sizes .sizes-wrapper .checked {
+  transition: 0.2s;
   background: black;
   color: white;
 }
@@ -11778,6 +11815,7 @@ section .container .section-title h2 {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .product .container .colors .color {
@@ -11814,26 +11852,66 @@ section .container .section-title h2 {
   background-color: #ff1a1a;
 }
 
-.product .container .quantity {
+.product .container .quantity-and-submit {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   margin-top: 30px;
+}
+
+.product .container .quantity-and-submit .quantity {
+  width: 60px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+}
+
+.product .container .quantity-and-submit button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  background: black;
+  border: 2px solid black;
+  color: white;
+  transition: 0.1s;
+  font-weight: 700;
+}
+
+.product .container .quantity-and-submit button i {
+  color: white;
+}
+
+.product .container .quantity-and-submit button:hover {
+  background-color: white;
+  color: black;
+}
+
+.product .container .quantity-and-submit button:hover i {
+  color: black;
 }
 
 .product .container .product-description {
   text-align: left;
   width: 100%;
+  margin-top: 30px;
 }
 
 .product .container .product-description h3 {
   font-weight: 700;
   font-size: 20px;
   text-transform: capitalize;
-}
-
-@media (max-width: 767px) {
-  .product-wrapper {
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 300px) !important;
-  }
 }
 
 .category-navbar {
