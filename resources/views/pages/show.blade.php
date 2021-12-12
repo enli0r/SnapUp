@@ -20,24 +20,17 @@
 
                 <div class="product-images">
 
-                    {{-- <div class="secondary-image">4</div>
-                    <div class="secondary-image">5</div>
-                    <div class="secondary-image">6</div> --}}
+                    <div class="side-images">
+                        <img class="main-image" src="{{ $product->images->first()->url }}" alt="">
 
-
-                    {{-- <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
---}}
-                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
-
-
-                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
-
-                    <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
-                     
-                    <img class="grid-item main-image" src="{{ $product->images->first()->url }}" alt="">
-
+                        <img class="secondary-image" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F12%2F14%2F1214b7c6fc43fb86060eac7967a689d1f8e59722.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+    
+    
+                        <img class="secondary-image" src="https://www.riotgames.com/darkroom/1440/b540da2b9afe5ec83e842a2d84f6dbb1:e95535ecd35e48592908762c9353926a/arcane-final-poster-16x9-no-text-no-border.jpg" alt="">
+                    </div>
                     
-                    
+
+                    <img class="active-image" src="{{ $product->images->first()->url }}" alt="">
                 </div>
 
                 
