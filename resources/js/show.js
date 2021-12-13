@@ -27,6 +27,7 @@ $(function(){
     $('.secondary-image').on('click', function(event){
         $('.main-image').addClass('secondary-image');
         $('.main-image').removeClass('main-image');
+        //
 
         $(event.target).addClass('main-image');
         $(event.target).removeClass('secondary-image');
