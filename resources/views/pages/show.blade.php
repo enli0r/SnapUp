@@ -29,8 +29,11 @@
                         <img class="secondary-image" src="https://www.riotgames.com/darkroom/1440/b540da2b9afe5ec83e842a2d84f6dbb1:e95535ecd35e48592908762c9353926a/arcane-final-poster-16x9-no-text-no-border.jpg" alt="">
                     </div>
                     
+                    <div class="active-image-container">
+                        <img class="active-image" src="{{ $product->images->first()->url }}" alt="">
+                    </div>
+                    
 
-                    <img class="active-image" src="{{ $product->images->first()->url }}" alt="">
                 </div>
 
                 

@@ -11646,39 +11646,47 @@ section .container .section-title h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   row-gap: 30px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .product .container .product-wrapper .product-images {
   display: flex;
+  max-width: 600px;
   gap: 10px;
-}
-
-.product .container .product-wrapper .product-images .side-images {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.product .container .product-wrapper .product-images .side-images img {
-  width: 100%;
-  height: 200px;
-}
-
-.product .container .product-wrapper .product-images .active-image {
-  width: 460px;
-  height: 620px;
 }
 
 .product .container .product-wrapper .product-images .main-image {
   border: 1px solid gray;
 }
 
+.product .container .product-wrapper .product-images .side-images {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.product .container .product-wrapper .product-images .side-images img {
+  width: 100%;
+  aspect-ratio: 26/35;
+}
+
+.product .container .product-wrapper .product-images .active-image-container {
+  flex: 1;
+}
+
+.product .container .product-wrapper .product-images .active-image-container img {
+  width: 100%;
+  aspect-ratio: 26/35;
+}
+
 .product .container .product-wrapper .product-details {
   text-align: left;
   flex: 1;
-  min-width: 200px;
-  margin-left: 20px;
+  min-width: 240px;
+  --margin-top: 30px;
 }
 
 .product .container .product-wrapper .product-details .name {
@@ -11699,7 +11707,7 @@ section .container .section-title h2 {
 }
 
 .product .container .product-wrapper .product-details .avaliability {
-  margin-top: 30px;
+  margin-top: var(--margin-top);
 }
 
 .product .container .product-wrapper .product-details .avaliability ul {
@@ -11738,7 +11746,7 @@ section .container .section-title h2 {
 }
 
 .product .container .product-wrapper .product-details .price {
-  margin-top: 30px;
+  margin-top: var(--margin-top);
 }
 
 .product .container .product-wrapper .product-details .price .store-price {
@@ -11762,11 +11770,11 @@ section .container .section-title h2 {
 .product .container .product-wrapper .product-details .attribute-name {
   font-weight: 700;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: var(--margin-top);
 }
 
 .product .container .sizes {
-  margin-top: 30px;
+  margin-top: var(--margin-top);
 }
 
 .product .container .sizes .sizes-wrapper {
@@ -11852,7 +11860,7 @@ section .container .section-title h2 {
   display: flex;
   gap: 5px;
   align-items: center;
-  margin-top: 30px;
+  margin-top: var(--margin-top);
 }
 
 .product .container .quantity-and-submit .quantity {
@@ -11911,23 +11919,29 @@ section .container .section-title h2 {
 }
 
 @media (max-width: 991px) {
-  .product-images {
-    max-width: 400px !important;
+  .product .container {
+    max-width: 100% !important;
+  }
+
+  .product .container .product-wrapper .product-images {
+    width: 460px;
   }
 }
 
 @media (max-width: 768px) {
-  .product-images {
+  .product .container {
     max-width: 100% !important;
-    min-width: none !important;
   }
 
-  .product-wrapper {
-    justify-content: flex-start !important;
+  .product .container .product-wrapper .product-images {
+    max-width: 650px;
+    width: 100%;
   }
+}
 
-  .product-details {
-    margin-left: 0 !important;
+@media (max-width: 789px) {
+  .product .container .product-wrapper .product-details {
+    --margin-top: 20px;
   }
 }
 

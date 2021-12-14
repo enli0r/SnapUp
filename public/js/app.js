@@ -37485,22 +37485,13 @@ $(function () {
     $('.active-image').attr('src', $(event.target).attr('src'));
   });
 });
-
-/***/ }),
-
-/***/ "./resources/js/sizes.js":
-/*!*******************************!*\
-  !*** ./resources/js/sizes.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
 $(function () {
   var mainImgSrc = $('.main-image').attr('src');
   $('.active-image').css('background-image', "url(" + mainImgSrc + ")");
   $('.secondary-image').on('click', function (event) {
     $('.main-image').addClass('secondary-image');
-    $('.main-image').removeClass('main-image');
+    $('.main-image').removeClass('main-image'); //
+
     $(event.target).addClass('main-image');
     $(event.target).removeClass('secondary-image');
     var imgSrc = $(event.target).attr('src');
@@ -37513,6 +37504,17 @@ $(function () {
     $('.active-image').css('background-image', "url(" + imgSrc + ")");
   });
 });
+
+/***/ }),
+
+/***/ "./resources/js/sizes.js":
+/*!*******************************!*\
+  !*** ./resources/js/sizes.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
