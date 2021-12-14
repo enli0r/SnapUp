@@ -11657,7 +11657,7 @@ section .container .section-title h2 {
 }
 
 .product .container .product-wrapper .product-images .main-image {
-  border: 1px solid gray;
+  filter: brightness(0.85);
 }
 
 .product .container .product-wrapper .product-images .side-images {
@@ -11671,6 +11671,10 @@ section .container .section-title h2 {
 .product .container .product-wrapper .product-images .side-images img {
   width: 100%;
   aspect-ratio: 26/35;
+}
+
+.product .container .product-wrapper .product-images .side-images img:hover {
+  filter: brightness(0.85);
 }
 
 .product .container .product-wrapper .product-images .active-image-container {

@@ -1,3 +1,4 @@
+//Active images
 $(function(){
     $('.secondary-image').on('click', function(event){
         $('.main-image').addClass('secondary-image');
@@ -20,27 +21,14 @@ $(function(){
     });
 });
 
+//Sizes
 $(function(){
-    var mainImgSrc = $('.main-image').attr('src');
-    $('.active-image').css('background-image', "url(" + mainImgSrc + ")");
+    $('.sizes-wrapper input').on('click', function(event){
+        if($(event.target).is(":checked")){
+            $('.checked').removeClass('checked');
+            var inputId = $(event.target).attr('id');
 
-    $('.secondary-image').on('click', function(event){
-        $('.main-image').addClass('secondary-image');
-        $('.main-image').removeClass('main-image');
-        //
-
-        $(event.target).addClass('main-image');
-        $(event.target).removeClass('secondary-image');
-
-        var imgSrc = $(event.target).attr('src');
-         $('.active-image').css('background-image', "url(" + imgSrc + ")");
-    });
-
-    $('.main-image').on('click', function(event){
-        $(event.target).addClass('main-image');
-        $(event.target).removeClass('secondary-image');
-
-        var imgSrc = $(event.target).attr('src');
-         $('.active-image').css('background-image', "url(" + imgSrc + ")");
+            $('.label-for-' + inputId).addClass('checked');
+        }
     });
 });

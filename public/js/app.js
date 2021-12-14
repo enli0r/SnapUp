@@ -37284,8 +37284,6 @@ __webpack_require__(/*! ./carousel.js */ "./resources/js/carousel.js");
 
 __webpack_require__(/*! ./slick-slider.js */ "./resources/js/slick-slider.js");
 
-__webpack_require__(/*! ./sizes.js */ "./resources/js/sizes.js");
-
 __webpack_require__(/*! ./show.js */ "./resources/js/show.js");
 
 /***/ }),
@@ -37469,6 +37467,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+//Active images
 $(function () {
   $('.secondary-image').on('click', function (event) {
     $('.main-image').addClass('secondary-image');
@@ -37484,37 +37483,17 @@ $(function () {
     $(event.target).removeClass('secondary-image');
     $('.active-image').attr('src', $(event.target).attr('src'));
   });
-});
+}); //Sizes
+
 $(function () {
-  var mainImgSrc = $('.main-image').attr('src');
-  $('.active-image').css('background-image', "url(" + mainImgSrc + ")");
-  $('.secondary-image').on('click', function (event) {
-    $('.main-image').addClass('secondary-image');
-    $('.main-image').removeClass('main-image'); //
-
-    $(event.target).addClass('main-image');
-    $(event.target).removeClass('secondary-image');
-    var imgSrc = $(event.target).attr('src');
-    $('.active-image').css('background-image', "url(" + imgSrc + ")");
-  });
-  $('.main-image').on('click', function (event) {
-    $(event.target).addClass('main-image');
-    $(event.target).removeClass('secondary-image');
-    var imgSrc = $(event.target).attr('src');
-    $('.active-image').css('background-image', "url(" + imgSrc + ")");
+  $('.sizes-wrapper input').on('click', function (event) {
+    if ($(event.target).is(":checked")) {
+      $('.checked').removeClass('checked');
+      var inputId = $(event.target).attr('id');
+      $('.label-for-' + inputId).addClass('checked');
+    }
   });
 });
-
-/***/ }),
-
-/***/ "./resources/js/sizes.js":
-/*!*******************************!*\
-  !*** ./resources/js/sizes.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
