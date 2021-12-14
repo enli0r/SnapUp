@@ -1,50 +1,82 @@
 @props(['cart_count'])
 
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="{{route('home')}}"><span>s</span>nap <span>u</span>p</a>
+<nav class="main-navbar">
 
+    <div class="sidebar d-flex" id="sidebar">
 
-    <div class="sidebar" id="sidebar">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="{{route('cart')}}">Cart({{ isset($cart_count) ? $cart_count: ''  }})</a>
+          <a href="#" class="nav-link">
+            <span>Customer service</span>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{route('home')}}">Home</a>
+          <a href="#" class="nav-link">
+            <span>About</span>
+          </a>
         </li>
+
+      </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+
         <li class="nav-item">
-          <a class="nav-link" href="{{route('about')}}" href="#">About</a>
-        </li>
-
-        @auth
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('login')}}">{{Auth::user()->username}}</a>
-            </li>
-            
-            <form action="{{route('logout')}}" id="logout-form" method="POST">
-                @csrf
-
-                <button type="submit" class="nav-link" id="logout-btn">Logout</button>
+          <div class="search nav-link">
+            <i class="fas fa-search"></i>
+            <form action="" class="search-form">
+              <input type="text" placeholder="Search">
             </form>
+          </div>
+        </li>
 
 
-        @endauth
-            
-          @guest
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('login')}}">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('register')}}">Register</a>
-            </li>
-          @endguest
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('cart')}}">
+            <i class="fas fa-shopping-bag"></i>
+            <span>
+              Shopping bag({{ isset($cart_count) ? $cart_count: ''  }})
+            </span>
+          </a>
+        </li>
 
-      <span class="navbar-toggler-icon"></span>
-      
-  
-      <img class="close-icon" src="https://i.ibb.co/6RDhB9Q/cancel.png" alt="hehe">
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('login')}}"><i class="fas fa-user"></i>
+          
+          <span>
+            @auth
+                {{ $user->username }}
+            @endauth
+
+            @guest
+              Sign in
+            @endguest
+
+          </span>
+
+          </a>
+        </li>
+        
+      </ul>
+           
     </div>
+
+
+    <div class="logo-container">
+      <a href="{{ route('home') }}" class="logo">snapup</a>
+    </div>
+
+    <nav class="category-navbar">
+        <div class="category-navbar-wrapper">
+
+            <a href="{{ route('products') }}" class="category-link">All products</a>
+
+            <x-dropdown buttonName="Men" :categories="$categories" gender="men"/>
+            <x-dropdown buttonName="Women" :categories="$categories" gender="women"/>
+        
+        </div>
   </nav>
+
+
+</nav>

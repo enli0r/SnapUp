@@ -20,7 +20,6 @@
     </head>
     <body>
         <x-navbar render="render"/>
-        <x-category-navbar />
         {{$slot}}
         <x-footer />
         

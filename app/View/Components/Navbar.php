@@ -2,13 +2,14 @@
 
 namespace App\View\Components;
 
+use App\Category;
 use Illuminate\View\Component;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class Navbar extends Component
 {
 
-    public $reder;
+    public $render;
 
     /**
      * Create a new component instance.
@@ -28,6 +29,7 @@ class Navbar extends Component
     public function render()
     {        
         $cart_count = Cart::content()->count();
-        return view('components.navbar')->with(compact('cart_count'));
+        $categories = Category::all();
+        return view('components.navbar')->with(compact('cart_count', 'categories'));
     }
 }

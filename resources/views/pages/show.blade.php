@@ -103,7 +103,7 @@
 
                                 @if ($attributeProduct->attribute->code == 'color')
                                     <h3 class="attribute-name">
-                                        Choose color
+                                        Choose a color
                                     </h3>
                                     
                                     <div class="colors">
@@ -145,5 +145,4 @@
 
         </div>
     </section>        
-    <x-footer />
 </x-layout>
