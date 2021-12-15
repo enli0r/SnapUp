@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;
 
-400;600;700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap);@charset "UTF-8";
+400;600;700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap);@import url(https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -10905,7 +10905,8 @@ a.text-dark:focus {
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Baloo Bhaijaan 2", cursive;
   color: black;
 }
 
@@ -11414,15 +11415,11 @@ section .container .section-title h2 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.main-navbar .logo-container {
-  margin-top: 20px;
-}
-
 .main-navbar .logo-container .logo {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 28px;
   padding: 0;
   margin: 0;
   font-weight: 300;
@@ -11437,7 +11434,6 @@ section .container .section-title h2 {
 
 .main-navbar .category-navbar {
   background: white;
-  border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
   padding: 15px 0;
   margin-top: 15px;
 }
@@ -11802,17 +11798,16 @@ section .container .section-title h2 {
   text-align: left;
   flex: 1;
   min-width: 240px;
-  --margin-top: 30px;
+  --margin-top: 20px;
 }
 
 .product .container .product-wrapper .product-details .name {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
   text-transform: capitalize;
 }
 
 .product .container .product-wrapper .product-details .code {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   text-transform: capitalize;
   margin-top: 10px;
@@ -11832,7 +11827,7 @@ section .container .section-title h2 {
 }
 
 .product .container .product-wrapper .product-details .avaliability ul li {
-  color: gray;
+  color: #969696;
 }
 
 .product .container .product-wrapper .product-details .avaliability ul #avaliable,
@@ -11844,13 +11839,12 @@ section .container .section-title h2 {
   margin: 0;
 }
 
-.product .container .product-wrapper .product-details .avaliability ul #avaliable::before,
-.product .container .product-wrapper .product-details .avaliability ul #not-avaliable::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+.product .container .product-wrapper .product-details .avaliability ul #avaliable {
+  color: green;
+}
+
+.product .container .product-wrapper .product-details .avaliability ul #not-avaliable {
+  color: gray;
 }
 
 .product .container .product-wrapper .product-details .avaliability ul #avaliable::before {
@@ -11865,27 +11859,21 @@ section .container .section-title h2 {
   margin-top: var(--margin-top);
 }
 
-.product .container .product-wrapper .product-details .price .store-price {
-  font-size: 18px;
-  text-decoration: line-through;
-  font-weight: 700;
-}
-
 .product .container .product-wrapper .product-details .price .online-price {
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   padding-bottom: 0;
 }
 
 .product .container .product-wrapper .product-details .price p {
   margin-top: 5px;
-  color: gray;
+  color: #969696;
 }
 
 .product .container .product-wrapper .product-details .attribute-name {
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
   margin-top: var(--margin-top);
 }
 
@@ -11894,7 +11882,7 @@ section .container .section-title h2 {
 }
 
 .product .container .sizes .sizes-wrapper {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   gap: 15px;
 }
@@ -11935,7 +11923,7 @@ section .container .section-title h2 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .product .container .colors .color {
@@ -11995,7 +11983,7 @@ section .container .section-title h2 {
 }
 
 .product .container .quantity-and-submit button {
-  width: 250px;
+  width: 100%;
   height: 50px;
   display: flex;
   gap: 10px;

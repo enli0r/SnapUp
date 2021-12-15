@@ -36,7 +36,7 @@
           <a class="nav-link" href="{{route('cart')}}">
             <i class="fas fa-shopping-bag"></i>
             <span>
-              Shopping bag({{ isset($cart_count) ? $cart_count: ''  }})
+              Shopping bag ({{ isset($cart_count) ? $cart_count: ''  }})
             </span>
           </a>
         </li>

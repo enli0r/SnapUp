@@ -42,7 +42,7 @@
 
                 <div class="product-details grid-item">
                     <h2 class="name">{{ $product->name }}</h2>
-                    <h2 class="code"><span>code</span>: {{ $product->code }}</h2>
+                    <h2 class="code"><span>code:</span> #{{ $product->code }}</h2>
 
                     <div class="avaliability">
                         <ul>
@@ -58,15 +58,15 @@
                         </ul>
                     </div>
                     
-                    
 
                     <div class="price">
                         {{-- <h3 class="store-price">${{ $product->price }}</h3> --}}
-                    
+                        <p>Listed price is only for online purchase!</p>
+
                         <h3 class="online-price">${{ $product->online_price }}</h3>
 
-                        <p>Listed price is only for online purchase!</p>
                     </div>
+                    
 
                     
                     {{-- order form --}}
