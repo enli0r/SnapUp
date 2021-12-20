@@ -11463,6 +11463,15 @@ section .container .section-title h2 {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.main-navbar .category-navbar .category-navbar-wrapper .disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.main-navbar .category-navbar .category-navbar-wrapper .disabled:hover {
+  color: black;
+}
+
 .main-navbar .category-navbar .category-navbar-wrapper .dropdown button {
   outline: none;
 }
@@ -11827,7 +11836,7 @@ section .container .section-title h2 {
 }
 
 .product .container .product-wrapper .product-details .avaliability ul li {
-  color: #969696;
+  color: #979797;
 }
 
 .product .container .product-wrapper .product-details .avaliability ul #avaliable,

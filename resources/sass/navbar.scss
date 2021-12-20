@@ -109,7 +109,7 @@
             column-gap: 50px;
             position: relative;
             align-items: center;
-    
+
             .category-link{
                 font-size: 14px;
                 color: black;
@@ -123,6 +123,15 @@
                 &:hover{
                     text-decoration: none;
                     color: rgba(0,0,0,0.8);
+                }
+            }
+
+            .disabled{
+                cursor: default;
+                opacity: 0.5;
+
+                &:hover{
+                    color: black;
                 }
             }
     
