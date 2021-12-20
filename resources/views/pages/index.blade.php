@@ -8,15 +8,21 @@
 
                 <div class="header-slider">
                     <div class="header-slide">
-                        <img src="https://i.ibb.co/TgChnZZ/SV-FW21-Desktop.jpg" alt="">
+                        <img src="https://i.ibb.co/TgChnZZ/SV-FW21-Desktop.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/44db1qZ/c1crop.jpg" class="phone-slide" alt="">
+
                     </div>
 
                     <div class="header-slide">
-                        <img src="https://i.ibb.co/YBks3Hp/sv-gym-time-oct21-2-desk.jpg" alt="">
+                        <img src="https://i.ibb.co/YBks3Hp/sv-gym-time-oct21-2-desk.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/gDDpYXQ/c2crop.jpg" class="phone-slide" alt="">
+
                     </div>
 
                     <div class="header-slide">
-                        <img src="https://i.ibb.co/cYjhv8K/SV-New-trends-21-1200x526.jpg" alt="">
+                        <img src="https://i.ibb.co/cYjhv8K/SV-New-trends-21-1200x526.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/Hrcd7Rx/c3crop.jpg" class="phone-slide" alt="">
+
                     </div>
                 </div>
             </div>

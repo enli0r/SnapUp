@@ -1,40 +1,32 @@
 <div class="footer container-parent">
     <div class="container">
-        <div class="row">
-            <div class="col-3" id="fcol-1">
-                <h5>Download Our App</h5>
-                <p>Download App for Android and IOS.</p>
-                <div class="app-logo">
-                    <a href=""><img src="images/play-store.png" alt=""></a>
-                    <a href=""><img src="images/app-store.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-3" id="fcol-2">
-                <h1><span>s</span>nap <span>u</span>p</h1>
-                <p>our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p>
-            </div>
-            <div class="col-3" id="fcol-3">
-                <h5>Useful Links</h5>
-                <ul>
-                    <li><a href="">Coupons</a></li>
-                    <li><a href="">Blog Post</a></li>
-                    <li><a href="">Return Policy</a></li>
-                    <li><a href="">Join Affiliate</a></li>
-                </ul>
-            </div>
-            <div class="col-3" id="fcol-4">
-                <h5>Follow Us</h5>
-                <ul>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">YouTube</a></li>
-                </ul>
-            </div>
+        <div class="social-media">
+            <p class="social-text">Visit us on social media!</p>
+
+            <div class="social-icons">
+                <a href=""><i class="fab fa-twitter social-icon"></i></a>
+                <a href=""><i class="fab fa-facebook social-icon"></i></a>
+                <a href=""><i class="fab fa-instagram social-icon"></i></a>
+                <a href=""><i class="fab fa-youtube social-icon"></i></a>
+            </div>    
         </div>
+
         <div class="copyright">
-            <hr>
-            <p>Copyright 2020</p>
+            <p class="copyright-text">
+                The content of this site is copyright-protected and is the property of Milan Nikolic. SnapUp is committed to accessibility.
+            </p>
+        </div>
+
+        <div class="signature">
+            <p class="signature-text">
+                snapup by Milan Nikolic
+            </p>
+        </div>
+
+        <div class="location">
+            <p class="location-text">
+                Serbia | Jagodina
+            </p>
         </div>
     </div>
 </div>

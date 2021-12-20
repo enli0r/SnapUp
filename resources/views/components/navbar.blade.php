@@ -75,8 +75,8 @@
             <x-dropdown buttonName="Men" :categories="$categories" gender="men"/>
             <x-dropdown buttonName="Women" :categories="$categories" gender="women"/>
 
-            <a href="{{ route('products') }}" class="category-link disabled">Featured</a>
-            <a href="{{ route('products') }}" class="category-link disabled">Sale</a>
+            <p class="category-link disabled">Featured</p>
+            <p class="category-link disabled">Sale</p>
         
         </div>
   </nav>
