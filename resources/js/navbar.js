@@ -10,11 +10,9 @@ $(function(){
 
     $('.fa-bars').on('click', function(event){
         $('.sidebar').toggleClass('sidebar-opened');
-        $('.sidebar-close-icon').addClass('icon-closed');
     });
 
     $('.sidebar-close-icon').on('click', function(){
         $('.sidebar').removeClass('sidebar-opened');
-        $('.sidebar-close-icon').removeClass('icon-closed');
     });
 });
