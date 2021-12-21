@@ -1,5 +1,38 @@
 <x-layout>
 
+    <div class="sidebar">
+        <ul class="navbar-nav">
+            <li class="nav-item sign-in">
+                <i class="fas fa-user"></i>
+                <a href="">Sing in</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="{{ route('products') }}" class="sidebar-link">All products</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="" class="sidebar-link">Men</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="" class="sidebar-link">Women</a>
+            </li>
+    
+            <li class="nav-item">
+                <p class="sidebar-link disabled">Featured</p>
+            </li>
+    
+            <li class="nav-item">
+                <p class="sidebar-link disabled">Sale</p>
+            </li>
+        </ul>
+
+        <i class="fa fa-times sidebar-close-icon"></i>
+    </div>
+  
+
     <section class="header">
         <div class="container header-container">
             <div class="header-wrapper ">
