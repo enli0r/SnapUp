@@ -14,14 +14,17 @@
     }
 }
 
-.main-navbar{
+.navbar{
     width: 100%;
-    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 
-    .sidebar{
+    .main-navbar{
         display: flex;
         width: 100%;
-        padding-top: 20px;
+        padding: 20px 30px 0 30px;
 
         ul{
             display: flex;
@@ -40,6 +43,10 @@
             margin: 0;
             border-bottom: 1px solid gray;
 
+            .fa-times{
+                display: none;
+            }
+
             .search-form{
                 padding: 0;
                 margin: 0;
@@ -50,7 +57,7 @@
                     outline: 0;
                     font-size: 13px;
                     font-weight: 400;
-                    width: 170px;
+                    //width: 170px;
                     background-color: transparent;
                 }
             }
@@ -100,7 +107,6 @@
     }
 
     .category-navbar{
-        padding: 15px 0;
         margin-top: 15px;
     
         .category-navbar-wrapper{
@@ -211,9 +217,19 @@
 
 
 @media (max-width: 991px){
-   .main-navbar{
-       .sidebar{
-           ul{
+   .navbar{
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        justify-content: space-between !important;
+        width: 100%;
+        align-items: center;
+        padding: 20px 30px;
+
+       .main-navbar{
+            padding: 0 !important;
+            width: auto;
+
+            ul{
                gap: 25px;
 
                li{
@@ -229,28 +245,52 @@
 
                         form{
                             input{
-                                transition: 0.2s;
-                                width: 0 !important;
+                                display: none !important;
                             }
                         }
                     }
 
                     .search-clicked{
-                        transition: 0.2s;
-                        column-gap: 5px !important;
-                        border-bottom: 1px solid gray;
+                        position: absolute;
+                        left: 30px;
+                        top: 0;
+                        bottom: 0;
+                        right: 30px;
+                        background-color: #faf9f8;
+                        display: flex;
+                        justify-content: space-between;
 
+                        .fa-times{
+                            display: block !important;
+                            position: absolute;
+                            font-size: 28px;
+                            right: 0;
+                        }
+
+                        .fa-search{
+                            font-size: 22px !important;
+                        }
 
                         form{
+                            width: 100%;
+
                             input{
-                                transition: 0.2s;
-                                width: 170px !important;
+                                display: block !important;
+                                margin-left: 15px;
+                                font-weight: 500 !important;
+                                width: 100% !important;
+                                font-size: 16px !important;
+
                             }
                         }
                         
                     }
                }
            }
+       }
+
+       .category-navbar{
+           display: none !important;
        }
    }
 }

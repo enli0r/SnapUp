@@ -1,8 +1,8 @@
 @props(['cart_count'])
 
-<nav class="main-navbar">
+<nav class="navbar">
 
-    <div class="sidebar d-flex" id="sidebar">
+    <div class="main-navbar">
 
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -25,6 +25,7 @@
         <li class="nav-item">
           <div class="search nav-link">
             <i class="fas fa-search"></i>
+            <i class="fas fa-times"></i>
             <form action="" class="search-form">
               <input type="text" placeholder="Search">
             </form>
@@ -61,7 +62,6 @@
       </ul>
            
     </div>
-
 
     <div class="logo-container">
       <a href="{{ route('home') }}" class="logo">snapup</a>

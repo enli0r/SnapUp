@@ -414,14 +414,6 @@ section{
 }
 
 @media (max-width: 991px){
-    .header{
-        .container{
-            max-width: 100% !important;
-            padding: 0;
-
-            
-        }
-    }
 
     .exclusive-offer-wrapper{
         flex-direction: column;
@@ -453,7 +445,7 @@ section{
     .header-wrapper{
         .slick-slide{
             img{
-                aspect-ratio: 1 / 1 !important;
+                aspect-ratio: 1 / 0.8 !important;
             }
 
             .phone-slide{
