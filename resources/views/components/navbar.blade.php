@@ -72,15 +72,21 @@
     <nav class="category-navbar">
         <div class="category-navbar-wrapper">
 
-            <a href="{{ route('products') }}" class="category-link">All products</a>
+            <a href="{{ route('products') }}" class="category-link reveal-link" id="all-products">All products</a>
 
-            <x-dropdown buttonName="Men" :categories="$categories" gender="men"/>
-            <x-dropdown buttonName="Women" :categories="$categories" gender="women"/>
+            <a href="#" class="category-link reveal-link" id="men">Men</a>
+            <a href="#" class="category-link reveal-link" id="women">Women</a>
+
 
             <p class="category-link disabled">Featured</p>
             <p class="category-link disabled">Sale</p>
-        
         </div>
+
+        <x-dropdown :categories="$categories" category="men"/>
+        <x-dropdown :categories="$categories" category="women" />
+        <x-dropdown :categories="$categories" category="all-products" />
+
+
   </nav>
 
 

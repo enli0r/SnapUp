@@ -449,11 +449,11 @@ section{
             }
 
             .phone-slide{
-                display: block;
+                display: block !important;
             }
 
             .desktop-slide{
-                display: none;
+                display: none !important;
             }
         }
     }

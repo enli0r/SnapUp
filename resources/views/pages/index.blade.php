@@ -33,7 +33,7 @@
     </div>
   
 
-    <section class="header">
+    {{-- <section class="header">
         <div class="container header-container">
             <div class="header-wrapper ">
                 <i class="fas fa-chevron-left prev header-prev arrow"></i>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-    </section>
+    </section> --}}
 
     <section class="featured-categories">
         <div class="container">
