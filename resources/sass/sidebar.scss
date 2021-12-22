@@ -42,7 +42,22 @@
                 display: block;
                 padding: 15px;
                 font-weight: 500;
+                cursor: pointer;
 
+
+                &:hover{
+                    color: rgba(0,0,0,0.8);
+                }
+            }
+
+            .sidebar-link-smaller{
+                font-size: 14px;
+                text-decoration: none;
+                color: black;
+                transition: 0.1s;
+                display: block;
+                padding: 15px;
+                font-weight: 500;
 
                 &:hover{
                     color: rgba(0,0,0,0.8);

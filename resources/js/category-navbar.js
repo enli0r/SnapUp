@@ -12,6 +12,4 @@ $(function(){
             $('.navbar-reveal').removeClass('revealed');
         }
     });
-
-
 });

@@ -11492,7 +11492,7 @@ section .container .section-title h2 {
 }
 
 .navbar .category-navbar .category-navbar-wrapper .disabled {
-  cursor: default;
+  cursor: pointer;
   opacity: 0.5;
 }
 
@@ -12751,9 +12751,24 @@ section .container .section-title h2 {
   display: block;
   padding: 15px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .sidebar .navbar-nav .nav-item .sidebar-link:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar .navbar-nav .nav-item .sidebar-link-smaller {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  transition: 0.1s;
+  display: block;
+  padding: 15px;
+  font-weight: 500;
+}
+
+.sidebar .navbar-nav .nav-item .sidebar-link-smaller:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 

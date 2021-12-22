@@ -27,6 +27,15 @@
             <li class="nav-item">
                 <p class="sidebar-link disabled">Sale</p>
             </li>
+
+            <li class="nav-item">
+                <a href="#" class="sidebar-link-smaller">Customer service</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="sidebar-link-smaller">About</a>
+            </li>
+
         </ul>
 
         <i class="fa fa-times sidebar-close-icon"></i>
