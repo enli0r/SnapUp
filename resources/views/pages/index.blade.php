@@ -54,12 +54,12 @@
             
 
         <div class="sidebar-close-icon">
-            
+
         </div>
     </div>
   
 
-    {{-- <section class="header">
+    <section class="header">
         <div class="container header-container">
             <div class="header-wrapper ">
                 <i class="fas fa-chevron-left prev header-prev arrow"></i>
@@ -67,27 +67,26 @@
 
                 <div class="header-slider">
                     <div class="header-slide">
-                        <img src="https://i.ibb.co/TgChnZZ/SV-FW21-Desktop.jpg" class="desktop-slide" alt="">
-                        <img src="https://i.ibb.co/44db1qZ/c1crop.jpg" class="phone-slide" alt="">
+                        <img src="https://i.ibb.co/ZGP2j65/komp-slika-3.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/PWsSWgt/mob-slika-3.jpg" class="phone-slide" alt="">
+                    </div>
+
+                    <div class="header-slide">
+                        <img src="https://i.ibb.co/gy4jh45/komp-slika-1.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/vzxqkcj/mob-slika-1-with-bubbles.jpg" class="phone-slide" alt="">
 
                     </div>
 
                     <div class="header-slide">
-                        <img src="https://i.ibb.co/YBks3Hp/sv-gym-time-oct21-2-desk.jpg" class="desktop-slide" alt="">
-                        <img src="https://i.ibb.co/gDDpYXQ/c2crop.jpg" class="phone-slide" alt="">
-
-                    </div>
-
-                    <div class="header-slide">
-                        <img src="https://i.ibb.co/cYjhv8K/SV-New-trends-21-1200x526.jpg" class="desktop-slide" alt="">
-                        <img src="https://i.ibb.co/Hrcd7Rx/c3crop.jpg" class="phone-slide" alt="">
+                        <img src="https://i.ibb.co/TgtFFk6/komp-slika-2.jpg" class="desktop-slide" alt="">
+                        <img src="https://i.ibb.co/7NTB7PN/mob-slika-2.jpg" class="phone-slide" alt="">
 
                     </div>
                 </div>
             </div>
         </div>
 
-    </section> --}}
+    </section>
 
     <section class="featured-categories">
         <div class="container">

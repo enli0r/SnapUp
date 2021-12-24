@@ -5,13 +5,12 @@
 }
 
 .sidebar-close-icon{
-    display: flex !important;
     justify-content: center;
     background-color: transparent;
     color: white;
     width: 100%;
-    padding-top: 350px;
     cursor: pointer;
+
 }
 
 .sidebar{    
@@ -29,10 +28,11 @@
 
     .sidebar-wrapper{
         background-color: white;
-        width: 100%;
-        max-width: 250px;
-        cursor: pointer;
-        
+        cursor: pointer;   
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        min-width: 250px;
 
         .sidebar-link-wrapper{
             width: 100%;
@@ -93,8 +93,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
             bottom: 0;
+            width: 100%;
+            max-width: 300px;
             background-color: white;
 
             .category-wrapper{
@@ -113,9 +114,10 @@
         .subcategory-toggled{
             position: absolute;
             left: 0;
-            right: 0;
             top: 0;
             bottom: 0;
+            width: 100%;
+            max-width: 300px;
             background-color: white;
 
             .subcategory-wrapper{

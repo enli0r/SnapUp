@@ -10963,7 +10963,7 @@ body {
 
 .header .header-wrapper .slick-slide img {
   width: 100%;
-  aspect-ratio: 1/0.5;
+  aspect-ratio: 1/0.6;
 }
 
 .header .header-wrapper .slick-slide .desktop-slide {
@@ -11349,7 +11349,7 @@ section .container .section-title h2 {
   }
 
   .header-wrapper .slick-slide img {
-    aspect-ratio: 1/0.8 !important;
+    aspect-ratio: 0.8/1 !important;
   }
 
   .header-wrapper .slick-slide .phone-slide {
@@ -12713,12 +12713,10 @@ section .container .section-title h2 {
 }
 
 .sidebar-close-icon {
-  display: flex !important;
   justify-content: center;
   background-color: transparent;
   color: white;
   width: 100%;
-  padding-top: 350px;
   cursor: pointer;
 }
 
@@ -12738,9 +12736,11 @@ section .container .section-title h2 {
 
 .sidebar .sidebar-wrapper {
   background-color: white;
-  width: 100%;
-  max-width: 250px;
   cursor: pointer;
+  flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 250px;
 }
 
 .sidebar .sidebar-wrapper .sidebar-link-wrapper {
@@ -12792,8 +12792,9 @@ section .container .section-title h2 {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  width: 100%;
+  max-width: 300px;
   background-color: white;
 }
 
@@ -12812,9 +12813,10 @@ section .container .section-title h2 {
 .sidebar .sidebar-wrapper .subcategory-toggled {
   position: absolute;
   left: 0;
-  right: 0;
   top: 0;
   bottom: 0;
+  width: 100%;
+  max-width: 300px;
   background-color: white;
 }
 
