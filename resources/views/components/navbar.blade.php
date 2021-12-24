@@ -68,7 +68,6 @@
       <a href="{{ route('home') }}" class="logo">snapup</a>
     </div>
   
-
     <nav class="category-navbar">
         <div class="category-navbar-wrapper">
 

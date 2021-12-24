@@ -1,42 +1,57 @@
 <x-layout>
 
     <div class="sidebar">
-        <ul class="navbar-nav">
-            <li class="nav-item sign-in">
+        <div class="sidebar-wrapper">
+            <div class="sidebar-link-wrapper sing-in">
                 <i class="fas fa-user"></i>
-                <a href="">Sing in</a>
-            </li>
+                <a href="" class="sidebar-link-sign-in">Sign in</a>
+            </div>
 
-
-            <li class="nav-item">
-                <a href="{{ route('products') }}" class="sidebar-link">All products</a>
-            </li>
+            <div class="sidebar-category-toggle toggled-stg-all">
+                <div class="sidebar-link-wrapper category-wrapper" id="stg-all">
+                    <a href="" class="sidebar-link">All products</a>
+                </div>
     
-            <li class="nav-item">
-                <a href="" class="sidebar-link">Men</a>
-            </li>
-    
-            <li class="nav-item">
-                <a href="" class="sidebar-link">Women</a>
-            </li>
-    
-            <li class="nav-item">
-                <p class="sidebar-link disabled">Featured</p>
-            </li>
-    
-            <li class="nav-item">
-                <p class="sidebar-link disabled">Sale</p>
-            </li>
+                <x-slideToggle :categories="$categories" category="stg-all" />
+            </div>
 
-            <li class="nav-item">
-                <a href="#" class="sidebar-link-smaller">Customer service</a>
-            </li>
 
-            <li class="nav-item">
-                <a href="#" class="sidebar-link-smaller">About</a>
-            </li>
+            <div class="sidebar-category-toggle toggled-stg-men">
+                <div class="sidebar-link-wrapper category-wrapper" id="stg-men">
+                    <a href="" class="sidebar-link">Men</a>
+                </div>
+    
+                <x-slideToggle :categories="$categories" category="stg-men" />
+            </div>
+            
+            <div class="sidebar-category-toggle toggled-stg-women">
+                <div class="sidebar-link-wrapper category-wrapper" id="stg-women">
+                    <a href="" class="sidebar-link">Women</a>
+                </div>
 
-        </ul>
+                <x-slideToggle :categories="$categories" category="stg-women" />
+            </div>
+            
+            
+            <div class="sidebar-link-wrapper">
+                <a href="" class="sidebar-link">Featured</a>
+            </div>
+
+
+            <div class="sidebar-link-wrapper">
+                <a href="" class="sidebar-link">Sale</a>
+            </div>
+
+            <div class="sidebar-link-wrapper">
+                <a href="" class="sidebar-link small-link">Customer service</a>
+            </div>
+            
+            <div class="sidebar-link-wrapper">
+                <a href="" class="sidebar-link small-link">About</a>
+            </div>
+        </div>
+
+            
 
         <i class="fa fa-times sidebar-close-icon"></i>
     </div>

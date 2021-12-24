@@ -37286,6 +37286,8 @@ __webpack_require__(/*! ./slick-slider.js */ "./resources/js/slick-slider.js");
 
 __webpack_require__(/*! ./show.js */ "./resources/js/show.js");
 
+__webpack_require__(/*! ./sidebarSlideToggle.js */ "./resources/js/sidebarSlideToggle.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37439,6 +37441,28 @@ $(function () {
       var inputId = $(event.target).attr('id');
       $('.label-for-' + inputId).addClass('checked');
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/sidebarSlideToggle.js":
+/*!********************************************!*\
+  !*** ./resources/js/sidebarSlideToggle.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.category-wrapper').on('click', function (event) {
+    $('.toggled-' + $(event.target).attr('id')).toggleClass('category-toggled');
+    $('.sidebar-category-' + $(event.target).attr('id')).toggleClass('sidebar-category-visible');
+  });
+});
+$(function () {
+  $('.subcategory-wrapper').on('click', function (event) {
+    $('.toggled-' + $(event.target).attr('id')).toggleClass('subcategory-toggled');
+    $('.sidebar-subcategory-' + $(event.target).attr('id')).toggleClass('sidebar-subcategories-visible');
   });
 });
 

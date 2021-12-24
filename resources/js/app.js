@@ -11,3 +11,5 @@ require('./carousel.js');
 require('./slick-slider.js');
 
 require('./show.js');
+
+require('./sidebarSlideToggle.js');
