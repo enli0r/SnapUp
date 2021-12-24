@@ -53,7 +53,9 @@
 
             
 
-        <i class="fa fa-times sidebar-close-icon"></i>
+        <div class="sidebar-close-icon">
+            
+        </div>
     </div>
   
 
