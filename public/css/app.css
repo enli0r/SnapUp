@@ -11348,6 +11348,14 @@ section .container .section-title h2 {
     justify-content: center !important;
   }
 
+  .header-wrapper .prev {
+    left: 10px !important;
+  }
+
+  .header-wrapper .next {
+    right: 10px !important;
+  }
+
   .header-wrapper .slick-slide img {
     aspect-ratio: 0.8/1 !important;
   }

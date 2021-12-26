@@ -55,7 +55,7 @@ body{
             }
 
             .phone-slide{
-                display: none;
+                display: none; //com
             }
         }
 
@@ -443,6 +443,16 @@ section{
     }
 
     .header-wrapper{
+
+        .prev{
+            left: 10px !important;
+        }
+
+        .next{
+            right: 10px !important;
+        }
+
+
         .slick-slide{
             img{
                 aspect-ratio: 0.8 / 1 !important;
