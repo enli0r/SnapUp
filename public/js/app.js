@@ -37465,6 +37465,7 @@ $(function () {
     $('.sidebar-subcategory-' + $(event.target).attr('id')).toggleClass('sidebar-subcategories-visible');
   });
 });
+$(function () {});
 
 /***/ }),
 

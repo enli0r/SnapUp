@@ -158,7 +158,8 @@
                 </div>
 
                 <div class="category kids">
-                    <img src="https://i.ibb.co/gSyFd40/kids.jpg" alt="">
+                    {{-- <img src="https://i.ibb.co/gSyFd40/kids.jpg" alt=""> --}}
+                    <img src="https://i.ibb.co/4T8nnRN/children-817368-1280.webp" alt="">
 
                     <a href="#">Kids</a>
 
