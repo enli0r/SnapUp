@@ -135,7 +135,7 @@
         <div class="container">
             <div class="base-categories-wrapper">
                 <div class="category men">
-                    <img src="https://i.ibb.co/cDNCSdc/hmgoepprod-2.jpg" alt="">
+                    <img src="https://i.ibb.co/c1LnKgx/cropped-shot-of-handsome-businessman-in-stylish-suit-in-front-of-concrete-wall.jpg" alt="">
 
                     <a href="#">Men</a>
 
@@ -146,7 +146,7 @@
                 </div>
 
                 <div class="category women">
-                    <img src="https://i.ibb.co/xqK99L4/women.jpg" alt="">
+                    <img src="https://i.ibb.co/R4jrKGD/is-it-bad-for-girls-to-dress-provacitively.jpg" alt="">
 
                     <a href="#">Women</a>
 
@@ -155,22 +155,7 @@
                         <button type="submit" name="category" value="footwear">footwear</button>
                     </form>
 
-                </div>
-
-                <div class="category kids">
-                    {{-- <img src="https://i.ibb.co/gSyFd40/kids.jpg" alt=""> --}}
-                    <img src="https://i.ibb.co/4T8nnRN/children-817368-1280.webp" alt="">
-
-                    <a href="#">Kids</a>
-
-                    <form action="{{ route('products') }}">
-                        <button type="submit" name="category" value="clothes">Clothes</button>
-                        <button type="submit" name="category" value="footwear">footwear</button>
-                    </form>
-
-                </div>
-
-                
+                </div>                
                 
             </div>
         </div>
