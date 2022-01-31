@@ -11371,8 +11371,7 @@ section .container .section-title h2 {
 
   .base-categories .base-categories-wrapper .category:last-child {
     grid-column: 1/3;
-    aspect-ratio: unset !important;
-    height: 250px;
+    aspect-ratio: 2/1.1 !important;
   }
 
   .base-categories .base-categories-wrapper .category:last-child a {
@@ -11391,8 +11390,7 @@ section .container .section-title h2 {
 
   .featured-categories-wrapper .grid-item:last-child {
     grid-column: 1/3;
-    height: 250px;
-    aspect-ratio: unset !important;
+    aspect-ratio: 2/1 !important;
   }
 
   .header-wrapper .prev {

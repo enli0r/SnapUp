@@ -469,8 +469,7 @@ section{
 
             .category:last-child{
                 grid-column: 1/3;
-                aspect-ratio: unset !important;
-                height: 250px;
+                aspect-ratio: 2/1.1 !important;
 
                 a{
                     top: 55% !important;
@@ -490,8 +489,7 @@ section{
 
         .grid-item:last-child{
             grid-column: 1/3;
-            height: 250px;
-            aspect-ratio:unset !important;
+            aspect-ratio: 2/1 !important;
         }
     }
 
