@@ -11392,7 +11392,7 @@ section .container .section-title h2 {
   }
 
   .header-wrapper .slick-slide img {
-    aspect-ratio: 0.8/1 !important;
+    aspect-ratio: 1/1.1 !important;
   }
 
   .header-wrapper .slick-slide .phone-slide {
