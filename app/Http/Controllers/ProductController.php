@@ -27,16 +27,10 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $products = Product::all();
-        $currentcategory = null;
-
         $products = $this->getProducts(isset($_POST['category']) ? $_POST['category'] : null, isset($_POST['subcategory']) ? $_POST['subcategory'] : null, $_POST);
-
-        isset($_POST) ? $previouspost = $_POST : $previouspost = null;
 
         return view('pages.products')->with([
             'products' => $products,
-            'currentcategory' => $currentcategory,
-            'previouspost' => $previouspost
         ]);
     }
 

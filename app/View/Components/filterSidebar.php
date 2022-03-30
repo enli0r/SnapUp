@@ -18,10 +18,9 @@ class filterSidebar extends Component
      */
 
 
-    public function __construct($currentcategory, $previouspost)
+    public function __construct()
     {
-        $this->currentcategory = $currentcategory;
-        $this->previouspost = $previouspost;
+
     }
 
     /**

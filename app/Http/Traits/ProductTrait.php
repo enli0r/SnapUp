@@ -11,6 +11,7 @@ trait ProductTrait{
     public function getProducts($categorySlug, $subcategorySlug, $POST){  
         $filters = [];
         $filterAttributes = ['color', 'size'];
+        
         foreach($filterAttributes as $filterAttribute){
             isset($POST[$filterAttribute]) ? $filters[$filterAttribute] = $POST[$filterAttribute] : '';
         }

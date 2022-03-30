@@ -37380,7 +37380,12 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+//submiting form on checkbox click
+$(function () {
+  $('.filterable').on('change', function () {
+    $('.filters-form').submit();
+  });
+});
 
 /***/ }),
 

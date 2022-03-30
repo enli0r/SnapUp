@@ -1,7 +1,7 @@
 <x-layout>
     <section class="products">
         <div class="container filters-products-wrapper">
-            <x-filter-sidebar :previouspost="$previouspost" :currentcategory="$currentcategory"/>
+            <x-filter-sidebar />
 
 
             @if (count($products) > 0)

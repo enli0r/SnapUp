@@ -1,24 +1,23 @@
-@props(['currentcategory', 'previouspost'])
-
 <button class="filters-open-button">Filters &#8594;</button>
 
 <div class="filter-sidebar">
     <img class="filters-close-icon" src="https://i.ibb.co/6RDhB9Q/cancel.png" alt="hehe">
 
 
-    <form action="" method="post" class="filters-form">
-        @csrf
-        <input type="hidden" name="_method" value="PUT">
+    <form action="" method="get" class="filters-form">
 
         {{-- Gender --}}
         <div class="form-section form-section-gender">
             <h4 class="form-group-heading" id="heading-gender">Gender</i></h4>
             <span class="caret"></span>
+
+
             
         
             <div class="form-group">
                 <div class="input-label">
-                    <x-filtering.checkbox-bounce id="men" name="gender" value="men" />
+                    <x-filtering.checkbox-bounce id="men" name="gender" value="men"/>
+
 
                     <label for="men">Men</label>
                 </div>
@@ -39,32 +38,27 @@
 
 
         {{-- Category --}}
-        @if ($currentcategory == null)
-            <div class="form-section form-section-category">
-                <h4 class="form-group-heading" id="heading-category">Category</h4>
-                
-                <div class="form-group" id="form-group-category">
-                    @foreach ($categories as $category)
-                        @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
-{{-- 
-                            <x-filtering.category-button type="submit" class="parent-category" name="category" :category="$category"/> --}}
+        <div class="form-section form-section-category">
+            <h4 class="form-group-heading" id="heading-category">Category</h4>
+            
+            <div class="form-group" id="form-group-category">
+                @foreach ($categories as $category)
+                    @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 0 && $category->parent_id == 0)
 
-                            {{-- category-children radio buttons --}}
-                            @foreach ($category->children as $child)
+                        @foreach ($category->children as $child)
 
-                                <div class="input-label subcategory">
-                                    <x-filtering.checkbox-bounce :id="$child->slug" name="subcategory" :value="$child->slug"/>
+                            <div class="input-label subcategory">
+                                <x-filtering.checkbox-bounce :id="$child->slug" name="subcategory" :value="$child->slug"/>
 
-                                    <label for="{{ $child->slug }}">{{ $child->name }}</label>
-                                </div>
+                                <label for="{{ $child->slug }}">{{ $child->name }}</label>
+                            </div>
 
-                            @endforeach
+                        @endforeach
 
-                        @endif
-                    @endforeach
-                </div>
-            </div> 
-        @endif
+                    @endif
+                @endforeach
+            </div>
+        </div> 
 
 
         {{-- featured category --}}
@@ -73,7 +67,7 @@
             
             <div class="form-group" id="form-group-featured-category">
                 @foreach ($categories as $category)
-                    @if ($category->slug != "men" && $category->slug != "women" && $category->is_featured == 1)
+                    @if ($category->is_featured == 1)
                         <div class="input-label">
 
                             <x-filtering.checkbox-bounce :id="$category->slug" name="featured_category" :value="$category->slug" />
@@ -116,17 +110,14 @@
                         @foreach ($attribute->values as $value)
                             <div class="input-label">
     
-                                    <input type="checkbox" name="color[]" id="{{ $value->value }}" value="{{ $value->value }}" class="color color-{{ $value->value }}"
-                                    
-                                    @if (isset($previouspost['color']))
-                                        @foreach ($previouspost['color'] as $color)
-                                            @if ($color == $value->value)
-                                                checked
-                                            @endif
-                                        @endforeach
+                                <input type="checkbox" name="color[]" id="{{ $value->value }}" value="{{ $value->value }}" class="color color-{{ $value->value }} filterable"
+                                
+                                    @if (request()->color != null)
+                                        @if (in_array($value->value , request()->color))
+                                            checked
+                                        @endif
                                     @endif
-
-                                    >
+                                />
                     
                             </div>
                             
