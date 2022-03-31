@@ -99,31 +99,5 @@
             </div>
         </div>
 
-        {{-- color --}}
-        <div class="form-section form-section-color">
-            <h4 class="form-group-heading" id="heading-color">Color</h4>        
-
-            <div class="form-group form-group-colors ">
-                @foreach ($all_attributes as $attribute)
-                    @if ($attribute->name == "Color")
-                        @foreach ($attribute->values as $value)
-                            <div class="input-label">
-    
-                                <input type="checkbox" name="color[]" id="{{ $value->value }}" value="{{ $value->value }}" class="color color-{{ $value->value }} filterable"
-                                
-                                    @if (request()->color != null)
-                                        @if (in_array($value->value , request()->color))
-                                            checked
-                                        @endif
-                                    @endif
-                                />
-                    
-                            </div>
-                            
-                        @endforeach
-                    @endif
-                @endforeach
-            </div>
-        </div>
     </form>
 </div>
