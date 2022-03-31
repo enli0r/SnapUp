@@ -73,17 +73,17 @@
 
             <a href="{{ route('products') }}" class="category-link reveal-link" id="all-products">All products</a>
 
-            <a href="#" class="category-link reveal-link" id="men">Men</a>
-            <a href="#" class="category-link reveal-link" id="women">Women</a>
+            <a href="products?gender=men" class="category-link reveal-link" id="men">Men</a>
+            <a href="products?gender=women" class="category-link reveal-link" id="women">Women</a>
 
 
             <p class="category-link disabled">Featured</p>
             <p class="category-link disabled">Sale</p>
         </div>
 
-        <x-dropdown :categories="$categories" category="men"/>
-        <x-dropdown :categories="$categories" category="women" />
-        <x-dropdown :categories="$categories" category="all-products" />
+        <x-dropdown :categories="$categories" categorySlug="men" />
+        <x-dropdown :categories="$categories" categorySlug="women"/>
+        <x-dropdown :categories="$categories" categorySlug="all-products"/>
 
 
   </nav>
