@@ -52,9 +52,14 @@ trait ProductTrait{
 
 
         //If there are no filtered products, show products which fromm the condition can be either all products or products with selected gender
-        if(count($filtered_products) == 0){
-            $filtered_products = $products;
+        if(request()->input() == null){
+            $filtered_products = Product::all();
         }
+
+        if(count($filtered_products) == 0 && request()->gender != null){
+            $filtered_products = Category::where('name', $gender)->first()->products;
+        }
+        
 
         return $filtered_products;
 
