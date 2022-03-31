@@ -11746,14 +11746,6 @@ section .container .section-title h2 {
   display: none;
 }
 
-.products .filters-products-wrapper .products-wrapper .grid-item .images:hover .product-image {
-  display: none;
-}
-
-.products .filters-products-wrapper .products-wrapper .grid-item .images:hover .hover-image {
-  display: block;
-}
-
 .products .filters-products-wrapper .products-wrapper .grid-item img {
   aspect-ratio: 26/35;
   width: 100%;

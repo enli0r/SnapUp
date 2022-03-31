@@ -12,20 +12,20 @@
                         @foreach ($category->children as $child_cat)
 
                             @php
-                                $redirect = 'products';
-                                $subcategory = 'subcategory[]='.$child_cat->slug;
-                                $gender = '?gender='.$categorySlug.'&';
 
+                                $route = route('products', array_merge(\Request::query(), ['type' => 'listing']));
+                                
                                 if($categorySlug == 'men' || $categorySlug == 'women'){
-                                    $url = $redirect . $gender . $subcategory;
+                                    $route = route('products', array_merge(\Request::query(), ['gender' => $categorySlug, 'subcategory[]' => $child_cat->slug]));
                                 }else{
-                                    $url = $redirect . '?' . $subcategory;
+                                    $route = route('products', array_merge(\Request::query(), ['subcategory[]' => $child_cat->slug]));
+
                                 }
 
                             @endphp
 
 
-                            <a href="{{ $url }}" class="reveal-subcategory-link">{{ $child_cat->name }}</a>
+                            <a href="{{ $route }}" class="reveal-subcategory-link">{{ $child_cat->name }}</a>
                         @endforeach
                     </div>
                 
