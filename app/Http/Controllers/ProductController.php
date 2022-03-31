@@ -13,6 +13,7 @@ use App\Http\Traits\ProductTrait;
 use App\Http\Controllers\Controller;
 use App\AttributeValueProductAttribute;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Arr;
 
 class ProductController extends Controller
 {
@@ -26,11 +27,55 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $products = Product::all();
-        $products = $this->getProducts(isset($_POST['category']) ? $_POST['category'] : null, isset($_POST['subcategory']) ? $_POST['subcategory'] : null, $_POST);
+        $gender = request()->gender;
+
+        if(request()->gender != null){
+            $products = Category::where('name', $gender)->first()->products;
+        }else{
+            $products = Product::all();
+        }
+
+        $filters = Arr::except(request()->input(), ['gender']);
+        $filtered_products = collect();
+
+
+        //Algorithm for filtering products ie. pushing products that accept conditions into filtered products array.
+        foreach($products as $product){
+            foreach($filters as $filter=>$values){
+                foreach($values as $value){
+
+                    // Comparing to product categories
+                    foreach($product->categories->pluck('name') as $category){
+
+                        if($value == $category){
+                            if(!$filtered_products->contains($product)){
+                                $filtered_products->push($product);
+                            }
+                        }
+                    }
+
+                    // Comparing to product attributes
+                    foreach($product->attributes->pluck('name') as $attribute){
+                        if($value == $attribute){
+                            if(!$filtered_products->contains($product)){
+                                $filtered_products->push($product);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        //If there are no filtered products, show products which fromm the condition can be either all products or products with selected gender
+        if(count($filtered_products) == 0){
+            $filtered_products = $products;
+        }
+
 
         return view('pages.products')->with([
-            'products' => $products,
+            'products' => $filtered_products,
         ]);
     }
 

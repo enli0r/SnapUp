@@ -94,5 +94,12 @@ class CategorySeeder extends Seeder
             'image' => null,
             'parent_id' => 9
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'unisex',
+            'slug' => 'unisex',
+            'is_featured' => 0,
+            'image' => null
+        ]);
     }
 }

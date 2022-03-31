@@ -15,24 +15,23 @@
             
         
             <div class="form-group">
-                <div class="input-label">
-                    <x-filtering.checkbox-bounce id="men" name="gender" value="men"/>
 
+                <div class="input-label filterable">
+                    <x-filtering.checkbox-bounce-single name="gender" value="men" id="men" />
 
                     <label for="men">Men</label>
                 </div>
-
-                <div class="input-label">
-                    <x-filtering.checkbox-bounce id="women" name="gender" value="women" />
+                <div class="input-label filterable">
+                    <x-filtering.checkbox-bounce-single name="gender" value="women" id="women" />
 
                     <label for="women">Women</label>
                 </div>
+                <div class="input-label filterable">
+                    <x-filtering.checkbox-bounce-single name="gender" value="unisex" id="unisex" />
 
-                <div class="input-label">
-                    <x-filtering.checkbox-bounce id="unisex" name="gender" value="unisex" />
-
-                    <label for="women">Unisex</label>
+                    <label for="unisex">Unisex</label>
                 </div>
+
             </div>
         </div>
 

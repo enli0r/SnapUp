@@ -4,10 +4,12 @@
 
     <input type="checkbox" id="{{ $id }}" name="{{ $name }}[]" value="{{ $value }}" 
     
-        @if (request()->$name != null)
-            @if (in_array($value , request()->$name))
-                checked
-            @endif
+        @if (request()->$name != null)   
+        
+                @if (in_array($value , request()->$name))
+                    checked
+                @endif
+
         @endif
 
     />
