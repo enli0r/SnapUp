@@ -10930,7 +10930,7 @@ body {
 
 .header .header-wrapper {
   position: relative;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .header .header-wrapper .arrow {
@@ -10963,7 +10963,7 @@ body {
 
 .header .header-wrapper .slick-slide img {
   width: 100%;
-  aspect-ratio: 1/0.6;
+  aspect-ratio: 1/0.5;
 }
 
 .header .header-wrapper .slick-slide .desktop-slide {
@@ -10975,7 +10975,7 @@ body {
 }
 
 section {
-  margin: 70px auto;
+  margin: 0px auto;
 }
 
 section .container {
@@ -10995,6 +10995,7 @@ section .container .section-title h2 {
   -moz-column-gap: 100px;
        column-gap: 100px;
   justify-content: space-between;
+  margin-top: 70px;
 }
 
 .featured-categories-wrapper .grid-item {
@@ -11057,7 +11058,7 @@ section .container .section-title h2 {
 }
 
 .exclusive-offer {
-  margin: 50px auto;
+  margin: 70px auto;
   border: none;
   background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
 }
@@ -11066,7 +11067,7 @@ section .container .section-title h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 0px;
 }
 
 .exclusive-offer .container .exclusive-offer-wrapper .exclusive-offer-product {
@@ -11159,6 +11160,10 @@ section .container .section-title h2 {
 
 .section-title h2 {
   text-align: center;
+}
+
+.section-title .most-popular-title {
+  margin-top: 70px;
 }
 
 .latest-products-wrapper,
@@ -11661,6 +11666,7 @@ section .container .section-title h2 {
 }
 
 .footer {
+  margin-top: 70px;
   padding: 25px 0;
   background-color: #e4e4e4;
   color: black;

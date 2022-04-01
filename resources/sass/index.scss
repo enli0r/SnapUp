@@ -14,7 +14,7 @@ body{
 .header{
     .header-wrapper{
         position: relative;
-        margin-top: 40px;
+        margin-top: 60px;
 
         .arrow{
             top: 40%;
@@ -48,7 +48,7 @@ body{
         .slick-slide{
             img{
                 width: 100%;
-                aspect-ratio: 1 / 0.6; //
+                aspect-ratio: 1 / 0.5; //
             }
 
             .desktop-slide{
@@ -67,7 +67,7 @@ body{
 }
   
 section{
-    margin: 70px auto;
+    margin: 0px auto;
 
     .container{
         text-align: center;
@@ -89,6 +89,7 @@ section{
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 100px;
     justify-content: space-between;
+    margin-top: 70px;
 
 
     .grid-item{
@@ -155,7 +156,7 @@ section{
 }
 
 .exclusive-offer{
-    margin: 50px auto;
+    margin: 70px auto;
     border: none;
     background-image: linear-gradient(90deg, #36D1DC, #5B86E5);
 
@@ -165,7 +166,7 @@ section{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 40px 0;
+            padding: 40px 0px;
 
 
 
@@ -269,6 +270,11 @@ section{
     h2{
         text-align: center;
     }
+
+    .most-popular-title{
+        margin-top: 70px;
+    }
+
 }
 
 .latest-products-wrapper, .featured-products-wrapper{

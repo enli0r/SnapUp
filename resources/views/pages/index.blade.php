@@ -118,13 +118,13 @@
         <div class="container">
             <div class="exclusive-offer-wrapper">
                 <div class="exclusive-offer-product">
-                    <img src="https://i.ibb.co/BnK7sy4/pngwing-com-2.png" alt="">
+                    <img src="https://i.ibb.co/xfNVH7K/kindpng-390568.png" alt="">
                 </div>
             
                 <div class="offer-description">
                     <p>Exclusively Avaliable on SnapUp</p>
-                    <h2>nike vendor</h2>
-                    <small>The Addidas Vendor are designed to protect your feet when running, provide traction on different surfaces, cushion landing shock and support your feet.</small>
+                    <h2>nike air force</h2>
+                    <small>Nike Air Force shoes are designed with attention to detail, providing comfort along with the style while wearing.</small>
                     <a href="" class="exclusive-btn">buy now!</a>
                 </div>
             </div>
@@ -196,7 +196,7 @@
     <section class="latest-products">
         <div class="container">
             <div class="section-title">
-                <h2>new collection</h2>
+                <h2 class="new-collection-title">new collection</h2>
                 <div id="rectangle"></div>
             </div>
 
@@ -226,7 +226,7 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>most popular</h2>
+                <h2 class="most-popular-title">most popular</h2>
                 <div id="rectangle"></div>
             </div>
 

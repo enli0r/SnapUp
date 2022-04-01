@@ -1,10 +1,4 @@
 pagination
-
-layout{
-    change footer
-}
-
-homepage{
-    media queries on featured and base categories
-    change carousel images when on mobile size
-}
+search
+making clothes/footwear categories
+changing redirection for featured categories on homepage
