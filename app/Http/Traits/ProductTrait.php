@@ -56,7 +56,7 @@ trait ProductTrait{
             $filtered_products = Product::all();
         }
 
-        if(count($filtered_products) == 0 && request()->gender != null){
+        if(request()->gender != null && count($filters) == 0){
             $filtered_products = Category::where('name', $gender)->first()->products;
         }
         

@@ -96,6 +96,14 @@ class CategorySeeder extends Seeder
         ]);
 
         DB::table('categories')->insert([
+            'name' => 'pants',
+            'slug' => 'pants',
+            'is_featured' => 0,
+            'image' => null,
+            'parent_id' => 6
+        ]);
+
+        DB::table('categories')->insert([
             'name' => 'unisex',
             'slug' => 'unisex',
             'is_featured' => 0,

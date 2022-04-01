@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            'name' => 'red t-shirt',
+            'name' => 'Red T-Shirt',
             'code' => '123123',
             'price' => 30.00,
             'online_price' => 25.00,
@@ -22,7 +22,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'sneakers',
+            'name' => 'HRX Sneakers',
             'code' => '123124',
             'price' => 100.00,
             'online_price' => 90.00,
@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'sweatsuit',
+            'name' => 'Gray pants',
             'code' => '123125',
             'price' => 60.00,
             'online_price' => 53.00,
@@ -40,7 +40,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'blue-tshirt',
+            'name' => 'Blue T-Shirt',
             'code' => '123126',
             'price' => 50.00,
             'online_price' => 46.00,
@@ -51,7 +51,7 @@ class ProductSeeder extends Seeder
         /////////////
 
         DB::table('products')->insert([
-            'name' => 'grey shoes',
+            'name' => 'Gray Shoes',
             'code' => '123123123',
             'price' => 80.00,
             'online_price' => 25.00,
@@ -60,7 +60,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'puma t shirt',
+            'name' => 'Puma T-Shirt',
             'code' => '12312123125',
             'price' => 40.00,
             'online_price' => 37.00,
@@ -68,28 +68,12 @@ class ProductSeeder extends Seeder
             'is_featured' => 0
         ]);
 
-        DB::table('products')->insert([
-            'name' => 'socks',
-            'code' => '123126333',
-            'price' => 5.00,
-            'online_price' => 4.65,
-            'quantity' => 5,
-            'is_featured' => 0
-        ]);
 
-        DB::table('products')->insert([
-            'name' => 'watch',
-            'code' => '123126222',
-            'price' => 500.00,
-            'online_price' => 475.00,
-            'quantity' => 5,
-            'is_featured' => 0
-        ]);
 
         ////////////////boots
 
         DB::table('products')->insert([
-            'name' => 'boots1',
+            'name' => 'Casual Boots',
             'code' => '12312412312312312',
             'price' => 100.00,
             'online_price' => 90.00,
@@ -98,7 +82,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'boots2',
+            'name' => 'Classic Boots',
             'code' => '1231412312312312',
             'price' => 100.00,
             'online_price' => 90.00,
@@ -109,7 +93,7 @@ class ProductSeeder extends Seeder
 
         //jackets
         DB::table('products')->insert([
-            'name' => 'jacket1',
+            'name' => 'Black Jacket',
             'code' => '12312345566333',
             'price' => 5.00,
             'online_price' => 4.65,
@@ -118,7 +102,7 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'jacket2',
+            'name' => 'Red Jacket',
             'code' => '123126333123333',
             'price' => 5.00,
             'online_price' => 4.65,

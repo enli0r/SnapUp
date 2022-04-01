@@ -44,36 +44,28 @@ class ProductImageSeeder extends Seeder
             'url' => 'https://i.ibb.co/0hR39CQ/product-6.jpg'
         ]);
 
+
+
+        //boots
         DB::table('product_images')->insert([
             'product_id' => 7,
-            'url' => 'https://i.ibb.co/VDdCnDn/product-7.jpg'
+            'url' => 'https://i.ibb.co/FVb5P65/12308001-85.jpg'
         ]);
 
         DB::table('product_images')->insert([
             'product_id' => 8,
-            'url' => 'https://i.ibb.co/M2Qky9p/product-8.jpg'
-        ]);
-
-        //boots
-        DB::table('product_images')->insert([
-            'product_id' => 9,
-            'url' => 'https://i.ibb.co/r5Y3qnT/11821006-80.jpg'
-        ]);
-
-        DB::table('product_images')->insert([
-            'product_id' => 10,
             'url' => 'https://i.ibb.co/r5Y3qnT/11821006-80.jpg'
         ]);
 
         //jackets
         DB::table('product_images')->insert([
-            'product_id' => 11,
-            'url' => 'https://i.ibb.co/xXdFpDg/Lightweight-Jackets-2021-Uniqlo.jpg'
+            'product_id' => 9,
+            'url' => 'https://i.ibb.co/2ZLcj1Y/goods-09-419994.webp'
         ]);
 
         DB::table('product_images')->insert([
-            'product_id' => 12,
-            'url' => 'https://i.ibb.co/xXdFpDg/Lightweight-Jackets-2021-Uniqlo.jpg'
+            'product_id' => 10,
+            'url' => 'https://i.ibb.co/hKBJhgB/goods-16-429280.webp'
         ]);
 
     }

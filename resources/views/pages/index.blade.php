@@ -137,7 +137,11 @@
                 <div class="category men">
                     <img src="https://i.ibb.co/c1LnKgx/cropped-shot-of-handsome-businessman-in-stylish-suit-in-front-of-concrete-wall.jpg" alt="">
 
-                    <a href="#">Men</a>
+                    @php
+                        $route = route('products', array_merge(\Request::query(), ['gender' => 'men']));
+                    @endphp
+
+                    <a href="{{ $route }}">Men</a>
 
                     <form action="{{ route('products') }}">
                         <button type="submit" name="category" value="clothes">Clothes</button>
@@ -148,7 +152,11 @@
                 <div class="category women">
                     <img src="https://i.ibb.co/R4jrKGD/is-it-bad-for-girls-to-dress-provacitively.jpg" alt="">
 
-                    <a href="#">Women</a>
+                    @php
+                        $route = route('products', array_merge(\Request::query(), ['gender' => 'women']));
+                    @endphp
+
+                    <a href="{{ $route }}">Women</a>
 
                     <form action="{{ route('products') }}">
                         <button type="submit" name="category" value="clothes">Clothes</button>
