@@ -1,0 +1,199 @@
+.filters-open-button{
+    display: none !important;
+}
+
+.filter-sidebar{
+    position: normal;
+    max-width: 300px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    margin-right: 10px;
+
+    .filters-close-icon{
+        display: none !important;
+    }
+
+
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+        font-weight: 800;
+        color: rgb(80,80,80);
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.filters-form{
+    .form-section{
+        margin-bottom: 20px;
+
+        .form-group-heading{
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+
+            .arrow{
+                border: solid rgb(80,80,80);
+                border-width: 0 3px 3px 0;
+                padding: 3px;
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
+
+            .down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+              }
+        
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .form-group{
+            margin-top: 10px;    
+        
+            .input-label{
+                display: flex;
+                justify-content: flex-start;
+                align-content: center;
+                gap: 5px;
+                margin-bottom: 3px;
+
+                label{
+                    font-size: 14px;
+                    font-weight: 300px;
+                    text-transform: capitalize;
+                    user-select: none;
+                    margin-bottom: 3px;
+        
+                    &:hover{
+                        color: black;
+                    }
+                }
+        
+                label, input{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .form-group-colors{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            .color{
+                height: 18px;
+                width: 18px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                border-radius: 100%;
+                display: inline-block;
+                outline: none;
+                margin-bottom: 3px;
+
+                &:checked{
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+
+            .color-black{
+                background-color: rgba(0,0,0);
+            }
+
+            .color-blue{
+                background-color: rgba(0, 102, 204);
+            }
+
+            .color-red{
+                background-color: rgb(255, 26, 26);
+            }
+            
+        }
+
+    }
+
+    #filter-submit{
+        border: none;
+        font-size: 15px;
+        color: white;
+        background: #0b69b1;
+        padding: 7px 12px;
+        border-radius: 5px;
+    }
+
+}
+
+
+
+@media (max-width: 768px){
+    .filters-open-button{
+        display: block !important;
+        background: white;
+        color: rgb(80,80,80);
+        border-radius: 20px;
+        padding: 6px 12px;
+        border: 1px solid rgb(80,80,80);
+        position: absolute;
+        top: 210px;
+        left: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .filter-sidebar{
+        position: absolute;
+        min-width: 0;
+        width: 0px !important;
+        top: 131px;
+        left: 0;
+        bottom: 0;
+        background: white;
+        z-index: 100;
+        transition: 0.3s;
+        overflow-x: hidden;
+        padding-left: 0 !important;
+
+        .filters-form, .filters-heading{
+            margin: 20px;
+        }
+
+        .filters-close-icon{
+            display: none;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 25px;
+            left: 195px;
+            z-index: 101;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .opened{
+        width: 300px !important;
+        padding-left: 20px;
+
+        .filters-close-icon{
+            display: block !important;
+        }
+    }
+}
+

@@ -1,0 +1,4 @@
+pagination
+search
+making clothes/footwear categories
+changing redirection for featured categories on homepage

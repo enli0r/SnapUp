@@ -1,0 +1,33 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+// Custom
+@import 'global';
+
+@import 'index';
+
+@import 'navbar';
+
+@import 'footer';
+
+@import 'admin';
+
+@import 'products';
+
+@import 'show';
+
+@import 'filter-sidebar';
+
+@import 'cart';
+
+@import 'order-details';
+
+@import 'order';
+
+@import 'checkbox';
+
+@import 'sidebar';
