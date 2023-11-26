@@ -62,9 +62,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## SnapUp modern look
 
+Current homepage look.
 ![su-home1](https://github.com/enli0r/SnapUp/assets/75050561/67bab3c9-bdc7-40f5-9c8c-ce63a93dfa4e)
 ![su-home2](https://github.com/enli0r/SnapUp/assets/75050561/23d9287a-5a31-4258-b80f-506804334bf8)
-![su-shop](https://github.com/enli0r/SnapUp/assets/75050561/4b233484-7456-46b5-844c-67883df7f4a0)
 ![su-home3](https://github.com/enli0r/SnapUp/assets/75050561/75153dda-01c8-4b3b-9680-0a3b459d4400)
+
+Modern design with seamless shopping experience.
+![su-shop](https://github.com/enli0r/SnapUp/assets/75050561/4b233484-7456-46b5-844c-67883df7f4a0)
 
 
