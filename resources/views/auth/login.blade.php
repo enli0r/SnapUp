@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="d-flex container justify-content-center my-2 flex-column">
+    <div class="d-flex container justify-content-center my-2 flex-column mx-auto">
 
         @if (session('status'))
             <div class="alert alert-danger col-6 align-self-center py-3">
